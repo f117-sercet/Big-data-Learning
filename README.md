@@ -1,4 +1,6 @@
-# Big-data-Learning
+# Big-data-Learning  
+计划用一到三年的时间，打造大数据从低阶到高阶的整合资料。其中有开发，有项目文档，有读书笔记的整理等
+
 初识大数据   
 ## java知识  
 ### Java基础  
