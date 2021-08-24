@@ -20,6 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/大数据框架/Flink/FlinkDataSink.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/大数据框架/Flink/FlinkStandalone集群部署.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/大数据框架/Flink/Flink分布式缓存.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/大数据框架/Flink/Flink状态管理与检查检查点机制.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/大数据框架/Flink/Flink窗口.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/大数据框架/Flink/Flink重启策略.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/大数据框架/Flink/Flink集群部署.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,6 +94,8 @@
       <workItem from="1629250667350" duration="3816000" />
       <workItem from="1629640142623" duration="472000" />
       <workItem from="1629679496414" duration="600000" />
+      <workItem from="1629727481670" duration="149000" />
+      <workItem from="1629773838013" duration="1278000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -137,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629640365950</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Flink">
+      <created>1629727631085</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1629727631085</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,13 +182,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="Flink" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="715" y="190" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1629361589144">
+    <state x="715" y="190" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1629788979536">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="715" y="190" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1629361589144" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1629640413367">
+    <state x="715" y="190" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1629788979536" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1629788843656">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1629640413367" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1629788843656" />
   </component>
 </project>
