@@ -20,14 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/scla语法基础/Scla简介及开发环境配置.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/scla语法基础/基本数据类型.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/scla语法基础/函数闭包柯里化.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/scla语法基础/模式匹配.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/scla语法基础/类型参数.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,6 +42,9 @@
         <option value="git@github.com:f117-sercet/Big-data-Learning.git" />
       </set>
     </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1wG5NTCoDMqmaCfVId0KJ3YHqo7" />
   <component name="ProjectLevelVcsManager">
@@ -50,6 +57,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -93,6 +101,8 @@
       <workItem from="1629727481670" duration="149000" />
       <workItem from="1629773838013" duration="2058000" />
       <workItem from="1629968118578" duration="202000" />
+      <workItem from="1629968406429" duration="212000" />
+      <workItem from="1630072200786" duration="396000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -157,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629789644125</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="scala">
+      <created>1629968582225</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1629968582225</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +201,8 @@
     <MESSAGE value="大数据框架" />
     <MESSAGE value="Flink" />
     <MESSAGE value="更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新" />
+    <MESSAGE value="scala" />
+    <option name="LAST_COMMIT_MESSAGE" value="scala" />
   </component>
   <component name="WindowStateProjectService">
     <state x="715" y="190" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1629788979536">
@@ -195,9 +213,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="540" y="114" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1629968329715" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1629788843656">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1629968587856">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1629788843656" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1629968587856" />
   </component>
 </project>
