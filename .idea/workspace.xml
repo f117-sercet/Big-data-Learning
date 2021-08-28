@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/scla语法基础/函数闭包柯里化.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/scla语法基础/模式匹配.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/scla语法基础/类型参数.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/scla语法基础/隐式转换和隐式参数.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +100,7 @@
       <workItem from="1629773838013" duration="2058000" />
       <workItem from="1629968118578" duration="202000" />
       <workItem from="1629968406429" duration="212000" />
-      <workItem from="1630072200786" duration="396000" />
+      <workItem from="1630072200786" duration="901000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -174,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629968582225</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="scala语法">
+      <created>1630072779588</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1630072779589</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,13 +207,14 @@
     <MESSAGE value="Flink" />
     <MESSAGE value="更新" />
     <MESSAGE value="scala" />
-    <option name="LAST_COMMIT_MESSAGE" value="scala" />
+    <MESSAGE value="scala语法" />
+    <option name="LAST_COMMIT_MESSAGE" value="scala语法" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="715" y="190" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1629788979536">
+    <state x="715" y="190" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1630072490224">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="715" y="190" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1629788979536" />
+    <state x="715" y="190" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1630072490224" />
     <state x="540" y="114" key="SettingsEditor" timestamp="1629968329715">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
