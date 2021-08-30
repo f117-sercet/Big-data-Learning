@@ -13,8 +13,8 @@
     <bytecodeTargetLevel>
       <module name="Big-data-Learning" target="1.5" />
       <module name="FLink" target="1.5" />
-      <module name="flink-java" target="1.5" />
-      <module name="flink-scala" target="1.5" />
+      <module name="flink-java" target="1.8" />
+      <module name="flink-scala" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
