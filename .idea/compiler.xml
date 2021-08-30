@@ -6,12 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="FLink" />
+        <module name="flink-scala" />
+        <module name="flink-java" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Big-data-Learning" target="1.5" />
       <module name="FLink" target="1.5" />
+      <module name="flink-java" target="1.5" />
+      <module name="flink-scala" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
