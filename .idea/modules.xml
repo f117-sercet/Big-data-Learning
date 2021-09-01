@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/code/FLink/FLink.iml" filepath="$PROJECT_DIR$/code/FLink/FLink.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/Flink/flink-java/flink-java.iml" filepath="$PROJECT_DIR$/code/Flink/flink-java/flink-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/Flink/flink-kafka-integration/flink-kafka-integration.iml" filepath="$PROJECT_DIR$/code/Flink/flink-kafka-integration/flink-kafka-integration.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/Flink/flink-scala/flink-scala.iml" filepath="$PROJECT_DIR$/code/Flink/flink-scala/flink-scala.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/Flink/flink-state-management/flink-state-management.iml" filepath="$PROJECT_DIR$/code/Flink/flink-state-management/flink-state-management.iml" />
     </modules>
   </component>
 </project>
