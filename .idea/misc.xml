@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/code/FLink/pom.xml" />
         <option value="$PROJECT_DIR$/code/Flink/pom.xml" />
+        <option value="$PROJECT_DIR$/Handoop/pom.xml" />
       </list>
     </option>
   </component>

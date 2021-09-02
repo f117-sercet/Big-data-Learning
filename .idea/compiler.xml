@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="flink-state-management" />
         <module name="flink-scala" />
+        <module name="Handoop" />
         <module name="flink-java" />
         <module name="flink-kafka-integration" />
       </profile>
@@ -19,6 +20,7 @@
       <module name="flink-kafka-integration" target="1.8" />
       <module name="flink-scala" target="1.8" />
       <module name="flink-state-management" target="1.8" />
+      <module name="Handoop" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
