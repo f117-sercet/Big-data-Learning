@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="flink-state-management" />
-        <module name="flink-scala" />
-        <module name="Handoop" />
         <module name="flink-java" />
         <module name="flink-kafka-integration" />
+        <module name="hdfs-java-api" />
+        <module name="flink-scala" />
+        <module name="hadoop-word-count" />
+        <module name="flink-state-management" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,7 +21,10 @@
       <module name="flink-kafka-integration" target="1.8" />
       <module name="flink-scala" target="1.8" />
       <module name="flink-state-management" target="1.8" />
+      <module name="hadoop" target="1.5" />
+      <module name="hadoop-word-count" target="8" />
       <module name="Handoop" target="1.5" />
+      <module name="hdfs-java-api" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
