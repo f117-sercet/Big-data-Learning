@@ -1,4 +1,4 @@
-package com.dsc.component;
+package com.dsc;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;

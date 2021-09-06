@@ -1,7 +1,5 @@
 package com.dsc;
 
-import com.dsc.component.WordCountMapper;
-import com.dsc.component.WordCountReducer;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
@@ -27,7 +25,7 @@ public class WordCountApp {
     private static final String HDFS_URL="hdfs://192.168.0.107:8020";
     private static final String HADOOP_USER_NAME = "root";
 
-    public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
+    public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException, ClassNotFoundException {
 
         /**文件输入路径和输出路径由外部传参指定**/
         if (args.length<2){
@@ -68,6 +66,19 @@ public class WordCountApp {
         if (fileSystem.exists(outputPath)){
             fileSystem.delete(outputPath,true);
         }
+
+        //设置作业输入文件路径和输出文件的路径
+        FileInputFormat.setInputPaths(job,new Path(args[0]));
+        FileOutputFormat.setOutputPath(job,outputPath);
+
+        // 将作业提交到群集并等待它完成，参数设置为true代表打印显示对应的进度
+        boolean result = job.waitForCompletion(true);
+
+        //关闭之前创建的fileSystem
+        fileSystem.close();
+
+        //根据作业结果，终止当前运行的Java虚拟机，退出程序
+        System.exit(result? 0:-1);
 
 
     }
