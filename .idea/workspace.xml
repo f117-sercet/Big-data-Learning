@@ -20,11 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Handoop/hadoop-word-count/src/main/java/com/dsc/component/CustomPartitioner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Handoop/hadoop-word-count/src/main/java/com/dsc/WordCountApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/hadoop-word-count/src/main/java/com/dsc/WordCountApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Handoop/hadoop-word-count/src/main/java/com/dsc/component/WordCountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/hadoop-word-count/src/main/java/com/dsc/WordCountMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Handoop/hadoop-word-count/src/main/java/com/dsc/component/WordCountReducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/hadoop-word-count/src/main/java/com/dsc/WordCountReducer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +136,8 @@
       <workItem from="1630565676969" duration="2122000" />
       <workItem from="1630638627674" duration="2914000" />
       <workItem from="1630845703659" duration="785000" />
-      <workItem from="1630895423859" duration="1888000" />
+      <workItem from="1630895423859" duration="2288000" />
+      <workItem from="1631000298148" duration="4797000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -289,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630846469211</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="hadoop学习">
+      <created>1630898700053</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1630898700053</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,10 +362,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="326" y="99" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1630568457782" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1630846474889">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1630898712326">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1630846474889" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1630898712326" />
     <state x="328" y="68" key="new project wizard" timestamp="1630568779520">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
