@@ -20,7 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Handoop/hadoop-word-count/src/main/java/com/dsc/utils/WordCountDataUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/hadoop-word-count/src/main/java/com/dsc/utils/WordCountDataUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Handoop/hdfs-java-api/hdfs-java-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/hdfs-java-api/hdfs-java-api.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +141,8 @@
       <workItem from="1630845703659" duration="785000" />
       <workItem from="1630895423859" duration="2288000" />
       <workItem from="1631000298148" duration="4797000" />
+      <workItem from="1631009997112" duration="177000" />
+      <workItem from="1631094318443" duration="368000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -293,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630898700053</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="pom文件配置">
+      <created>1631010130705</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1631010130705</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +339,8 @@
     <MESSAGE value="flink代码" />
     <MESSAGE value="flink学习" />
     <MESSAGE value="hadoop学习" />
-    <option name="LAST_COMMIT_MESSAGE" value="hadoop学习" />
+    <MESSAGE value="pom文件配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="pom文件配置" />
   </component>
   <component name="WindowStateProjectService">
     <state x="498" y="0" key="#Project_Structure" timestamp="1630568709744">

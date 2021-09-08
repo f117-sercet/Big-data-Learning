@@ -3,6 +3,10 @@ package com.dsc.utils;
 import org.apache.commons.lang3.StringUtils;
 import org.graalvm.compiler.replacements.StandardGraphBuilderPlugins;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -32,6 +36,26 @@ public class WordCountDataUtils {
             builder.append(line).append("\n");
         }
         return builder.toString();
+    }
+
+    /**
+     * 模拟产生词频数据并输出到本地
+     *
+     * @param outputPath 输出文件路径
+     */
+    private static void generateDataToLocal(String outputPath){
+
+        try{
+            java.nio.file.Path path = Paths.get(outputPath);
+            if (Files.exists(path)){
+                Files.delete(path);
+            }
+            Files.write(path, generateData().getBytes(), StandardOpenOption.CREATE);
+        }catch (IOException e){
+
+            e.printStackTrace();
+
+        }
     }
 
 }
