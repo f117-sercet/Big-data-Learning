@@ -1,9 +1,14 @@
 package com.dsc.utils;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FSDataOutputStream;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
 import org.graalvm.compiler.replacements.StandardGraphBuilderPlugins;
 
 import java.io.IOException;
+import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
@@ -58,4 +63,35 @@ public class WordCountDataUtils {
         }
     }
 
+    /**
+     * 模拟产生的词频数据并输出到HDFS
+     * @param hdfsUrl
+     * @param user
+     * @param outputPathString
+     */
+    private static void generateDataToHDFS(String hdfsUrl, String user, String outputPathString){
+
+        FileSystem fileSystem = null;
+        try {
+            fileSystem = FileSystem.get(new URI(hdfsUrl), new Configuration(), user);
+            Path outputPath = new Path(outputPathString);
+            if (fileSystem.exists(outputPath)) {
+                fileSystem.delete(outputPath, true);
+            }
+            FSDataOutputStream out = fileSystem.create(outputPath);
+            out.write(generateData().getBytes());
+            out.flush();
+            out.close();
+            fileSystem.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static void main(String[] args) {
+        //generateDataToLocal("input.txt");
+        generateDataToHDFS("hdfs://192.168.0.107:8020", "root", "/wordcount/input.txt");
+
+    }
 }
