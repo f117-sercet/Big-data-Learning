@@ -9,8 +9,10 @@
         <module name="flink-java" />
         <module name="flink-kafka-integration" />
         <module name="hdfs-java-api" />
+        <module name="kafa-basis" />
         <module name="flink-scala" />
         <module name="hadoop-word-count" />
+        <module name="hbase-java-api-1.x" />
         <module name="flink-state-management" />
       </profile>
     </annotationProcessing>
@@ -24,7 +26,9 @@
       <module name="hadoop" target="1.5" />
       <module name="hadoop-word-count" target="8" />
       <module name="Handoop" target="1.5" />
+      <module name="hbase-java-api-1.x" target="8" />
       <module name="hdfs-java-api" target="1.5" />
+      <module name="kafa-basis" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

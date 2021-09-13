@@ -11,6 +11,8 @@
         <option value="$PROJECT_DIR$/code/Flink/pom.xml" />
         <option value="$PROJECT_DIR$/Handoop/pom.xml" />
         <option value="$PROJECT_DIR$/Hadoop/hadoop/pom.xml" />
+        <option value="$PROJECT_DIR$/code/Hbase/hbase-java-api-1.x/pom.xml" />
+        <option value="$PROJECT_DIR$/code/Kafka/kafa-basis/pom.xml" />
       </list>
     </option>
   </component>

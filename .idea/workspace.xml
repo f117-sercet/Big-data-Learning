@@ -20,10 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/Hbase/hbase-java-api-1.x/hbase-java-api-1.x.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/Hbase/hbase-java-api-1.x/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/Kafka/kafa-basis/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Handoop/hdfs-java-api/hdfs-java-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/hdfs-java-api/hdfs-java-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Handoop/hdfs-java-api/src/main/java/com/dsc/utils/HdfsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/hdfs-java-api/src/main/java/com/dsc/utils/HdfsUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +89,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.23793103" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -146,6 +152,8 @@
       <workItem from="1631175611850" duration="1800000" />
       <workItem from="1631240998266" duration="2395000" />
       <workItem from="1631257967999" duration="1073000" />
+      <workItem from="1631454593403" duration="456000" />
+      <workItem from="1631504000816" duration="4383000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -336,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631258718825</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="HDFS工具类">
+      <created>1631455020060</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1631455020060</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,13 +389,14 @@
     <MESSAGE value="工具类编写" />
     <MESSAGE value="HDFS" />
     <MESSAGE value="HDFS-JAVA-API" />
-    <option name="LAST_COMMIT_MESSAGE" value="HDFS-JAVA-API" />
+    <MESSAGE value="HDFS工具类" />
+    <option name="LAST_COMMIT_MESSAGE" value="HDFS工具类" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="498" y="0" key="#Project_Structure" timestamp="1630568709744">
+    <state x="498" y="0" key="#Project_Structure" timestamp="1631522172982">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="498" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1630568709744" />
+    <state x="498" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1631522172982" />
     <state x="761" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1630459569251">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -409,17 +425,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1630466426030" />
-    <state x="326" y="99" key="SettingsEditor" timestamp="1630568457782">
+    <state x="326" y="99" key="SettingsEditor" timestamp="1631520161093">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="326" y="99" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1630568457782" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1631258723626">
+    <state x="326" y="99" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1631520161093" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1631455033360">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1631258723626" />
-    <state x="328" y="68" key="new project wizard" timestamp="1630568779520">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1631455033360" />
+    <state x="328" y="0" key="new project wizard" timestamp="1631522098825">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="328" y="68" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1630568779520" />
+    <state x="328" y="0" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1631522098825" />
   </component>
 </project>

@@ -9,7 +9,9 @@
       <module fileurl="file://$PROJECT_DIR$/code/Flink/flink-scala/flink-scala.iml" filepath="$PROJECT_DIR$/code/Flink/flink-scala/flink-scala.iml" />
       <module fileurl="file://$PROJECT_DIR$/code/Flink/flink-state-management/flink-state-management.iml" filepath="$PROJECT_DIR$/code/Flink/flink-state-management/flink-state-management.iml" />
       <module fileurl="file://$PROJECT_DIR$/Handoop/hadoop-word-count/hadoop-word-count.iml" filepath="$PROJECT_DIR$/Handoop/hadoop-word-count/hadoop-word-count.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/Hbase/hbase-java-api-1.x/hbase-java-api-1.x.iml" filepath="$PROJECT_DIR$/code/Hbase/hbase-java-api-1.x/hbase-java-api-1.x.iml" />
       <module fileurl="file://$PROJECT_DIR$/Handoop/hdfs-java-api/hdfs-java-api.iml" filepath="$PROJECT_DIR$/Handoop/hdfs-java-api/hdfs-java-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/Kafka/kafa-basis/kafa-basis.iml" filepath="$PROJECT_DIR$/code/Kafka/kafa-basis/kafa-basis.iml" />
     </modules>
   </component>
 </project>
