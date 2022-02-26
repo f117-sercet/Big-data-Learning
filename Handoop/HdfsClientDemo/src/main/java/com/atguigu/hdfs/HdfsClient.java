@@ -1,6 +1,7 @@
 package com.atguigu.hdfs;
 
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.junit.Before;
@@ -11,6 +12,7 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 
 public class HdfsClient {
 
@@ -46,5 +48,16 @@ public class HdfsClient {
 
         //创建文件夹
         fs.mkdirs(new Path("/xiyou/huaguoshan1"));
+    }
+   //上传
+
+    /**
+     * 参数优先级
+     *      * hdfs-default.xml => hdfs-site.xml=> 在项目资源目录下的配置文件 =》代码里面的配置
+     */
+    public void testPut() throws IOException {
+
+        FSDataOutputStream fos = fs.create(new Path("/input"));
+        fos.write("你好".getBytes());
     }
 }
