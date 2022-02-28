@@ -55,9 +55,24 @@ public class HdfsClient {
      * 参数优先级
      *      * hdfs-default.xml => hdfs-site.xml=> 在项目资源目录下的配置文件 =》代码里面的配置
      */
+    @Test
     public void testPut() throws IOException {
 
         FSDataOutputStream fos = fs.create(new Path("/input"));
         fos.write("你好".getBytes());
+    }
+    @Test
+    public void testPut2() throws IOException {
+        FSDataOutputStream fos = fs.create(new Path("/input"));
+
+        fos.write("hello world".getBytes());
+    }
+
+    // 文件下载
+    @Test
+    public void testGet() throws IOException {
+        // 参数的解读：参数一：原文件是否删除；参数二：原文件路径HDFS； 参数三：目标地址路径Win ; 参数四：
+        //fs.copyToLocalFile(true, new Path("hdfs://hadoop102/xiyou/huaguoshan/"), new Path("D:\\"), true);
+        fs.copyToLocalFile(false, new Path("hdfs://hadoop102/a.txt"), new Path("D:\\"), false);
     }
 }
