@@ -75,4 +75,20 @@ public class HdfsClient {
         //fs.copyToLocalFile(true, new Path("hdfs://hadoop102/xiyou/huaguoshan/"), new Path("D:\\"), true);
         fs.copyToLocalFile(false, new Path("hdfs://hadoop102/a.txt"), new Path("D:\\"), false);
     }
+
+    //删除
+    public void testRm() throws IOException {
+        // 参数解读：参数1：要删除的路径； 参数2 ： 是否递归删除
+        // 删除文件
+        //fs.delete(new Path("/jdk-8u212-linux-x64.tar.gz"),false);
+
+        // 删除空目录
+        //fs.delete(new Path("/xiyou"), false);
+
+        // 删除非空目录
+        fs.delete(new Path("/jinguo"), true);
+
+
+
+    }
 }

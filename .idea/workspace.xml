@@ -22,10 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="HDFSDemo上传">
-      <change afterPath="$PROJECT_DIR$/Handoop/HdfsClientDemo/src/main/resources/hdfs-site.xml" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="HDFS文件">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Handoop/HdfsClientDemo/src/main/java/com/atguigu/hdfs/HdfsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/HdfsClientDemo/src/main/java/com/atguigu/hdfs/HdfsClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,6 +166,8 @@
       <workItem from="1645604697168" duration="1169000" />
       <workItem from="1645607040665" duration="4689000" />
       <workItem from="1645664234485" duration="2521000" />
+      <workItem from="1645883542691" duration="736000" />
+      <workItem from="1646045236437" duration="320000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -372,7 +372,21 @@
       <option name="project" value="LOCAL" />
       <updated>1645610920400</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="HDFS文件上传">
+      <created>1645884275007</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1645884275007</updated>
+    </task>
+    <task id="LOCAL-00031" summary="HDFS文件">
+      <created>1646045340160</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1646045340160</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,6 +431,8 @@
     <MESSAGE value="HDFS-JAVA-API" />
     <MESSAGE value="HDFS工具类" />
     <MESSAGE value="HDFSDemo上传" />
-    <option name="LAST_COMMIT_MESSAGE" value="HDFSDemo上传" />
+    <MESSAGE value="HDFS文件上传" />
+    <MESSAGE value="HDFS文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="HDFS文件" />
   </component>
 </project>
