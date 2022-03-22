@@ -22,8 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="HDFS文件">
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="删除文件">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Handoop/HdfsClientDemo/src/main/java/com/atguigu/hdfs/HdfsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/HdfsClientDemo/src/main/java/com/atguigu/hdfs/HdfsClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +53,9 @@
         <option value="git@github.com:f117-sercet/Big-data-Learning.git" />
       </set>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../../maven/MavenResposity/org/apache/hadoop/hadoop-common/3.1.3/hadoop-common-3.1.3-sources.jar!/org/apache/hadoop/fs/FileSystem.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -95,6 +100,9 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.23793103" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -168,6 +176,13 @@
       <workItem from="1645664234485" duration="2521000" />
       <workItem from="1645883542691" duration="736000" />
       <workItem from="1646045236437" duration="320000" />
+      <workItem from="1646134846575" duration="375000" />
+      <workItem from="1646135240528" duration="121000" />
+      <workItem from="1647853100027" duration="2849000" />
+      <workItem from="1647917174671" duration="1188000" />
+      <workItem from="1647927411312" duration="1235000" />
+      <workItem from="1647930223663" duration="926000" />
+      <workItem from="1647945469932" duration="365000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -386,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646045340160</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="删除文件">
+      <created>1646135193220</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1646135193220</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,6 +455,7 @@
     <MESSAGE value="HDFSDemo上传" />
     <MESSAGE value="HDFS文件上传" />
     <MESSAGE value="HDFS文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="HDFS文件" />
+    <MESSAGE value="删除文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除文件" />
   </component>
 </project>
