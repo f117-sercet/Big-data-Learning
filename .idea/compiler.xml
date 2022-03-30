@@ -12,6 +12,7 @@
         <module name="HdfsClientDemo" />
         <module name="hbase-java-api-1.x" />
         <module name="hdfs-java-api" />
+        <module name="mapReduce" />
         <module name="flink-state-management" />
         <module name="flink-scala" />
         <module name="hadoop-word-count" />
@@ -31,6 +32,7 @@
       <module name="hdfs-java-api" target="1.5" />
       <module name="HdfsClientDemo" target="8" />
       <module name="kafa-basis" target="8" />
+      <module name="mapReduce" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
