@@ -10,15 +10,23 @@ object WordCountBatch {
 
     val benv = ExecutionEnvironment.getExecutionEnvironment
     val dataSet = benv.readTextFile("D:\\BigData-Notes\\code\\Flink\\flink-basis-scala\\src\\main\\resources\\wordcount.txt")
-    dataSet.flatMap {
+    dataSet.flatMap (
       _.toLowerCase.split(",")
-    }
-      .filter(_.nonEmpty)
+      .filter(_.nonEmpty))
       .map {
         (_, 1)
       }
       .groupBy(0)
       .sum(1)
       .print()
+
+    val dataStream:DataStream[String] = benv.fromElements("hello","flink");
+
+    dataStream.map(new MapFunction[String,String]{
+      // 实现对输入字符串大写转换
+      override  def  map(t:String):String = {
+        t.toUpperCase()
+      }
+    })
   }
 }

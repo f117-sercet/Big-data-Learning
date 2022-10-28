@@ -12,6 +12,7 @@
         <module>hadoop-word-count</module>
         <module>hdfs-java-api</module>
         <module>HdfsClientDemo</module>
+        <module>mapReduce</module>
     </modules>
 
 

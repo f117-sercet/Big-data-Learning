@@ -1,7 +1,10 @@
 package com.dsc;
 
+import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
+
+import static org.apache.flink.api.java.ExecutionEnvironment.getExecutionEnvironment;
 
 /**
  * @Author:estic
@@ -12,7 +15,9 @@ public class StreamingJob {
 
     public static void main(String[] args) throws Exception {
 
-        final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+
+        StreamExecutionEnvironment env = null;
+        StreamExecutionEnvironment StreamutionEnvironment = env.getExecutionEnvironment();
         DataStreamSource<String> streamSource = env.readTextFile(ROOT_PATH + "log4j.properties");
         streamSource.writeAsText(ROOT_PATH + "out").setParallelism(1);
         env.execute();

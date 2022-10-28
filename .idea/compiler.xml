@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -12,7 +13,6 @@
         <module name="HdfsClientDemo" />
         <module name="hbase-java-api-1.x" />
         <module name="hdfs-java-api" />
-        <module name="mapReduce" />
         <module name="flink-state-management" />
         <module name="flink-scala" />
         <module name="hadoop-word-count" />
