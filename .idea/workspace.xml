@@ -22,17 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="flink">
-      <change afterPath="$PROJECT_DIR$/code/Flink/flink-java/src/main/java/com/dsc/KafkaEventDataSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/Flink/flink-java/src/main/java/com/dsc/testPojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/Flink/flink-scala/src/main/scala/CollectionStream.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/Flink/flink-scala/src/main/scala/DataStream.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/Flink/flink-scala/src/main/scala/test03.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/Flink/flink-scala/src/main/scala/testSplit.java" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="flink相关API">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/Flink/FLink.iml" beforeDir="false" afterPath="$PROJECT_DIR$/code/Flink/FLink.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/Flink/flink-java/flink-java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/code/Flink/flink-java/flink-java.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/Flink/flink-java/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/Flink/flink-java/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +222,8 @@
       <workItem from="1667437743517" duration="612000" />
       <workItem from="1667469558873" duration="11238000" />
       <workItem from="1667793579404" duration="7149000" />
-      <workItem from="1667976573286" duration="6320000" />
+      <workItem from="1667976573286" duration="6978000" />
+      <workItem from="1667986479030" duration="387000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -485,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667900220046</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="flink相关API">
+      <created>1667983228538</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1667983228538</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +533,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="基础知识更新" />
     <MESSAGE value="jvm相关" />
     <MESSAGE value="分布式理论和基础" />
     <MESSAGE value="常用框架" />
@@ -559,7 +557,8 @@
     <MESSAGE value="删除文件" />
     <MESSAGE value="遍历文件" />
     <MESSAGE value="flink" />
-    <option name="LAST_COMMIT_MESSAGE" value="flink" />
+    <MESSAGE value="flink相关API" />
+    <option name="LAST_COMMIT_MESSAGE" value="flink相关API" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
