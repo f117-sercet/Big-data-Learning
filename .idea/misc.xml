@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
@@ -17,7 +17,17 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/Handoop/HdfsClientDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/Handoop/hadoop-word-count/pom.xml" />
+        <option value="$PROJECT_DIR$/Handoop/hdfs-java-api/pom.xml" />
         <option value="$PROJECT_DIR$/Handoop/mapReduce/pom.xml" />
+        <option value="$PROJECT_DIR$/code/Flink/flink-java/pom.xml" />
+        <option value="$PROJECT_DIR$/code/Flink/flink-kafka-integration/pom.xml" />
+        <option value="$PROJECT_DIR$/code/Flink/flink-scala/pom.xml" />
+        <option value="$PROJECT_DIR$/code/Flink/flink-state-management/pom.xml" />
+        <option value="$PROJECT_DIR$/code/Flink/pom.xml" />
+        <option value="$PROJECT_DIR$/code/Hbase/hbase-java-api-1.x/pom.xml" />
+        <option value="$PROJECT_DIR$/code/Kafka/kafa-basis/pom.xml" />
       </set>
     </option>
   </component>
