@@ -22,7 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="项目重构" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="项目重构">
+      <change afterPath="$PROJECT_DIR$/Handoop/src/main/java/com/atguigu/hadoop/hdfsClient/hdfsClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Handoop/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Big-data-Learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Big-data-Learning.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Handoop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +81,9 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="1wG5NTCoDMqmaCfVId0KJ3YHqo7" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -87,10 +96,15 @@
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "F:/git/Repository/gitHub/Big-data-Learning",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "scala_project_settings_configurable.last_selected_tab_index": "6",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.scala.settings.ScalaProjectSettingsConfigurable",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -118,7 +132,7 @@
       <recent name="com.atguigu.hdfs" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.hdfsClient.testMkdirs">
     <configuration name="WordCountStreaming" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="WordCountStreaming" />
       <module name="flink-scala" />
@@ -126,8 +140,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="hdfsClient.testMkdirs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Handoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.hadoop.hdfsClient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.hadoop.hdfsClient" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.hadoop.hdfsClient.hdfsClient" />
+      <option name="METHOD_NAME" value="testMkdirs" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.hdfsClient.testMkdirs" />
         <item itemvalue="Application.WordCountStreaming" />
       </list>
     </recent_temporary>
@@ -225,6 +256,9 @@
       <workItem from="1667976573286" duration="6978000" />
       <workItem from="1667986479030" duration="387000" />
       <workItem from="1690451594062" duration="216000" />
+      <workItem from="1690451985454" duration="288000" />
+      <workItem from="1690452284644" duration="132000" />
+      <workItem from="1690452454301" duration="540000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -493,7 +527,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690451782075</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="项目重构">
+      <option name="closed" value="true" />
+      <created>1690452035547</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1690452035547</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
