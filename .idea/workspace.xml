@@ -23,11 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="项目重构">
-      <change afterPath="$PROJECT_DIR$/Handoop/src/main/java/com/atguigu/hadoop/hdfsClient/hdfsClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Handoop/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Big-data-Learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Big-data-Learning.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Handoop/Handoop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Handoop/src/main/resources/hdfs-site.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Handoop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Handoop/src/main/java/com/atguigu/hadoop/hdfsClient/hdfsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/src/main/java/com/atguigu/hadoop/hdfsClient/hdfsClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Handoop/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/src/main/resources/log4j.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,22 +93,24 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "F:/git/Repository/gitHub/Big-data-Learning",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "scala_project_settings_configurable.last_selected_tab_index": "6",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/git/Repository/gitHub/Big-data-Learning&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;scala_project_settings_configurable.last_selected_tab_index&quot;: &quot;6&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
@@ -132,10 +135,67 @@
       <recent name="com.atguigu.hdfs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.hdfsClient.testMkdirs">
-    <configuration name="WordCountStreaming" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="WordCountStreaming" />
-      <module name="flink-scala" />
+  <component name="RunManager" selected="JUnit.hdfsClient.testListStatus">
+    <configuration name="hdfsClient.testCopyFromLocalFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Handoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.hadoop.hdfsClient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.hadoop.hdfsClient" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.hadoop.hdfsClient.hdfsClient" />
+      <option name="METHOD_NAME" value="testCopyFromLocalFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hdfsClient.testCopyToLocalFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Handoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.hadoop.hdfsClient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.hadoop.hdfsClient" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.hadoop.hdfsClient.hdfsClient" />
+      <option name="METHOD_NAME" value="testCopyToLocalFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hdfsClient.testListFiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Handoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.hadoop.hdfsClient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.hadoop.hdfsClient" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.hadoop.hdfsClient.hdfsClient" />
+      <option name="METHOD_NAME" value="testListFiles" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hdfsClient.testListStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Handoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.hadoop.hdfsClient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.hadoop.hdfsClient" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.hadoop.hdfsClient.hdfsClient" />
+      <option name="METHOD_NAME" value="testListStatus" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,8 +218,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.hdfsClient.testListStatus" />
+        <item itemvalue="JUnit.hdfsClient.testListFiles" />
+        <item itemvalue="JUnit.hdfsClient.testCopyToLocalFile" />
+        <item itemvalue="JUnit.hdfsClient.testCopyFromLocalFile" />
         <item itemvalue="JUnit.hdfsClient.testMkdirs" />
-        <item itemvalue="Application.WordCountStreaming" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +321,9 @@
       <workItem from="1690451594062" duration="216000" />
       <workItem from="1690451985454" duration="288000" />
       <workItem from="1690452284644" duration="132000" />
-      <workItem from="1690452454301" duration="540000" />
+      <workItem from="1690452454301" duration="864000" />
+      <workItem from="1690514311978" duration="749000" />
+      <workItem from="1690515088194" duration="789000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -535,7 +600,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690452035547</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="项目重构">
+      <option name="closed" value="true" />
+      <created>1690453121798</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1690453121798</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
