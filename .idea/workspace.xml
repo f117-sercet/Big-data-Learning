@@ -22,13 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="项目重构">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Handoop/Handoop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Handoop/src/main/resources/hdfs-site.xml" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="hdfs读写流程.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Handoop/src/main/java/com/atguigu/hadoop/hdfsClient/hdfsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/src/main/java/com/atguigu/hadoop/hdfsClient/hdfsClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Handoop/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/src/main/resources/log4j.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +58,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-common/3.1.3/hadoop-common-3.1.3-sources.jar!/org/apache/hadoop/fs/FileSystem.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-hdfs/2.6.0-cdh5.15.2/hadoop-hdfs-2.6.0-cdh5.15.2-sources.jar!/org/apache/hadoop/hdfs/server/blockmanagement/BlockPlacementPolicyDefault.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -100,14 +96,14 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/git/Repository/gitHub/Big-data-Learning&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/git/Repository/gitHub/Big-data-Learning/docs/Hadoop&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;scala_project_settings_configurable.last_selected_tab_index&quot;: &quot;6&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -116,17 +112,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\Hadoop" />
       <recent name="F:\Github\Git\repo\Big-data-Learning\Handoop\hadoop-word-count\src\main\resources" />
       <recent name="F:\Github\Git\repo\Big-data-Learning\code\Flink\flink-state-management\src\main\resources" />
       <recent name="F:\Github\Git\repo\Big-data-Learning\code\Flink\flink-kafka-integration\src\main\resources" />
       <recent name="F:\Github\Git\repo\Big-data-Learning\code\Flink\flink-scala\src\main\resources" />
-      <recent name="F:\Github\Git\repo\Big-data-Learning\code\Flink\flink-java\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\Hadoop\HDFS\images" />
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\Hadoop\HDFS" />
       <recent name="F:\Github\Git\repo\Big-data-Learning\docs\数据和数据库\HBase" />
       <recent name="F:\Github\Git\repo\Big-data-Learning\docs\框架基础\大数据框架\Spark\core" />
       <recent name="F:\Github\Git\repo\Big-data-Learning\docs\框架基础\大数据框架\Handoop" />
-      <recent name="F:\Github\Git\repo\Big-data-Learning\docs\java高阶知识点\多线程" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -218,11 +215,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.hdfsClient.testMkdirs" />
         <item itemvalue="JUnit.hdfsClient.testListStatus" />
         <item itemvalue="JUnit.hdfsClient.testListFiles" />
         <item itemvalue="JUnit.hdfsClient.testCopyToLocalFile" />
         <item itemvalue="JUnit.hdfsClient.testCopyFromLocalFile" />
-        <item itemvalue="JUnit.hdfsClient.testMkdirs" />
       </list>
     </recent_temporary>
   </component>
@@ -324,6 +321,12 @@
       <workItem from="1690452454301" duration="864000" />
       <workItem from="1690514311978" duration="749000" />
       <workItem from="1690515088194" duration="789000" />
+      <workItem from="1690515887074" duration="1308000" />
+      <workItem from="1690763754580" duration="1809000" />
+      <workItem from="1690784918968" duration="876000" />
+      <workItem from="1690787219640" duration="1340000" />
+      <workItem from="1690851322446" duration="365000" />
+      <workItem from="1690964528881" duration="4233000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -608,7 +611,23 @@
       <option name="project" value="LOCAL" />
       <updated>1690453121798</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="hdfs常用API">
+      <option name="closed" value="true" />
+      <created>1690516336727</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1690516336727</updated>
+    </task>
+    <task id="LOCAL-00042" summary="hdfs读写流程.md">
+      <option name="closed" value="true" />
+      <created>1690970057716</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1690970057717</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,8 +676,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="分布式理论和基础" />
-    <MESSAGE value="常用框架" />
     <MESSAGE value="大数据框架" />
     <MESSAGE value="Flink" />
     <MESSAGE value="更新" />
@@ -682,7 +699,9 @@
     <MESSAGE value="flink" />
     <MESSAGE value="flink相关API" />
     <MESSAGE value="项目重构" />
-    <option name="LAST_COMMIT_MESSAGE" value="项目重构" />
+    <MESSAGE value="hdfs常用API" />
+    <MESSAGE value="hdfs读写流程.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="hdfs读写流程.md" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
