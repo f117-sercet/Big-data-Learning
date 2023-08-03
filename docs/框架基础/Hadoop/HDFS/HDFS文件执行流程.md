@@ -10,7 +10,139 @@
     7.客户端开始往dn1上传第一个Block（先从磁盘读取数据放到一个本地内存缓存）,以Packet为单位，dn1收到一个Packet就会传给dn2，dn3传给dn3;dn1每传一个packet会放入一个应答队列等待应答  
     8.当一个Block传输完成后，客户端再次请求NameNode上传第二个Block的服务器。（重复执行3-7步）  
 ### 1.2 网络拓扑-节点距离计算  
-   在HDFS写数据的过程中，NameNode会选择距离待上传数据最近距离的DataNode接收数据。（节点距离：两个节点到最近的共同祖先的距离总和）
+   在HDFS写数据的过程中，NameNode会选择距离待上传数据最近距离的DataNode接收数据。（节点距离：两个节点到最近的共同祖先的距离总和)  
+#### 副本节点选择  
+![img.png](img.png)  
+### HDFSD的读数据流程  
+![img_2.png](img_2.png)  
+1.  客户端通过DistributedFileSystem向NameNode请求下载文件，NameNode通过查询数据元素，找到文件块所在的DataNode地址。
+2. 挑选一台DataNode(就近原则，然后随机)服务器，请求读取数据
+3. DataNode开始传输数据给客户端
+4. 客户端以Packet为单位接收，现在本地缓存，然后写入目标文件。
+
+
+## NameNode和SecondryNameNode  
+### NN和2NN工作机制  
+#### NameNode工作机制  
+![img_3.png](img_3.png)  
+第一阶段：
+1) 第一次启动NameNode格式化后，创建Fsimage和Edits文件。如果不是第一次启动，直接加载编辑日志和镜像文件到内存。  
+2) 客户端对元数据进行增删改查的请求
+3) NameNode记录操作日志，更新滚动日志
+4) NameNode在内存中对元数据进行增删改
+第二阶段:  
+1) SecondryNameNode 询问 NameNode是否需要CheckPoint，直接带回NameNode是否检查结果
+2) NameNode滚动正在写的Edits日志
+3) 将滚动前的编辑日志和镜像文件拷贝到SecondryNameNode
+4) 生成新的镜像文件fsimage.checkpoint
+5) 拷贝到fsimage.checkpoint到NameNode
+6) NameNode将fsimage.checkpoint重新命名成fsimage
+
+## Fsimage和Edits解析  
+#### 概念    
+![img_4.png](img_4.png)  
+1) Fsimage文件： HDFS文件系统元数据的一个永久性的检查点，其中包含HDFS文件系统的所有目录和文件inode的序列信息。  
+2) Edits文件：存放HDFS文件系统的所有更新操作的路径，文件系统客户端执行的所有写操作首先会被记录到Edits文件中。  
+3) seen_txid文件保存的是一个数字，就是最后一个edits_的数字
+4) 每次NameNode启动的时候都会将Fsimage文件读入内存，加载Edits里面的更新操作，保证内存中的元数据信息是最新的，同步的，可以看成NameNode启动的时候就将Fsimage和Edits文件进行了合并。
+
+#### oiv产看Fsimage文件
+  ```shell
+  hdfs
+  ```
+#### 基本语法 
+```shell
+hdfs oiv -p #  文件类型  
+
+# 镜像文件  
+hdfs oiv -i  
+
+# 转换后文件输出路径  
+hdfs oiv -o
+```  
+将显示的xml文件内容拷贝到Idea中创建的xml文件中，并且格式化。部分结果显示  
+```xml
+<inodes>
+    <id>16386</id>
+    <type>DIRECTORY</type>
+    <name>user</name>
+    <mtime>1512722284477</mtime>
+    <permission>atguigu:supergroup:rwxr-xr-x</permission>
+    <nsquota>-1</nsquota>
+    <dsquota>-1</dsquota>
+
+    <inode>
+        <id>16387</id>
+        <type>DIRECTORY</type>
+        <name>atguigu</name>
+        <mtime>1512790549080</mtime>
+        <permission>atguigu:supergroup:rwxr-xr-x</permission>
+        <nsquota>-1</nsquota>
+        <dsquota>-1</dsquota>
+    </inode>
+
+    <inode>
+        <id>16389</id>
+        <type>FILE</type>
+        <name>wc.input</name>
+        <replication>3</replication>
+        <mtime>1512722322219</mtime>
+        <atime>1512722321610</atime>
+        <perferredBlockSize>134217728</perferredBlockSize>
+        <permission>atguigu:supergroup:rw-r--r--</permission>
+        <blocks>
+            <block>
+                <id>1073741825</id>
+                <genstamp>1001</genstamp>
+                <numBytes>59</numBytes>
+            </block>
+        </blocks>
+    </inode>
+    
+</inodes>
+```  
+在集群启动后，要求DataNode上报数据块信息，并间隔一段时间后再次上报。  
+#### oev查看Edits文件  
+#### 基本语法  
+```shell
+hdfs oev   
+-p #文件类型 
+-i #编辑日志 
+-o  #转换后文件输出路径
+```  
+### CheckPoint 时间设置  
+1) 通常情况下，SecondaryNameNode每隔一小时执行一次。  
+ ```xml
+<property>
+  <name>dfs.namenode.checkpoint.period</name>
+  <value>3600s</value>
+</property>
+```  
+2) 一分钟检查一次操作次数，当操作次数达到1百万时，SecondaryNameNode执行一次。  
+ ```xml
+<description>
+<property>
+  <name>dfs.namenode.checkpoint.txns</name>
+  <value>1000000</value>
+<description>操作动作次数</description>
+</property>
+
+<property>
+  <name>dfs.namenode.checkpoint.check.period</name>
+  <value>60s</value>
+<description> 1分钟检查一次操作次数</description>
+</property>
+</description>
+```    
+## DataNode 
+### DataNode工作机制  
+
+
+
+
+
+
+
 
 
 
