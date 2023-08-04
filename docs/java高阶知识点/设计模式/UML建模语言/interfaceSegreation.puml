@@ -1,0 +1,55 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+/'abstract class AbstractList
+abstract AbstractCollection
+interface List
+interface Collection'/
+interface interface1 {
+void operation1();
+}
+interface interface2{
+
+void operation2();
+void operation3();
+}
+interface interface3{
+
+void operation4();
+void operation5();
+}
+class A
+class B
+class C
+class D
+
+interface1<|--B
+interface2<|--B
+interface1<|--A
+interface2<|--A
+interface1<|--D
+interface3<|--D
+interface1<|--C
+interface3<|--C
+
+
+/'
+List <|-- AbstractList
+Collection <|-- AbstractCollection
+
+Collection <|- List
+AbstractCollection <|- AbstractList
+AbstractList <|-- ArrayList'/
+
+/'class ArrayList {
+Object[] elementData
+size()
+}
+
+enum TimeUnit {
+DAYS
+HOURS
+MINUTES
+}'/
+
+@enduml

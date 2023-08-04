@@ -22,7 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="hdfs读写流程.md">
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="1NNH和2NN">
+      <change afterPath="$PROJECT_DIR$/designModel/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/principle/interfaceSegeration/segregation1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/principle/singleResponsibility/SingleResponsibility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/principle/singleResponsibility/singleResponsbility2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/interfaceSegreation.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/单一职责.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/总纲.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,17 +53,26 @@
         <option value="FxmlFile" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="UML Use Case" />
+        <option value="UML Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;f117-sercet&quot;
+  }
+}</component>
   <component name="GithubPullRequestsUISettings">
-    <option name="hiddenUrls">
-      <set>
-        <option value="git@github.com:f117-sercet/Big-data-Learning.git" />
-      </set>
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="fca54352-4ee3-46fb-8b27-c899f94f2604" />
+        <option name="url" value="https://github.com/f117-sercet/Big-data-Learning.git" />
+      </UrlAndAccount>
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -89,24 +108,31 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/git/Repository/gitHub/Big-data-Learning/docs/Hadoop&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;scala_project_settings_configurable.last_selected_tab_index&quot;: &quot;6&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultPlantUmlFileTemplate": "UML Class",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "F:/git/Repository/gitHub/Big-data-Learning/docs/java高阶知识点/设计模式",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "scala_project_settings_configurable.last_selected_tab_index": "6",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
@@ -119,11 +145,11 @@
       <recent name="F:\Github\Git\repo\Big-data-Learning\code\Flink\flink-scala\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\java高阶知识点" />
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\Hadoop\HDFS\images" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\Hadoop\HDFS" />
       <recent name="F:\Github\Git\repo\Big-data-Learning\docs\数据和数据库\HBase" />
-      <recent name="F:\Github\Git\repo\Big-data-Learning\docs\框架基础\大数据框架\Spark\core" />
-      <recent name="F:\Github\Git\repo\Big-data-Learning\docs\框架基础\大数据框架\Handoop" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -132,35 +158,29 @@
       <recent name="com.atguigu.hdfs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.hdfsClient.testListStatus">
-    <configuration name="hdfsClient.testCopyFromLocalFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Handoop" />
+  <component name="RunManager" selected="Application.singleResponsbility2">
+    <configuration name="SingleResponsibility" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.designPattern.principle.singleResponsibility.SingleResponsibility" />
+      <module name="designModel" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.hadoop.hdfsClient.*" />
+          <option name="PATTERN" value="com.designPattern.principle.singleResponsibility.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.atguigu.hadoop.hdfsClient" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.hadoop.hdfsClient.hdfsClient" />
-      <option name="METHOD_NAME" value="testCopyFromLocalFile" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hdfsClient.testCopyToLocalFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Handoop" />
+    <configuration name="singleResponsbility2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.designPattern.principle.singleResponsibility.singleResponsbility2" />
+      <module name="designModel" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.hadoop.hdfsClient.*" />
+          <option name="PATTERN" value="com.designPattern.principle.singleResponsibility.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.atguigu.hadoop.hdfsClient" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.hadoop.hdfsClient.hdfsClient" />
-      <option name="METHOD_NAME" value="testCopyToLocalFile" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -215,11 +235,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.singleResponsbility2" />
+        <item itemvalue="Application.SingleResponsibility" />
         <item itemvalue="JUnit.hdfsClient.testMkdirs" />
         <item itemvalue="JUnit.hdfsClient.testListStatus" />
         <item itemvalue="JUnit.hdfsClient.testListFiles" />
-        <item itemvalue="JUnit.hdfsClient.testCopyToLocalFile" />
-        <item itemvalue="JUnit.hdfsClient.testCopyFromLocalFile" />
       </list>
     </recent_temporary>
   </component>
@@ -326,7 +346,17 @@
       <workItem from="1690784918968" duration="876000" />
       <workItem from="1690787219640" duration="1340000" />
       <workItem from="1690851322446" duration="365000" />
-      <workItem from="1690964528881" duration="4233000" />
+      <workItem from="1690964528881" duration="5218000" />
+      <workItem from="1691034781087" duration="147000" />
+      <workItem from="1691034937498" duration="818000" />
+      <workItem from="1691043933206" duration="3309000" />
+      <workItem from="1691109258576" duration="3334000" />
+      <workItem from="1691118903568" duration="2859000" />
+      <workItem from="1691131033554" duration="655000" />
+      <workItem from="1691131700009" duration="83000" />
+      <workItem from="1691131798150" duration="2226000" />
+      <workItem from="1691136635422" duration="905000" />
+      <workItem from="1691137559120" duration="2939000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -627,7 +657,31 @@
       <option name="project" value="LOCAL" />
       <updated>1690970057717</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="hdfs读写流程.md">
+      <option name="closed" value="true" />
+      <created>1690970458444</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1690970458444</updated>
+    </task>
+    <task id="LOCAL-00044" summary="hdfs读写流程.md">
+      <option name="closed" value="true" />
+      <created>1690970636822</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1690970636822</updated>
+    </task>
+    <task id="LOCAL-00045" summary="1NNH和2NN">
+      <option name="closed" value="true" />
+      <created>1691047174941</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1691047174941</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,7 +730,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="大数据框架" />
     <MESSAGE value="Flink" />
     <MESSAGE value="更新" />
     <MESSAGE value="scala" />
@@ -701,7 +754,8 @@
     <MESSAGE value="项目重构" />
     <MESSAGE value="hdfs常用API" />
     <MESSAGE value="hdfs读写流程.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="hdfs读写流程.md" />
+    <MESSAGE value="1NNH和2NN" />
+    <option name="LAST_COMMIT_MESSAGE" value="1NNH和2NN" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
