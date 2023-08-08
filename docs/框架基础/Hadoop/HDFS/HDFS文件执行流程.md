@@ -136,6 +136,55 @@ hdfs oev
 ```    
 ## DataNode 
 ### DataNode工作机制  
+![img_7.png](img_7.png)  
+1) 一个数据块在DataNode上以文件形式存储在磁盘上，包括两个文件，一个是数据本身，一个是元数据包括数据块的长度，块数据的校验和，以及时间戳。  
+2) DataNode启动后向NameNode注册，通过后，周期性的向NameNode上报所有的信息。  
+3) DN向NN汇报当前解读信息的时间间隔默认6小时  
+```xml
+<property>
+    <name>dfs.blockreport.intervalMsec</name>
+    <value>21600000</value>
+    <description>Determines block reporting interval in milliseconds.</description>
+</property>
+```  
+DN扫描自己的节点块信息列表的时间，默认6小时。  
+```xml
+<property>
+	<name>dfs.datanode.directoryscan.interval</name>
+	<value>21600s</value>
+	<description>Interval in seconds for Datanode to scan data 
+
+directories and reconcile the difference between blocks in memory and on the disk.
+	Support multiple time unit suffix(case insensitive), as described
+	in dfs.heartbeat.interval.
+	</description>
+</property>
+```
+4) 心跳是每3秒一次，心跳返回结果带有NameNode给该DataNode的命令如复制块数据到另一台机器，或删除某个数据块。如果超过1omin没有收到某个DataNode的心跳，则认为该节点不用。  
+5) 集群运行中可以安全加入和退出一些机器。  
+### 数据完整性  
+1. 当DataNode读取Block的时候，它会计算CheckSum。
+2. 如果计算后的CheckSum，与Block创建时不一致，说明Block已经损坏。
+3. Client读取其他DataNode上的Block。
+4. 常见的校验算法 crc，md5，sha1  
+5. DataNode在其创建后周期验证CheckSum。
+![img_8.png](img_8.png)  
+#### 掉线时限参数设置  
+![img_9.png](img_9.png)
+而默认的dfs.namenode.heartbeat.recheck-interval 大小为 5 分钟，dfs.heartbeat.interval默认为3秒。 需要注意的是hdfs-site.xml配置文件中的heartbeat。recheck。interval的单位是毫秒，dfs.heartbeat.interval的单位为秒。  
+```xml
+
+<property>
+    <name>dfs.namenode.heartbeat.recheck-interval</name>
+    <value>300000</value>
+</property>
+
+<property>
+    <name>dfs.heartbeat.interval</name>
+    <value>3</value>
+</property>
+```
+
 
 
 
