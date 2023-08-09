@@ -22,15 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="开闭原则">
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/img_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/img_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/img_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/MapReduce.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="hadoop-MapReduce 程序编写">
+      <change afterPath="$PROJECT_DIR$/Handoop/HadoopMapReducer/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/总纲.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/总纲.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/HDFS文件执行流程.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/HDFS文件执行流程.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/MapReduce.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/MapReduce.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,13 +154,26 @@
       <recent name="com.atguigu.hdfs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.openCloseTest2">
+  <component name="RunManager" selected="Application.WordCountDriver">
     <configuration name="DependencyInversionTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.designPattern.principle.inverse.DependencyInversionTest2" />
       <module name="designModel" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.designPattern.principle.inverse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordCountDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hadoop.mapReduce.wordCount.WordCountDriver" />
+      <module name="HadoopMapReducer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hadoop.mapReduce.wordCount.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -209,26 +220,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="singleResponsbility2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.designPattern.principle.singleResponsibility.singleResponsbility2" />
-      <module name="designModel" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.designPattern.principle.singleResponsibility.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WordCountDriver" />
         <item itemvalue="Application.openCloseTest2" />
         <item itemvalue="Application.openCloseTest" />
         <item itemvalue="Application.DependencyInversionTest2" />
         <item itemvalue="Application.seregation2" />
-        <item itemvalue="Application.singleResponsbility2" />
       </list>
     </recent_temporary>
   </component>
@@ -348,7 +346,9 @@
       <workItem from="1691137559120" duration="4192000" />
       <workItem from="1691377187900" duration="5610000" />
       <workItem from="1691455643930" duration="134000" />
-      <workItem from="1691462615535" duration="9263000" />
+      <workItem from="1691462615535" duration="10321000" />
+      <workItem from="1691545586872" duration="23000" />
+      <workItem from="1691566813705" duration="3675000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -609,14 +609,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00038" summary="项目重构">
-      <option name="closed" value="true" />
-      <created>1690451782075</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1690451782075</updated>
-    </task>
     <task id="LOCAL-00039" summary="项目重构">
       <option name="closed" value="true" />
       <created>1690452035547</created>
@@ -697,7 +689,23 @@
       <option name="project" value="LOCAL" />
       <updated>1691478728515</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="hadoop-MapReduce">
+      <option name="closed" value="true" />
+      <created>1691483906055</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1691483906055</updated>
+    </task>
+    <task id="LOCAL-00050" summary="hadoop-MapReduce 程序编写">
+      <option name="closed" value="true" />
+      <created>1691568765472</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1691568765472</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -747,8 +755,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="scala语法" />
-    <MESSAGE value="Handoop" />
     <MESSAGE value="继续搭建框架" />
     <MESSAGE value="flink代码" />
     <MESSAGE value="flink学习" />
@@ -772,7 +778,9 @@
     <MESSAGE value="接口隔离原则" />
     <MESSAGE value="依赖倒转原则" />
     <MESSAGE value="开闭原则" />
-    <option name="LAST_COMMIT_MESSAGE" value="开闭原则" />
+    <MESSAGE value="hadoop-MapReduce" />
+    <MESSAGE value="hadoop-MapReduce 程序编写" />
+    <option name="LAST_COMMIT_MESSAGE" value="hadoop-MapReduce 程序编写" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
