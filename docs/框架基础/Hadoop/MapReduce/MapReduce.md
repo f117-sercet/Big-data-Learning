@@ -38,5 +38,67 @@ MapReduce 是一个分布式运算程序的编程框架，是用户开发”基�
    3) Reducer的业务逻辑写在reduce()方法中
    4) ReduceTask进程对每一组相同的k的<k ,v>组调用一次reduce()方法
 3) Driver阶段  
-    相当于YARN集群的客户端，用于提交我们只能整个程序到YARN集群，提交的是封装了MapReduce程序相关运行参数的JOB对象。
-        
+    相当于YARN集群的客户端，用于提交我们只能整个程序到YARN集群，提交的是封装了MapReduce程序相关运行参数的JOB对象。   
+
+
+#### 序列化  
+#### 什么是序列化  
+   序列化就是把内存中的对象，转换成字节序列或其它数据传输协议，以便存储到磁盘和网络传输。  
+#### Hadoop序列化特点  
+1) 紧凑：高效使用存储空间
+2) 快速：读写数据的额外开销小
+3) 互操作：支持多语言的交互  
+###### bean对象实现序列化的步骤  
+1) 实现Writable接口  
+2) 反序列化时，需要反射调用空参构造函数，所以必须有空参构造。
+```java
+public void FlowBean(){
+    super()
+        }
+```
+3) 重写序列化方法
+```java
+@Override
+public void write(DataOutput out){
+        out.writeLong(upFlow);
+
+        out.writeLong(downFlow);
+
+        out.writeLong(sumFlow);
+
+        }
+```      
+4) 重写序列化方法
+```java
+@Override
+public void readFiles(DataOutput out)
+
+        upFlow = in.readLong();
+
+        downFlow= in.readLong();
+
+        sumFlow= in.readLong();
+
+
+
+```  
+（5）注意反序列化的顺序和序列化的顺序完全一致
+
+（6）要想把结果显示在文件中，需要重写toString()，可用"\t"分开，方便后续用。
+
+（7）如果需要将自定义的bean放在key中传输，则还需要实现Comparable接口  
+#### MapReduce框架原理  
+![img_2.png](img_2.png)  
+##### InputFormat 数据输入
+###### 切片与MapTask 并行度决定机制  
+MapTask的并行度决定Map阶段的任务处理并发度，进而影响到整个Job的处理速度。  
+1) MapTask并行度决定机制  
+数据块：Blocks是物理上把数据分成一块儿一块儿，数据块是HDFS存储数据单位。  
+数据切片：数据切片只是在逻辑上对输入进行分片，并不会在磁盘将其分片存储。数据切片是Mapreduce程序计算输入数据的单位，一个切片会对应启动一个MapTask。  
+![img_3.png](img_3.png)    
+#### Job提交示例流程  
+![img_4.png](img_4.png)
+
+
+
+
