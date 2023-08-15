@@ -110,7 +110,44 @@ classDiagram
 classDiagram
     Oxygen <.. Animal:依赖
 
-```
+```  
+#### 用例图  
+1) 静态结构图：类图，对象图，包图，组件图，部署图。  
+2) 动态行为图：交互图(时序图与协作图)，状态图，活动图。  
+###### 依赖  
+```mermaid
+classDiagram
+    class A{
+        + id:Integer
+        + name:string
+    }
+```  
+
+```mermaid
+classDiagram
+ 
+    class PersonServiceBean{
+        -personDao:PersonServiceBean
+        + save(person:Person):void
+        + getIDCard(personId:Integer):IDCard
+        +modify():void
+        }
+    
+    IDCard<|..PersonServiceBean
+    Person<|..PersonServiceBean
+    personDao<|..PersonServiceBean
+    Department<|..PersonServiceBean
+        
+    
+```  
+###### 小结  
+1) 类中用到了对方  
+2) 如果是类的成员属性
+3) 是方法接收的参数类型
+4) 是方法的返回值
+5) 方法中使用到  
+###### 泛化  
+继承了对方就是泛化
 
 
 

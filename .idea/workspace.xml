@@ -22,7 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="hadoop-MapReduce 案例编写" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="uml类图编写" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -344,6 +344,7 @@
       <workItem from="1691566813705" duration="4295000" />
       <workItem from="1691571510406" duration="548000" />
       <workItem from="1691630868351" duration="6211000" />
+      <workItem from="1692080665406" duration="5315000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -604,14 +605,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00041" summary="hdfs常用API">
-      <option name="closed" value="true" />
-      <created>1690516336727</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1690516336727</updated>
-    </task>
     <task id="LOCAL-00042" summary="hdfs读写流程.md">
       <option name="closed" value="true" />
       <created>1690970057716</created>
@@ -700,7 +693,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691637133517</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="uml类图编写">
+      <option name="closed" value="true" />
+      <created>1692087073655</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1692087073655</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -750,7 +751,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="flink代码" />
     <MESSAGE value="flink学习" />
     <MESSAGE value="hadoop学习" />
     <MESSAGE value="pom文件配置" />
@@ -775,7 +775,8 @@
     <MESSAGE value="hadoop-MapReduce" />
     <MESSAGE value="hadoop-MapReduce 程序编写" />
     <MESSAGE value="hadoop-MapReduce 案例编写" />
-    <option name="LAST_COMMIT_MESSAGE" value="hadoop-MapReduce 案例编写" />
+    <MESSAGE value="uml类图编写" />
+    <option name="LAST_COMMIT_MESSAGE" value="uml类图编写" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
