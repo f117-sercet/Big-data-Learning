@@ -1,0 +1,18 @@
+@startuml
+
+class A{
+ <<interface>> A
+ +String name
+ - age
+ List~Object~ child    //带泛型的变量
+ +eat()
+ +sleep(time)          //有参数的方法
+ +getAge() int         //有返回值的方法
+
+}
+class B{
+}
+
+
+A--B:关联
+@enduml
