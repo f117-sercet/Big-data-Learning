@@ -22,15 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="Mapredue 文档汇总">
-      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/singleton/hungryMan/singleetonType1/type1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/uml基本介绍和用法/img_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/uml基本介绍和用法/设计模式起步.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/单例模式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designModel/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/designModel/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/uml基本介绍和用法/UML基本介绍.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/uml基本介绍和用法/UML基本介绍.md" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="设计模式-单例模式">
+      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/singleton/LazyManSingleton/singletonType2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/img_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/单例模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/单例模式.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +108,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -156,7 +152,7 @@
       <recent name="com.atguigu.hdfs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.type1">
+  <component name="RunManager" selected="Application.singletonType2">
     <configuration name="FlowDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hadoop.mapReduce.FlowBeanCount.FlowDriver" />
       <module name="HadoopMapReducer" />
@@ -183,8 +179,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="openCloseTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.designPattern.openClose.openCloseTest" />
+    <configuration name="openCloseTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.designPattern.openClose.openCloseTest2" />
       <module name="designModel" />
       <extension name="coverage">
         <pattern>
@@ -196,12 +192,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="openCloseTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.designPattern.openClose.openCloseTest2" />
+    <configuration name="singletonType2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.designPattern.singleton.LazyManSingleton.singletonType2" />
       <module name="designModel" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.designPattern.openClose.*" />
+          <option name="PATTERN" value="com.designPattern.singleton.LazyManSingleton.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -224,11 +220,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.singletonType2" />
         <item itemvalue="Application.type1" />
         <item itemvalue="Application.FlowDriver" />
         <item itemvalue="Application.WordCountDriver" />
         <item itemvalue="Application.openCloseTest2" />
-        <item itemvalue="Application.openCloseTest" />
       </list>
     </recent_temporary>
   </component>
@@ -358,6 +354,7 @@
       <workItem from="1692178088421" duration="1682000" />
       <workItem from="1692179805567" duration="33000" />
       <workItem from="1693529836897" duration="9923000" />
+      <workItem from="1693549980146" duration="1430000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -618,14 +615,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00044" summary="hdfs读写流程.md">
-      <option name="closed" value="true" />
-      <created>1690970636822</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1690970636822</updated>
-    </task>
     <task id="LOCAL-00045" summary="1NNH和2NN">
       <option name="closed" value="true" />
       <created>1691047174941</created>
@@ -714,7 +703,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692179749574</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="设计模式-单例模式">
+      <option name="closed" value="true" />
+      <created>1693551689609</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1693551689609</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -764,7 +761,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="hadoop学习" />
     <MESSAGE value="pom文件配置" />
     <MESSAGE value="工具类编写" />
     <MESSAGE value="HDFS" />
@@ -789,7 +785,8 @@
     <MESSAGE value="hadoop-MapReduce 案例编写" />
     <MESSAGE value="uml类图编写" />
     <MESSAGE value="Mapredue 文档汇总" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mapredue 文档汇总" />
+    <MESSAGE value="设计模式-单例模式" />
+    <option name="LAST_COMMIT_MESSAGE" value="设计模式-单例模式" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
