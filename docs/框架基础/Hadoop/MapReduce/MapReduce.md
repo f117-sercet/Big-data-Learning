@@ -112,9 +112,31 @@ MapTask的并行度决定Map阶段的任务处理并发度，进而影响到整�
 4) 提交切片到Yarn上，YARN的MrAppMaster就可以根据切片规划文件计算开启MapTask个数。
 #### FileInputFormat切片机制  
 ######  切片机制  
-1)  简单地奥找文件的长度进行切片。 
+1)  简单地寻找文件的长度进行切片。 
 2) 切片大小，默认等于block大小。  
-3) 切片时不考虑数据集整体，而是逐个针对每一个单独文件切片。  
+3) 切片时不考虑数据集整体，而是逐个针对每一个单独文件切片。   
+![img_5.png](img_5.png)  
+##### 切片大小设置
+maxsize(切片最大值):参数如果调得比blockSize小，则会让切片变小，而且就等于配置的这个参数的值。  
+minsize(切片最小值):参数调的比blockSize大,则可以让切片变得比blockSize还大。  
+##### 获取切片信息API  
+```java 
+public class test {
+    String name = inputSplit.getPath().getName();
+    // 根据文件类型获取切片信息
+    FileSplit inputSplit = (FileSplit) context.getInputSplit();
+}
+```    
+
+### TextInputFormat  
+#### FileInputFormat实现类  
+![img_6.png](img_6.png)     
+FileInput 常见的接口实现类包括：TextInputFormat、keyValueTextInputformat等。  
+TextInputFormat是默认的FileInputFormat实现类，按行读取每条记录。键是存储该行在整个文件中的起始字节偏移量，LongWritable类型，值是这行的内容，不包括任何行终止符。  
+### CombineTextInputFormat切片机制  
+框架默认的TextInputforMat切片机制是对任务按文件规划切片，不管文件多小，都会是一个单独的切片，都会交给一个MapTask，如果有大量小文件的，就会产生大量的MapTask,处理效率低下。
+
+
 
 
 
