@@ -22,19 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="设计模式-单例模式(饿汉模式)">
-      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/singleton/LazyManSingleton/singletoType2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/singleton/LazyManSingleton/singletoType3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/singleton/LazyManSingleton/singletoType4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/singleton/LazyManSingleton/singleton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/单例模式/img_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/单例模式/img_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/单例模式/img_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/工厂模式/工厂模式.md" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="MapTask笔记">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/单例模式/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/img_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/单例模式/img_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/单例模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/单例模式/单例模式.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/工厂模式/工厂模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/工厂模式/工厂模式.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -366,6 +356,9 @@
       <workItem from="1693819905223" duration="3209000" />
       <workItem from="1693875742961" duration="1992000" />
       <workItem from="1693882591992" duration="3021000" />
+      <workItem from="1693901818519" duration="114000" />
+      <workItem from="1693907386194" duration="2644000" />
+      <workItem from="1694404083804" duration="296000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -626,22 +619,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00046" summary="接口隔离原则">
-      <option name="closed" value="true" />
-      <created>1691145188025</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1691145188025</updated>
-    </task>
-    <task id="LOCAL-00047" summary="依赖倒转原则">
-      <option name="closed" value="true" />
-      <created>1691390359078</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1691390359078</updated>
-    </task>
     <task id="LOCAL-00048" summary="开闭原则">
       <option name="closed" value="true" />
       <created>1691478728515</created>
@@ -722,7 +699,23 @@
       <option name="project" value="LOCAL" />
       <updated>1693558518354</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="设计模式-简单工厂模式">
+      <option name="closed" value="true" />
+      <created>1693901913769</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1693901913769</updated>
+    </task>
+    <task id="LOCAL-00059" summary="MapTask笔记">
+      <option name="closed" value="true" />
+      <created>1693908929790</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1693908929792</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -772,8 +765,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="工具类编写" />
-    <MESSAGE value="HDFS" />
     <MESSAGE value="HDFS-JAVA-API" />
     <MESSAGE value="HDFS工具类" />
     <MESSAGE value="HDFSDemo上传" />
@@ -797,7 +788,9 @@
     <MESSAGE value="Mapredue 文档汇总" />
     <MESSAGE value="设计模式-单例模式" />
     <MESSAGE value="设计模式-单例模式(饿汉模式)" />
-    <option name="LAST_COMMIT_MESSAGE" value="设计模式-单例模式(饿汉模式)" />
+    <MESSAGE value="设计模式-简单工厂模式" />
+    <MESSAGE value="MapTask笔记" />
+    <option name="LAST_COMMIT_MESSAGE" value="MapTask笔记" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
