@@ -135,6 +135,10 @@ FileInput 常见的接口实现类包括：TextInputFormat、keyValueTextInputfo
 TextInputFormat是默认的FileInputFormat实现类，按行读取每条记录。键是存储该行在整个文件中的起始字节偏移量，LongWritable类型，值是这行的内容，不包括任何行终止符。  
 ### CombineTextInputFormat切片机制  
 框架默认的TextInputforMat切片机制是对任务按文件规划切片，不管文件多小，都会是一个单独的切片，都会交给一个MapTask，如果有大量小文件的，就会产生大量的MapTask,处理效率低下。
+1) 应用场景：  
+  CombineTextInputFormat 用于小文件过多的场景，它可以将多个小文件从逻辑上规划到一个切片中，这样，多个小文件就可以交给一个MapTask处理。
+2) 虚拟存储器切片最大值设置
+   CombineTextInputFormat.setMaxInputSplitSize(job, 4194304) // 4MB
 
 
 
