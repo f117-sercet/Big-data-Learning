@@ -22,9 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="原型模式">
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="设计模式-建造者模式.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/原型模式/原型模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/java高阶知识点/设计模式/UML建模语言/设计模式/原型模式/原型模式.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -367,6 +366,13 @@
       <workItem from="1694404083804" duration="296000" />
       <workItem from="1694422220111" duration="3405000" />
       <workItem from="1694685960719" duration="2396000" />
+      <workItem from="1694761804711" duration="1520000" />
+      <workItem from="1695031241983" duration="603000" />
+      <workItem from="1696641462538" duration="600000" />
+      <workItem from="1696660249602" duration="1421000" />
+      <workItem from="1696844952207" duration="1013000" />
+      <workItem from="1697529839077" duration="914000" />
+      <workItem from="1697708040383" duration="1070000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -627,30 +633,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00051" summary="hadoop-MapReduce 程序编写">
-      <option name="closed" value="true" />
-      <created>1691570843750</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1691570843751</updated>
-    </task>
-    <task id="LOCAL-00052" summary="hadoop-MapReduce 案例编写">
-      <option name="closed" value="true" />
-      <created>1691637133517</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1691637133517</updated>
-    </task>
-    <task id="LOCAL-00053" summary="uml类图编写">
-      <option name="closed" value="true" />
-      <created>1692087073655</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1692087073655</updated>
-    </task>
     <task id="LOCAL-00054" summary="uml类图编写">
       <option name="closed" value="true" />
       <created>1692089155275</created>
@@ -723,7 +705,31 @@
       <option name="project" value="LOCAL" />
       <updated>1694742901080</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="原型模式-深拷贝">
+      <option name="closed" value="true" />
+      <created>1694763279196</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1694763279196</updated>
+    </task>
+    <task id="LOCAL-00064" summary="hadoop-小文件处理">
+      <option name="closed" value="true" />
+      <created>1696847185220</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1696847185220</updated>
+    </task>
+    <task id="LOCAL-00065" summary="设计模式-建造者模式.md">
+      <option name="closed" value="true" />
+      <created>1697709063780</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1697709063780</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -773,9 +779,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="HDFSDemo上传" />
-    <MESSAGE value="HDFS文件上传" />
-    <MESSAGE value="HDFS文件" />
     <MESSAGE value="删除文件" />
     <MESSAGE value="遍历文件" />
     <MESSAGE value="flink" />
@@ -798,7 +801,10 @@
     <MESSAGE value="MapTask笔记" />
     <MESSAGE value="工厂模式" />
     <MESSAGE value="原型模式" />
-    <option name="LAST_COMMIT_MESSAGE" value="原型模式" />
+    <MESSAGE value="原型模式-深拷贝" />
+    <MESSAGE value="hadoop-小文件处理" />
+    <MESSAGE value="设计模式-建造者模式.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="设计模式-建造者模式.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
