@@ -373,6 +373,8 @@
       <workItem from="1696844952207" duration="1013000" />
       <workItem from="1697529839077" duration="914000" />
       <workItem from="1697708040383" duration="1070000" />
+      <workItem from="1698143113624" duration="204000" />
+      <workItem from="1698196023918" duration="2624000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -633,14 +635,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00054" summary="uml类图编写">
-      <option name="closed" value="true" />
-      <created>1692089155275</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1692089155275</updated>
-    </task>
     <task id="LOCAL-00055" summary="Mapredue 文档汇总">
       <option name="closed" value="true" />
       <created>1692179749573</created>
@@ -729,7 +723,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697709063780</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="设计模式-建造者模式.md">
+      <option name="closed" value="true" />
+      <created>1698143217842</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1698143217842</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

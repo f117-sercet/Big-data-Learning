@@ -59,7 +59,7 @@ public void FlowBean(){
 3) 重写序列化方法
 ```java
 @Override
-public void write(DataOutput out){
+public void write(DataOutput out) {
         out.writeLong(upFlow);
 
         out.writeLong(downFlow);
@@ -139,6 +139,39 @@ TextInputFormat是默认的FileInputFormat实现类，按行读取每条记录�
   CombineTextInputFormat 用于小文件过多的场景，它可以将多个小文件从逻辑上规划到一个切片中，这样，多个小文件就可以交给一个MapTask处理。
 2) 虚拟存储器切片最大值设置
    CombineTextInputFormat.setMaxInputSplitSize(job, 4194304) // 4MB
+
+##### MapReduce详细工作流程  
+![img_7.png](img_7.png)  
+![img_8.png](img_8.png)  
+具体Shuffle过程详解：  
+1) MapTask 收集我们的map方法输出的kv对，放到内存缓冲区。
+2) 从内存缓冲区不断溢出本地磁盘文件，可能会溢出多个
+3) 多个溢出文件会被合并成大的溢出文件
+4) 在溢出过程及合并过程中，都要调用Partitioner进行分区和针对key进行排序
+5) ReduceTask 根据自己的分区号,去各个MapTask机器上取相应的结果
+6) ReduceTask会抓取到同一个分区的来自不同MapTask的结果文件，ReduceTask会将这些文件在进行合并(归并排序)
+7) 合并称为大文件后,Shuffle的过程也就结束了，后面进入ReduceTask的逻辑运算过程。
+###### 注意：  
+1) Shuffle中的缓冲区大小会影响到MapReduce程序的执行效率，原则上说，缓冲区越大，磁盘io的次数越少，执行速度就越快。  
+2) 缓冲区的大小可以通过参数调整。参数：mapreduce.task.io.sort.mb 默认 100M。
+#### Shuffle机制  
+#### 1.1 机制  
+Map方法之后，Reduce方法之前的数据处理过程称之为Shuffle。
+![img_9.png](img_9.png)
+#### 1.2 partition 分区  
+![img_10.png](img_10.png)  
+1. 默认分区是根据key的hashCode对ReduceTask个数取模得到的。用户没法控制哪个key存储到哪个分区。
+2. 自定义partitioner步骤
+   1. 自定义继承Partitioner,重写getPartition()方法
+   2. 在Job中，设置自定义Partitioner
+   3. 自定义Partition后，要根据自定义Partitioner的逻辑设置相应数量的ReduceTask。
+3. partition总结 
+   1. d
+   2.
+
+
+
+
 
 
 
