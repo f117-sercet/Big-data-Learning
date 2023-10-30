@@ -170,6 +170,11 @@ Map方法之后，Reduce方法之前的数据处理过程称之为Shuffle。
    2. 如果1< ReduceTask的数量<getPartition的结果数,则有一部分分区数据无处安放,会Exception。
    3. 如果等于一，则不管MapTask端输出多少个分区文件，最终结果都交给这一个ReduceTask,最终也就只会产生一个结果文件part-r-00000;
    4. 分区号必须从零开始，逐一增加。
+#### WritiableComparable 排序  
+##### 排序概述  
+MapTask和ReduceTask均会对数据按照key进行排序。该操作属于Hadoop的默认行为。任何程序中的数据均会被排序，而不管逻辑上否需要。
+默认排序是按照字段顺序排序，且实现该排序的方法是快速排序。
+
 
 
 
