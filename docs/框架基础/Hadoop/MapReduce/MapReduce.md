@@ -166,8 +166,10 @@ Map方法之后，Reduce方法之前的数据处理过程称之为Shuffle。
    2. 在Job中，设置自定义Partitioner
    3. 自定义Partition后，要根据自定义Partitioner的逻辑设置相应数量的ReduceTask。
 3. partition总结 
-   1. d
-   2.
+   1. 如果ReduceTask的数量>getPartition的结果数，则会多产生几个空的输出文件part-r-00xx;
+   2. 如果1< ReduceTask的数量<getPartition的结果数,则有一部分分区数据无处安放,会Exception。
+   3. 如果等于一，则不管MapTask端输出多少个分区文件，最终结果都交给这一个ReduceTask,最终也就只会产生一个结果文件part-r-00000;
+   4. 分区号必须从零开始，逐一增加。
 
 
 
