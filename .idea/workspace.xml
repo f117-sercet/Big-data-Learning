@@ -22,7 +22,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="handoop笔记" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="handoop笔记">
+      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/BuilderConstructor/CommonHouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/BuilderConstructor/House.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/BuilderConstructor/HouseBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/BuilderConstructor/HouseDirector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/BuilderConstructor/client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/BuilderConstructor/higherBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/建造者模式/img/建造者模式.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/工厂模式/工厂模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/工厂模式/工厂模式.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/建造者模式/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/建造者模式/img/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/建造者模式/建造者模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/建造者模式/建造者模式.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,32 +119,32 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultPlantUmlFileTemplate": "UML Class",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "F:/git/Repository/gitHub/thingsBoard",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "scala_project_settings_configurable.last_selected_tab_index": "6",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/git/Repository/gitHub/thingsBoard&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;scala_project_settings_configurable.last_selected_tab_index&quot;: &quot;6&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
@@ -145,11 +157,11 @@
       <recent name="F:\Github\Git\repo\Big-data-Learning\code\Flink\flink-kafka-integration\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\语言与语法\java高阶知识点\设计模式\UML建模语言\设计模式\建造者模式\img" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\语言与语法" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\java高阶知识点\设计模式\UML建模语言\设计模式\单例模式" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\java高阶知识点\设计模式\UML建模语言\设计模式\工厂模式" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\java高阶知识点" />
-      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -158,13 +170,13 @@
       <recent name="com.atguigu.hdfs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.prototypeTest">
-    <configuration name="FlowDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hadoop.mapReduce.FlowBeanCount.FlowDriver" />
-      <module name="HadoopMapReducer" />
+  <component name="RunManager" selected="Application.client">
+    <configuration name="client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.BuilderConstructor.client" />
+      <module name="designModel" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.hadoop.mapReduce.FlowBeanCount.*" />
+          <option name="PATTERN" value="com.BuilderConstructor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -226,11 +238,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.client" />
         <item itemvalue="Application.prototypeTest" />
         <item itemvalue="Application.singletoType3" />
         <item itemvalue="Application.singletonType2" />
         <item itemvalue="Application.type1" />
-        <item itemvalue="Application.FlowDriver" />
       </list>
     </recent_temporary>
   </component>
@@ -379,6 +391,9 @@
       <workItem from="1698143113624" duration="204000" />
       <workItem from="1698196023918" duration="2624000" />
       <workItem from="1698216394179" duration="5770000" />
+      <workItem from="1698661220370" duration="2571000" />
+      <workItem from="1698723558120" duration="1764000" />
+      <workItem from="1698734539624" duration="37000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
