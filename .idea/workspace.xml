@@ -23,17 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="handoop笔记">
-      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/BuilderConstructor/CommonHouse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/BuilderConstructor/House.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/BuilderConstructor/HouseBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/BuilderConstructor/HouseDirector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/BuilderConstructor/client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/BuilderConstructor/higherBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/建造者模式/img/建造者模式.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Handoop/HadoopMapReducer/src/main/java/com/hadoop/mapReduce/writableCompable/FlowBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/工厂模式/工厂模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/工厂模式/工厂模式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/建造者模式/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/建造者模式/img/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/建造者模式/建造者模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/建造者模式/建造者模式.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Handoop/HadoopMapReducer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/HadoopMapReducer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/MapReduce.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/MapReduce.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,11 +231,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.client" />
-        <item itemvalue="Application.prototypeTest" />
-        <item itemvalue="Application.singletoType3" />
-        <item itemvalue="Application.singletonType2" />
         <item itemvalue="Application.type1" />
+        <item itemvalue="Application.singletonType2" />
+        <item itemvalue="Application.singletoType3" />
+        <item itemvalue="Application.prototypeTest" />
+        <item itemvalue="Application.client" />
       </list>
     </recent_temporary>
   </component>
@@ -394,6 +387,9 @@
       <workItem from="1698661220370" duration="2571000" />
       <workItem from="1698723558120" duration="1764000" />
       <workItem from="1698734539624" duration="37000" />
+      <workItem from="1698832828956" duration="2582000" />
+      <workItem from="1698883995008" duration="474000" />
+      <workItem from="1698884545537" duration="5439000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -654,14 +650,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00057" summary="设计模式-单例模式(饿汉模式)">
-      <option name="closed" value="true" />
-      <created>1693558518354</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1693558518354</updated>
-    </task>
     <task id="LOCAL-00058" summary="设计模式-简单工厂模式">
       <option name="closed" value="true" />
       <created>1693901913769</created>
@@ -750,7 +738,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698225548885</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="handoop笔记">
+      <option name="closed" value="true" />
+      <created>1698833376197</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1698833376197</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

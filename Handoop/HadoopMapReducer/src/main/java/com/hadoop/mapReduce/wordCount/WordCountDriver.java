@@ -28,7 +28,7 @@ public class WordCountDriver {
         // 2.关联本Driver程序的jar
         job.setJarByClass(WordCountDriver.class);
 
-        // 3.关联 Mapper 和 Reducer的Jar
+        // 3.关联 FlowMapper 和 Reducer的Jar
         job.setMapperClass(WordCountMapper.class);
         job.setReducerClass(WordCountReducer.class);
 
