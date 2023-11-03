@@ -22,11 +22,35 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="handoop笔记">
-      <change afterPath="$PROJECT_DIR$/Handoop/HadoopMapReducer/src/main/java/com/hadoop/mapReduce/writableCompable/FlowBean.java" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="handoop笔记-排序">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/qodana_code_quality.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img/img_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img/reduceTask工作机制.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qodana.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Handoop/HadoopMapReducer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Handoop/HadoopMapReducer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/HDFS文件执行流程.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/HDFS文件执行流程.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/images/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/img_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/images/img_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/img_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/images/img_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/img_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/images/img_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/img_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/images/img_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/img_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/images/img_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/img_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/images/img_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/img_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/images/img_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/img_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/images/img_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/img_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/HDFS/images/img_9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/MapReduce.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/MapReduce.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img/img_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img/img_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img/img_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img/img_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img/img_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img/img_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img/img_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img/img_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img/img_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/Hadoop/MapReduce/img/img_9.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +101,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Handoop/HadoopMapReducer/src/main/java/com/hadoop/mapReduce/writableCompable/FlowReduce.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-common/3.1.3/hadoop-common-3.1.3-sources.jar!/org/apache/hadoop/fs/FileSystem.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-hdfs/2.6.0-cdh5.15.2/hadoop-hdfs-2.6.0-cdh5.15.2-sources.jar!/org/apache/hadoop/hdfs/server/blockmanagement/BlockPlacementPolicyDefault.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -96,6 +121,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
     <option name="showPreview" value="true" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
@@ -138,6 +164,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="C:\Users\LENOVO\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="314e0779-8acf-4671-a948-7ce997287421" reportId="Big-data-Learning/qodana/2023-11-03" />
+    </option>
+  </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
@@ -150,11 +181,11 @@
       <recent name="F:\Github\Git\repo\Big-data-Learning\code\Flink\flink-kafka-integration\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\Hadoop\MapReduce\img" />
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\Hadoop\HDFS\images" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\语言与语法\java高阶知识点\设计模式\UML建模语言\设计模式\建造者模式\img" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\语言与语法" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\java高阶知识点\设计模式\UML建模语言\设计模式\单例模式" />
-      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\java高阶知识点\设计模式\UML建模语言\设计模式\工厂模式" />
-      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\java高阶知识点" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -389,7 +420,9 @@
       <workItem from="1698734539624" duration="37000" />
       <workItem from="1698832828956" duration="2582000" />
       <workItem from="1698883995008" duration="474000" />
-      <workItem from="1698884545537" duration="5439000" />
+      <workItem from="1698884545537" duration="6879000" />
+      <workItem from="1698976302140" duration="3290000" />
+      <workItem from="1698991841582" duration="4964000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -650,14 +683,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00058" summary="设计模式-简单工厂模式">
-      <option name="closed" value="true" />
-      <created>1693901913769</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1693901913769</updated>
-    </task>
     <task id="LOCAL-00059" summary="MapTask笔记">
       <option name="closed" value="true" />
       <created>1693908929790</created>
@@ -746,7 +771,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698833376197</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="handoop笔记-排序">
+      <option name="closed" value="true" />
+      <created>1698914217495</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1698914217496</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -796,7 +829,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="flink" />
     <MESSAGE value="flink相关API" />
     <MESSAGE value="项目重构" />
     <MESSAGE value="hdfs常用API" />
@@ -821,7 +853,8 @@
     <MESSAGE value="设计模式-建造者模式.md" />
     <MESSAGE value="scala 编程规范" />
     <MESSAGE value="handoop笔记" />
-    <option name="LAST_COMMIT_MESSAGE" value="handoop笔记" />
+    <MESSAGE value="handoop笔记-排序" />
+    <option name="LAST_COMMIT_MESSAGE" value="handoop笔记-排序" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -855,6 +888,15 @@
           <url>file://$PROJECT_DIR$/designModel/src/main/java/com/designPattern/prototype/prototypeTest.java</url>
           <line>12</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-mapreduce-client-core/3.1.3/hadoop-mapreduce-client-core-3.1.3-sources.jar!/org/apache/hadoop/mapreduce/lib/input/SequenceFileInputFormat.java</url>
+          <line>43</line>
+          <properties class="org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat" method="createRecordReader">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

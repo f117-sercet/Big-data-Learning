@@ -16,7 +16,7 @@ MapReduce 是一个分布式运算程序的编程框架，是用户开发”基�
 3) 不擅长DAG(有向无环图)计算  
 使用后，每个MapReduce作业的输出结果都会写入到磁盘，会造成大量的磁盘IO，导致性能非常低下。 
 #### 核心思想  
-![img.png](img.png)  
+![img.png](img/img.png)  
 1) 第一阶段的MapTask并发实例，完全并行运行，互不相干。
 2) 第二个阶段的ReduceTask并发实例互不相干，但是他们的数据依赖于上一个阶段的所有MapTask并发实例的输出。  
 3) MapReduce编程模型只能包含一个Map阶段和一个Reduce阶段，如果用户的业务逻辑非常复杂，那就只能多个MapReduce程序，串行运行。  
@@ -88,16 +88,16 @@ public void readFiles(DataOutput out)
 
 （7）如果需要将自定义的bean放在key中传输，则还需要实现Comparable接口  
 #### MapReduce框架原理  
-![img_2.png](img_2.png)  
+![img_2.png](img/img_2.png)  
 ##### InputFormat 数据输入
 ###### 切片与MapTask 并行度决定机制  
 MapTask的并行度决定Map阶段的任务处理并发度，进而影响到整个Job的处理速度。  
 1) MapTask并行度决定机制  
 数据块：Blocks是物理上把数据分成一块儿一块儿，数据块是HDFS存储数据单位。  
 数据切片：数据切片只是在逻辑上对输入进行分片，并不会在磁盘将其分片存储。数据切片是Mapreduce程序计算输入数据的单位，一个切片会对应启动一个MapTask。  
-![img_3.png](img_3.png)    
+![img_3.png](img/img_3.png)    
 #### Job提交示例流程  
-![img_4.png](img_4.png)  
+![img_4.png](img/img_4.png)  
 ##### FileInputFormat切片源碼分析  
 1) 程序先找到你数据存储的目录。
 2) 开始遍历处理目录下的每一个文件
@@ -115,7 +115,7 @@ MapTask的并行度决定Map阶段的任务处理并发度，进而影响到整�
 1)  简单地寻找文件的长度进行切片。 
 2) 切片大小，默认等于block大小。  
 3) 切片时不考虑数据集整体，而是逐个针对每一个单独文件切片。   
-![img_5.png](img_5.png)  
+![img_5.png](img/img_5.png)  
 ##### 切片大小设置
 maxsize(切片最大值):参数如果调得比blockSize小，则会让切片变小，而且就等于配置的这个参数的值。  
 minsize(切片最小值):参数调的比blockSize大,则可以让切片变得比blockSize还大。  
@@ -130,7 +130,7 @@ public class test {
 
 ### TextInputFormat  
 #### FileInputFormat实现类  
-![img_6.png](img_6.png)     
+![img_6.png](img/img_6.png)     
 FileInput 常见的接口实现类包括：TextInputFormat、keyValueTextInputformat等。  
 TextInputFormat是默认的FileInputFormat实现类，按行读取每条记录。键是存储该行在整个文件中的起始字节偏移量，LongWritable类型，值是这行的内容，不包括任何行终止符。  
 ### CombineTextInputFormat切片机制  
@@ -141,8 +141,8 @@ TextInputFormat是默认的FileInputFormat实现类，按行读取每条记录�
    CombineTextInputFormat.setMaxInputSplitSize(job, 4194304) // 4MB
 
 ##### MapReduce详细工作流程  
-![img_7.png](img_7.png)  
-![img_8.png](img_8.png)  
+![img_7.png](img/img_7.png)  
+![img_8.png](img/img_8.png)  
 具体Shuffle过程详解：  
 1) MapTask 收集我们的map方法输出的kv对，放到内存缓冲区。
 2) 从内存缓冲区不断溢出本地磁盘文件，可能会溢出多个
@@ -157,9 +157,9 @@ TextInputFormat是默认的FileInputFormat实现类，按行读取每条记录�
 #### Shuffle机制  
 #### 1.1 机制  
 Map方法之后，Reduce方法之前的数据处理过程称之为Shuffle。
-![img_9.png](img_9.png)
+![img_9.png](img/img_9.png)
 #### 1.2 partition 分区  
-![img_10.png](img_10.png)  
+![img_10.png](img/img_10.png)  
 1. 默认分区是根据key的hashCode对ReduceTask个数取模得到的。用户没法控制哪个key存储到哪个分区。
 2. 自定义partitioner步骤
    1. 自定义继承Partitioner,重写getPartition()方法
@@ -185,6 +185,38 @@ MapTask和ReduceTask均会对数据按照key进行排序。该操作属于Hadoop
    在Reduce端对key进行分组。应用于：在接收的key为value对象时，想让一个或几个字段相同的key进入到同一个reduce方法时，可以采用分组排序。
 4) 二次排序
    在自定义排序过程中，如果compareTo的判断条件为两个，即为二次排序。
+### Combiner合并  
+#### Combine合并 
+1) Combiner是MR程序中Mapper和Reducer之外的一种组件。
+2) Combiner组件的父类就是Reducer。
+3) Combiner和Reducer的区别在于运行的位置。
+   1. Combiner是在每一个MapTask所在的节点运行。
+   2. Reducer是接收全局所有Mapper的输出结果。
+4) Combiner的意义就是对每一个MapTask的输出进行局部汇总，以减小网络传输量。
+5) Combiner能够应用的前提是不能影响最终的业务逻辑,而且，Combiner的输出KV应该跟Reducer的输入kv类型要对应起来。  
+### OutputFormat数据输出  
+#### OutputFormat接口实现类  
+outputFormat是MapReduce输出的基类,所有实现MapReduce输出都实现了OutPutFormat接口。
+
+### MapTask工作机制  
+![img_11.png](img/img_11.png)  
+1) Read阶段: MapTask通过InputFormathu获得的RecordReader,从输入InputSplit中解析出一个个key/value
+2) Map阶段：该节点主要是将解析出的key/value 交给用户编写map()函数处理，并产生一系列新的key/value.
+3) Collect收集阶段：在用户编写map()函数中,当数据处理完后,一般会调用OutPutCollector.collect()输出结果。在函数内部,他将生成的key/value分区，并写入一个环形内的缓冲区中间。
+4) Split阶段:溢写阶段，当环形缓冲区满后，MapReduce会将数据写到本地磁盘上，生成一个临时文件。需要注意的是，将数据写入本地磁盘之前，先要对数据进行一次本地排序，并在必要时对数据进行合并，压缩等操作。  
+###### 溢写阶段
+   1. 利用快速排序算法对缓存区内的数据进行排序，排序方式是：先按照分区编号Partition进行排序，然后按照key进行排序。这样经过排序后，数据以分区为单位聚集在一起，且同一个分区内所有数据按照key有序。
+   2. 按照分区数据的元信息写到内存索引数据结构SpillRecord中，其中每个分区的元信息包括在临时文件中的偏移量，压缩前数据大小和压缩后数据大小。如果当前内存索引大小超过1MB,则将内存索引写到文件outPut/spillN.out.index中。
+###### Merge 阶段  
+当所有数据处理完成后,MapTask对所有临时文件进行一次合并，以确保最终只会生成一个数据文件。 当所有数据处理完成后，MapTask会将所有临时文件合并成一个大文件，并保存到文件output/file.out中，同时生成相应的索引文件output/file.out.index。 在进行文件合并过程中，MapTask以分区为单位进行合并。对某个分区，它将采用多轮递归合并的方式。每轮合并mapreduce.task.io.sort.factor(默认10)个文件，并将产生的文件重新加入待合并列表中，对文件排序后，重复上述过程，直到最终得到一个大文件。  
+让每个MapTask最终只生成一个数据文件，可避免同时打开大量文件和同时读取大量小文件产生的随机读取带来的开销。  
+
+### ReduceTask工作机制  
+![img.png](img/reduceTask工作机制.png)  
+1) Copy阶段:ReduceTask从各个MapTask上远程拷贝一片数据，并针对某一片数据，如果其大小超过一定阈值，则写到磁盘上，否则直接放到内存中。
+2) Sort阶段：在远程拷贝数据的同时，ReduceTask启动了两个后台线程对内存和磁盘上的文件进行合并，以防止内存使用过多或磁盘上文件过多。按照MapReduce语义，用户编写reduce()函数输入数据是按key进行聚集的一组数据。为了将key相同的数据聚在一起，Hadoop采用了基于排序的策略。由于各个MapTask已经实现对自己的处理结果进行了局部排序，因此，ReduceTask只需对所有数据进行一次归并排序即可。
+3) Reduce阶段:reduce() 函数将计算结果写道HDFS.
+
 
 
 

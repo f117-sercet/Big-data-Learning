@@ -1,6 +1,6 @@
 ## HDFS 文件执行流程
 ### 1.1 HDFS的写数据流程
-![img_1.png](img_1.png)
+![img_1.png](images/img_1.png)
     1.客户端通过DistributedFileSystem模块向NameNode请求上传文件，NameNode检查目标文件是否已经存在,父目录是否存在。  
     2.NameNode返回是否可以上传。  
     3.客户端请求第一个Block上传到哪几个DataNode服务器上  
@@ -12,9 +12,9 @@
 ### 1.2 网络拓扑-节点距离计算  
    在HDFS写数据的过程中，NameNode会选择距离待上传数据最近距离的DataNode接收数据。（节点距离：两个节点到最近的共同祖先的距离总和)  
 #### 副本节点选择  
-![img.png](img.png)  
+![img.png](images/img.png)  
 ### HDFSD的读数据流程  
-![img_2.png](img_2.png)  
+![img_2.png](images/img_2.png)  
 1.  客户端通过DistributedFileSystem向NameNode请求下载文件，NameNode通过查询数据元素，找到文件块所在的DataNode地址。
 2. 挑选一台DataNode(就近原则，然后随机)服务器，请求读取数据
 3. DataNode开始传输数据给客户端
@@ -24,7 +24,7 @@
 ## NameNode和SecondryNameNode  
 ### NN和2NN工作机制  
 #### NameNode工作机制  
-![img_3.png](img_3.png)  
+![img_3.png](images/img_3.png)  
 第一阶段：
 1) 第一次启动NameNode格式化后，创建Fsimage和Edits文件。如果不是第一次启动，直接加载编辑日志和镜像文件到内存。  
 2) 客户端对元数据进行增删改查的请求
@@ -40,7 +40,7 @@
 
 ## Fsimage和Edits解析  
 #### 概念    
-![img_4.png](img_4.png)  
+![img_4.png](images/img_4.png)  
 1) Fsimage文件： HDFS文件系统元数据的一个永久性的检查点，其中包含HDFS文件系统的所有目录和文件inode的序列信息。  
 2) Edits文件：存放HDFS文件系统的所有更新操作的路径，文件系统客户端执行的所有写操作首先会被记录到Edits文件中。  
 3) seen_txid文件保存的是一个数字，就是最后一个edits_的数字
@@ -136,7 +136,7 @@ hdfs oev
 ```    
 ## DataNode 
 ### DataNode工作机制  
-![img_7.png](img_7.png)  
+![img_7.png](images/img_7.png)  
 1) 一个数据块在DataNode上以文件形式存储在磁盘上，包括两个文件，一个是数据本身，一个是元数据包括数据块的长度，块数据的校验和，以及时间戳。  
 2) DataNode启动后向NameNode注册，通过后，周期性的向NameNode上报所有的信息。  
 3) DN向NN汇报当前解读信息的时间间隔默认6小时  
@@ -168,9 +168,9 @@ directories and reconcile the difference between blocks in memory and on the dis
 3. Client读取其他DataNode上的Block。
 4. 常见的校验算法 crc，md5，sha1  
 5. DataNode在其创建后周期验证CheckSum。
-![img_8.png](img_8.png)  
+![img_8.png](images/img_8.png)  
 #### 掉线时限参数设置  
-![img_9.png](img_9.png)
+![img_9.png](images/img_9.png)
 而默认的dfs.namenode.heartbeat.recheck-interval 大小为 5 分钟，dfs.heartbeat.interval默认为3秒。 需要注意的是hdfs-site.xml配置文件中的heartbeat。recheck。interval的单位是毫秒，dfs.heartbeat.interval的单位为秒。  
 ```xml
 
