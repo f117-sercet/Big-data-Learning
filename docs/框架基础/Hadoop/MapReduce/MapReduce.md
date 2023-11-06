@@ -215,7 +215,24 @@ outputFormat是MapReduce输出的基类,所有实现MapReduce输出都实现了O
 ![img.png](img/reduceTask工作机制.png)  
 1) Copy阶段:ReduceTask从各个MapTask上远程拷贝一片数据，并针对某一片数据，如果其大小超过一定阈值，则写到磁盘上，否则直接放到内存中。
 2) Sort阶段：在远程拷贝数据的同时，ReduceTask启动了两个后台线程对内存和磁盘上的文件进行合并，以防止内存使用过多或磁盘上文件过多。按照MapReduce语义，用户编写reduce()函数输入数据是按key进行聚集的一组数据。为了将key相同的数据聚在一起，Hadoop采用了基于排序的策略。由于各个MapTask已经实现对自己的处理结果进行了局部排序，因此，ReduceTask只需对所有数据进行一次归并排序即可。
-3) Reduce阶段:reduce() 函数将计算结果写道HDFS.
+3) Reduce阶段:reduce() 函数将计算结果写道HDFS。  
+### ReduceTask并行度决定机制  
+1) 设置ReduceTask 的并行度 同样影响 整个Job的执行并发度和执行效率，但与MapTask的并发数由切片数决定不同，ReduceTask数量的决定是可以直接手动设置。
+```java
+// 默认是1,手动设置为4
+job.setNumReduceTasks(4);
+```
+#### 注意事项  
+1. ReduceTask=0，表示没有Reduce阶段，输出文件个数和Map个数一致。
+2. ReduceTask 默认值就是1，所以输出文件个数为一个。
+3. 如果数据分布不均匀,就可能在Reduce阶段数据倾斜。
+4. ReduceTask数量并不是任意设置，还要考虑业务逻辑需求，有些情况下，需要计算全局汇总结果，就只能有一个ReduceTask。  
+### Join应用  
+#### Reduce Join 
+Map 端的主要工作：为来自不同表或者文件的key/value，打标签以区别不同来源的记录。然后用连接字段作为key,其余部分和新加的标志作为value，最后输出。
+
+
+
 
 
 
