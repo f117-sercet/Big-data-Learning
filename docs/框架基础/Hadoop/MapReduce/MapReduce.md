@@ -230,7 +230,27 @@ job.setNumReduceTasks(4);
 ### Join应用  
 #### Reduce Join 
 Map 端的主要工作：为来自不同表或者文件的key/value，打标签以区别不同来源的记录。然后用连接字段作为key,其余部分和新加的标志作为value，最后输出。
-
+#### 总结
+缺点：  
+  这种方式中,合并的操作是在Reduce阶段完成，Reduce的处理压力太大，Map节点的运算负载低，资源利用率不高，且在Reduce阶段极易产生数据倾斜。  
+解决方案：  
+Map实现数据合并。
+#### MapJoin  
+1) 使用场景  
+   MapJoin适用于一张表十分小，一张表很大的场景。  
+2) 优点  
+   Map端缓存多张表，提前处理业务逻辑，这样增加Map端业务,减少Reduce端数据的压力,尽可能的减少数据倾斜。
+3) 具体办法
+   1. 在Mapper的setup阶段,将文件读取到缓存合集中
+   2. 在Driver驱动类中加载缓存。
+```java
+// 缓存普通文件到Task运行节点  
+job.addCacheFile(new URI("file:///e:/cache/pd.txt"))
+//如果是集群运行，需要设置HDFS路径  
+job.addCacheFile(new URI("hdfs:// hadoop102：8020/cache/pd.txt"));
+```
+##### Map端合并案例分析  
+![img.png](img/Map端合并.png)
 
 
 
