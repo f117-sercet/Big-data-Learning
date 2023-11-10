@@ -50,4 +50,34 @@ Yarn主要由ResourceManager,NodeManager,ApplicationMaster和Container等组件�
 ###### (5) 进度和状态更新
 ARN中的任务将其进度和状态(包括counter)返回给应用管理器, 客户端每秒(通过mapreduce.client.progressmonitor.pollinterval设置)向应用管理器请求进度更新, 展示给用户。  
 ###### (6) 作业完成  
-除了向应用管理器请求作业进度外, 客户端每5秒都会通过调用waitForCompletion()来检查作业是否完成。时间间隔可以通过mapreduce.client.completion.pollinterval来设置。作业完成之后, 应用管理器和Container会清理工作状态。作业的信息会被作业历史服务器存储以备之后用户核查。
+除了向应用管理器请求作业进度外, 客户端每5秒都会通过调用waitForCompletion()来检查作业是否完成。时间间隔可以通过mapreduce.client.completion.poll interval来设置。作业完成之后, 应用管理器和Container会清理工作状态。作业的信息会被作业历史服务器存储以备之后用户核查。
+
+### Yarn调度器和调度算法  
+目前,Hadoop 作业调度有三种：FIFO,容量调度器，公平调度器。 具体设置详见：yarn-default.xml文件。  
+#### 先进先出调度器(FIFO)  
+FIFO 调度器：单队列，根据提交作业的先后顺序，先来先服务。  
+![123](images/FIFO调度器.png)  
+优点： 简单易懂  
+缺点：不支持多队列,生产环境很少使用。  
+##### 容量调度器  
+Capacity Scheduler是Yahoo开发的多用户调度器。  
+![](images/容量调度器.png)  
+1. 多队列:每个队列可配置一定的资源量,每个队列采用FIFO调度策略。
+2. 容量保证:管理员可为每个队列设置资源最低保证和资源使用上限。  
+3. 灵活性:如果一个队列中的资源有剩余，可以在暂时共享给那些需要资源的队列,而一旦该队列有新的应用程序提交，则其他队列借调的资源会归还给该队列。  
+4. 多租户：
+   1. 支持多用户共享集群和多应用程序同时运行。
+   2. 为了防止同一个用户作业独占队队列中的资源，该调度器会对同一用户提交的作业所占资源量进行限定。  
+
+![](images/容量调度器资源分配算法.png)  
+
+#### 公平调度器  
+FairSchedulere 是 FaceBook开发的多用户调度器。  
+![img.png](images/img.png)  
+![img_1.png](images/img_1.png)  
+![img_2.png](images/img_2.png)
+![img_3.png](images/img_3.png)  
+![img_4.png](images/img_4.png)
+![img_5.png](images/img_5.png)  
+#### YARN 生产环境核心参数  
+![img_6.png](images/img_6.png)
