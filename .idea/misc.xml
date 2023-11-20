@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/code/Hbase/hbase-java-api-1.x/pom.xml" />
         <option value="$PROJECT_DIR$/code/Kafka/kafa-basis/pom.xml" />
         <option value="$PROJECT_DIR$/designModel/pom.xml" />
+        <option value="$PROJECT_DIR$/sparkLearning/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
