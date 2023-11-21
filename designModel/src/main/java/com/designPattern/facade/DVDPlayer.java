@@ -10,8 +10,11 @@ import lombok.Getter;
  */
 public class DVDPlayer {
 
-    @Getter
     private static  DVDPlayer instance = new DVDPlayer();
+
+    public static DVDPlayer getInstance() {
+        return instance;
+    }
 
     public void on (){
         System.out.println("go on");

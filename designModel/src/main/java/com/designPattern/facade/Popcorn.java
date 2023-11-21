@@ -14,8 +14,11 @@ import lombok.Getter;
  */
 
 public class Popcorn {
-    @Getter
     private static  Popcorn instance = new Popcorn();
+
+    public static Popcorn getInstance() {
+        return instance;
+    }
 
     public void on (){
         System.out.println("popcorn on");

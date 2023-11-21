@@ -22,44 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="装饰者模式及其他">
-      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/facade/DVDPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/facade/Popcorn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/facade/Projector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/facade/client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/facade/facadeDesigner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/sprak运行框架.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/外观模式/原理图.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/外观模式/外观模式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_bundle_1_11_134.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_bundle_1_11_134.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark 模式">
+      <change afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/享元模式/享元模式.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/单例模式/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/单例模式/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/单例模式/img_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/单例模式/img_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/单例模式/img_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/单例模式/img_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/单例模式/img_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/单例模式/img_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/单例模式/img_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/单例模式/img_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/单例模式/单例模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/单例模式/单例模式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/原型模式/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/原型模式/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/原型模式/img_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/原型模式/img_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/原型模式/原型模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/原型模式/原型模式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/工厂模式/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/工厂模式/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/工厂模式/img_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/工厂模式/img_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/工厂模式/img_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/工厂模式/img_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/工厂模式/工厂模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/工厂模式/工厂模式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/建造者模式/img/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/建造者模式/img/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/建造者模式/img/建造者模式.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/建造者模式/img/建造者模式.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/建造者模式/建造者模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/建造者模式/建造者模式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/桥接模式/images/桥接模式.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/桥接模式/images/桥接模式.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/桥接模式/桥接模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/桥接模式/桥接模式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/组合模式/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/组合模式/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/组合模式/组合模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/组合模式/组合模式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/装饰模式/imges/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/装饰模式/imges/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/UML建模语言/设计模式/装饰模式/装饰者模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/装饰模式/装饰者模式.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/facade/DVDPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/facade/DVDPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/facade/Popcorn.java" beforeDir="false" afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/facade/Popcorn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/facade/Projector.java" beforeDir="false" afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/facade/Projector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/facade/facadeDesigner.java" beforeDir="false" afterPath="$PROJECT_DIR$/designModel/src/main/java/com/designPattern/facade/facadeDesigner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/外观模式/外观模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/语言与语法/java高阶知识点/设计模式/设计模式/外观模式/外观模式.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,11 +157,11 @@
       <recent name="F:\Github\Git\repo\Big-data-Learning\code\Flink\flink-kafka-integration\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\语言与语法\java高阶知识点\设计模式\设计模式" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\语言与语法\java高阶知识点\设计模式" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\语言与语法\java高阶知识点\设计模式\UML建模语言\设计模式\装饰模式\imges" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\语言与语法\java高阶知识点\设计模式\UML建模语言\设计模式\桥接模式\images" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\Hadoop\YARN\images" />
-      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\Hadoop\MapReduce\img" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -450,7 +420,8 @@
       <workItem from="1700470388166" duration="1919000" />
       <workItem from="1700472327101" duration="754000" />
       <workItem from="1700529405951" duration="27000" />
-      <workItem from="1700529449615" duration="3705000" />
+      <workItem from="1700529449615" duration="4032000" />
+      <workItem from="1700549813420" duration="2520000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -711,14 +682,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00070" summary="handoop笔记-排序">
-      <option name="closed" value="true" />
-      <created>1698914217495</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1698914217496</updated>
-    </task>
     <task id="LOCAL-00071" summary="handoop笔记-排序整理">
       <option name="closed" value="true" />
       <created>1699003486391</created>
@@ -807,7 +770,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700447648602</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="spark 模式">
+      <option name="closed" value="true" />
+      <created>1700533358209</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1700533358209</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -857,7 +828,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="开闭原则" />
     <MESSAGE value="hadoop-MapReduce" />
     <MESSAGE value="hadoop-MapReduce 程序编写" />
     <MESSAGE value="hadoop-MapReduce 案例编写" />
@@ -882,7 +852,8 @@
     <MESSAGE value="装饰者模式" />
     <MESSAGE value="spark 学习" />
     <MESSAGE value="装饰者模式及其他" />
-    <option name="LAST_COMMIT_MESSAGE" value="装饰者模式及其他" />
+    <MESSAGE value="spark 模式" />
+    <option name="LAST_COMMIT_MESSAGE" value="spark 模式" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -930,6 +901,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/designModel/src/main/java/com/designPattern/facade/client.java</url>
+          <line>10</line>
+          <properties class="com.designPattern.facade.client" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

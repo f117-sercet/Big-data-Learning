@@ -1,8 +1,6 @@
 package com.designPattern.facade;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 /**
  * Description： TODO
@@ -17,6 +15,12 @@ public class facadeDesigner {
     private Projector projector;
     private Popcorn popup;
 
+    public facadeDesigner() {
+        super();
+        this.dvdPlayer = DVDPlayer.getInstance();
+        this.projector = Projector.getInstance();
+        this.popup = Popcorn.getInstance();
+    }
 
     public void Ready(){
         dvdPlayer.on();

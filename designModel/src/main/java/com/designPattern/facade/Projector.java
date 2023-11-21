@@ -10,8 +10,11 @@ import lombok.Getter;
  */
 public class Projector {
 
-    @Getter
     private static  Projector instance = new Projector();
+
+    public static Projector getInstance() {
+        return instance;
+    }
 
     public void on (){
         System.out.println("Projector on");
