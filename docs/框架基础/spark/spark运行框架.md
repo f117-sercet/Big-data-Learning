@@ -85,7 +85,7 @@ RDD（Resilient Distributed Dataset）叫做弹性分布式数据集，是 Spark
   ![img_7.png](img_7.png)  
 4. 调度节点将任务根据计算节点状态发送到对应的计算节点进行计算。
 ![img_8.png](img_8.png)
-## RDD创建  
+#### RDD创建  
 在Spark中创建RDD的创建方式可以分为四种:
 1) 从集合中创建RDD，Spark 主要提供了两个方法：parallelize 和makeRDD.从底层代码来看，makeRDD方法其实就是parallelize方法。
   ![img_9.png](img_9.png)
@@ -93,5 +93,74 @@ RDD（Resilient Distributed Dataset）叫做弹性分布式数据集，是 Spark
 2) 从外部文件(存储)创建RDD：由外部存储系统的数据集创建RDD包括：本地的文件系统，所有Hadoop支持的数据集比如HDFS,HBASE等。
      ![img_11.png](img_11.png)
 3) 从其他RDD创建。主要是通过一个RDD运算完后，再产生新的RDD。
-4) 直接创建RDD（new）：使用 new 的方式直接构造RDD，一般由 Spark 框架自身使用。
+4) 直接创建RDD（new）：使用 new 的方式直接构造RDD，一般由 Spark 框架自身使用。  
+#### RDD并行度 
+默认情况下，spark可以将一个作业切分多个任务后，发送给Executor节点并计算,而能够并行计算的任务数量我们称之为并行度。这个数量可以在构建RDD时指定。读取内存数据时,数据可以按照并行度的设定进行数据的分区操作，数据分区规则的Spark核心源码如下：
+![img_12.png](img_12.png)
+#### RDD转换算子  
+RDD根据数据处理方式的不同将算子整体上分为Value 类型、双Value 类型和Key-Value 类型
+![img_13.png](img_13.png)  
+![img_14.png](img_14.png)    
+###### 思考一个问题：map 和mapPartitions 的区别？ 
+1. 数据处理角度
+   Map 算子是分区内一个数据一个数据的执行，类似于串行操作。而mapPartitions 算子 是以分区为单位进行批处理操作。
+2. 功能的角度
+   Map 算子主要目的将数据源中的数据进行转换和改变。但是不会减少或增多数据。 MapPartitions 算子需要传递一个迭代器，返回一个迭代器，没有要求的元素的个数保持不变，
+   所以可以增加或减少数据。
+3. 性能的角度  
+ Map 算子因为类似于串行操作，所以性能比较低，而是mapPartitions 算子类似于批处 理，所以性能较高。但是mapPartitions 算子会长时间占用内存，那么这样会导致内存可能
+   不够用，出现内存溢出的错误。所以在内存有限的情况下，不推荐使用。使用map 操作。
+![img_15.png](img_15.png)  
+![img_16.png](img_16.png)
+```scala
+val dataRDD = sparkContext.makRDD(List(List(1,2),List(3,4)),1)
+val dataRDD1 = dataRDD.flatMap( list => list)  
+```
+![img_17.png](img_17.png)  
+![img_18.png](img_18.png)  
+```scala
+val dataRDD = sparkContext.makRDD(List(
+  1,2,3,4
+),4)
+val dataRDD1:RDD[Array[Int]] = dataRDD.golm()
+```
+
+![img_19.png](img_19.png)
+
+```scala 3
+val dataRDD = sparkContext.makeRDD(List(List(1,2,3,4),4))
+val dataRDD1 = dataRDD.groupBy( _%2)
+```
+![img_20.png](img_20.png)  
+```scala
+val dataRDD = sparkContext.makeRDD(List(List(1,2,3,4),1))
+val dataRDD1 = dataRDD.filter(_%2==0)  
+```
+![img_21.png](img_21.png)  
+```scala
+val dataRDD = sparkContext.makeRDD(List( 1,2,3,4
+),1) 
+// 抽取数据不放回（伯努利算法） 
+// 伯努利算法：又叫 0、1 分布。例如扔硬币，要么正面，要么反面。 
+// 具体实现：根据种子和随机算法算出一个数和第二个参数设置几率比较，小于第二个参数要，大于不 要 
+// 第一个参数：抽取的数据是否放回，false：不放回 
+// 第二个参数：抽取的几率，范围在[0,1]之间,0：全不取；1：全取； /
+// / 第三个参数：随机数种子
+val dataRDD1 = dataRDD.sample(false, 0.5) 
+// 抽取数据放回（泊松算法） 
+// 第一个参数：抽取的数据是否放回，true：放回；false：不放回 
+// 第二个参数：重复数据的几率，范围大于等于 0.表示每一个元素被期望抽取到的次数 
+// 第三个参数：随机数种子
+val dataRDD2 = dataRDD.sample(true, 2)
+```
+
+![img_22.png](img_22.png)  
+```scala
+val dataRDD = sparkContext.makeRDD(List( 1,2,3,4,1,2
+),1)
+val dataRDD1 = dataRDD.distinct()
+val dataRDD2 = dataRDD.distinct(2)  
+
+```
+
 
