@@ -22,10 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark-RDD算子">
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_33.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_34.png" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark-RDD算子中的方法">
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_37.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_38.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_39.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_41.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_42.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_43.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/acc/Spark06_bc.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/spark运行框架.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/spark运行框架.md" afterDir="false" />
     </list>
@@ -116,32 +123,32 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultPlantUmlFileTemplate": "UML Class",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "F:/教程/学习/大数据/尚硅谷spark教程/3.代码/spark-core",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.43448275",
-    "scala_project_settings_configurable.last_selected_tab_index": "6",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.scala.compiler.ScalaCompileServerForm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/教程/学习/大数据/尚硅谷spark教程/3.代码/spark-core&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.43448275&quot;,
+    &quot;scala_project_settings_configurable.last_selected_tab_index&quot;: &quot;6&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.scala.compiler.ScalaCompileServerForm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
@@ -170,7 +177,7 @@
       <recent name="com.atguigu.hdfs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Spark03_Acc">
+  <component name="RunManager" selected="Application.Spark06_bc">
     <configuration name="Spark03_Acc" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="acc.Spark03_Acc" />
       <module name="sparkLearning" />
@@ -184,12 +191,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.designPattern.facade.client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.designPattern.facade.client" />
-      <module name="designModel" />
+    <configuration name="Spark06_bc" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="acc.Spark06_bc" />
+      <module name="sparkLearning" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.designPattern.facade.*" />
+          <option name="PATTERN" value="acc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -238,11 +245,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Spark06_bc" />
         <item itemvalue="Application.Spark03_Acc" />
         <item itemvalue="Application.wordCount3" />
         <item itemvalue="Application.spark01_rddParallelize" />
         <item itemvalue="Application.wc.wordCount" />
-        <item itemvalue="Application.com.designPattern.facade.client" />
       </list>
     </recent_temporary>
   </component>
@@ -435,7 +442,8 @@
       <workItem from="1700636512101" duration="4839000" />
       <workItem from="1700641528765" duration="285000" />
       <workItem from="1700648479390" duration="278000" />
-      <workItem from="1700649071086" duration="8839000" />
+      <workItem from="1700649071086" duration="9104000" />
+      <workItem from="1700710197297" duration="4288000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -696,14 +704,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00076" summary="handoop笔记Yarn">
-      <option name="closed" value="true" />
-      <created>1699579809764</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1699579809765</updated>
-    </task>
     <task id="LOCAL-00077" summary="handoop笔记Yarn">
       <option name="closed" value="true" />
       <created>1699579822237</created>
@@ -792,7 +792,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700706591903</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="spark-RDD算子中的方法">
+      <option name="closed" value="true" />
+      <created>1700709888012</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1700709888012</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -842,7 +850,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="uml类图编写" />
     <MESSAGE value="Mapredue 文档汇总" />
     <MESSAGE value="设计模式-单例模式" />
     <MESSAGE value="设计模式-单例模式(饿汉模式)" />
@@ -867,7 +874,8 @@
     <MESSAGE value="1、享元模式" />
     <MESSAGE value="spark运行框架.md--RDD" />
     <MESSAGE value="spark-RDD算子" />
-    <option name="LAST_COMMIT_MESSAGE" value="spark-RDD算子" />
+    <MESSAGE value="spark-RDD算子中的方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="spark-RDD算子中的方法" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

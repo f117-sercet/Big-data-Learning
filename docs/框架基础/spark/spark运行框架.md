@@ -251,3 +251,55 @@ val combineRdd: RDD[(String, (Int, Int))] = input.combineByKey( (_, 1),
 (acc: (Int, Int), v) => (acc._1 + v, acc._2 + 1), (acc1: (Int, Int), acc2: (Int, Int)) => (acc1._1 + acc2._1, acc1._2 + acc2._2)
 )
 ```
+
+思考一个问题：reduceByKey、foldByKey、aggregateByKey、combineByKey 的区别？   
+reduceByKey: 相同 key 的第一个数据不进行任何计算，分区内和分区间计算规则相同。
+FoldByKey: 相同 key 的第一个数据和初始值进行分区内计算，分区内和分区间计算规则相同。
+AggregateByKey：相同 key 的第一个数据和初始值进行分区内计算，分区内和分区间计算规 则可以不相同 CombineByKey:当计算时，发现数据结构不满足要求时，可以让第一个数据转换结构。分区
+内和分区间计算规则不相同。  
+CombineByKey:当计算时，发现数据结构不满足要求时，可以让第一个数据转换结构。分区 内和分区间计算规则不相同。  
+![img_35.png](img_35.png)  
+```scala
+val dataRDD1 = sparkContext.makeRDD(List(("a",1),("b",2),("c",3))) 
+val sortRDD1: RDD[(String, Int)] = dataRDD1.sortByKey(true)
+val sortRDD1: RDD[(String, Int)] = dataRDD1.sortByKey(false)
+```  
+![img_36.png](img_36.png)  
+
+```scala
+val rdd: RDD[(Int, String)] = sc.makeRDD(Array((1, "a"), (2, "b"), (3, "c"))) 
+val rdd1: RDD[(Int, Int)] = sc.makeRDD(Array((1, 4), (2, 5), (3, 6)))
+rdd.join(rdd1).collect().foreach(println)
+```  
+![img_37.png](img_37.png)  
+![img_38.png](img_38.png)  
+![img_39.png](img_39.png)  
+```scala
+val dataRDD1 = sparkContext.makeRDD(List(("a",1),("a",2),("c",3))) 
+val dataRDD2 = sparkContext.makeRDD(List(("a",1),("c",2),("c",3)))
+val value: RDD[(String, (Iterable[Int], Iterable[Int]))] = dataRDD1.cogroup(dataRDD2)
+```  
+## 行动算子  
+![img_40.png](img_40.png)  
+```scala
+val rdd:RDD[Int] = sc.makeRDD(List(1,2,3,4))
+// 聚合数据  
+val reduceResult:Int = rdd.reduce(_+_)
+```  
+![img_41.png](img_41.png)  
+```scala
+val rdd:RDD[Int] = sc.makeRDD(List(1,2,3,4))
+  // 收集数据到Driver  
+rdd.collect().foreach(println)
+```
+![img_42.png](img_42.png)  
+```scala
+var rdd:RDD[Int] =sc.makeRDD(List(1,2,3,4))
+  // 返回RDD中元素的个数  
+val countResult:Long = rdd.count()
+```  
+![img_43.png](img_43.png)
+```scala
+var rdd:RDD[Int] = sc.makeRDD(List(1,2,3,4))
+val firstResult: Int = rdd.first() println(firstResult)
+```
