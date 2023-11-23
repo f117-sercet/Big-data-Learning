@@ -23,21 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark-RDD算子">
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/acc/MyAccumulator.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/acc/Spark01_Acc.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/acc/Spark02_Acc.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/acc/Spark03_Acc.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/acc/Spark04_Acc_WordCount.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/acc/Spark05_Bc.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_34.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/spark运行框架.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/spark运行框架.md" afterDir="false" />
     </list>
@@ -447,7 +435,7 @@
       <workItem from="1700636512101" duration="4839000" />
       <workItem from="1700641528765" duration="285000" />
       <workItem from="1700648479390" duration="278000" />
-      <workItem from="1700649071086" duration="7260000" />
+      <workItem from="1700649071086" duration="8839000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -708,14 +696,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00075" summary="handoop笔记Yarn">
-      <option name="closed" value="true" />
-      <created>1699496952320</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1699496952321</updated>
-    </task>
     <task id="LOCAL-00076" summary="handoop笔记Yarn">
       <option name="closed" value="true" />
       <created>1699579809764</created>
@@ -804,7 +784,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700640910643</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="spark-RDD算子">
+      <option name="closed" value="true" />
+      <created>1700706591903</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1700706591903</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

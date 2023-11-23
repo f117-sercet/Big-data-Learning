@@ -221,4 +221,33 @@ val dataRDD4 = dataRDD1.groupByKey(new HashPartitioner(2))
 思考一个问题：reduceByKey 和 groupByKey 的区别？  
 从 shuffle 的角度:reduceByKey 和 groupByKey 都存在 shuffle 的操作，但是 reduceByKey 可以在 shuffle 前对分区内相同 key 的数据进行预聚合（combine）功能，这样会减少落盘的 数据量，而 groupByKey 只是进行分组，不存在数据量减少的问题，reduceByKey 性能比较
 高。
-从功能的角度: reduceByKey 其实包含分组和聚合的功能。GroupByKey 只能分组，不能聚合，所以在分组聚合的场合下，推荐使用 reduceByKey，如果仅仅是分组而不需要聚合那么还是只能使用 groupByKey
+从功能的角度: reduceByKey 其实包含分组和聚合的功能。GroupByKey 只能分组，不能聚合，所以在分组聚合的场合下，推荐使用 reduceByKey，如果仅仅是分组而不需要聚合那么还是只能使用 groupByKey。
+![img_32.png](img_32.png)  
+```scala 3
+val dataRDD1 = sparkContext.makeRDD(List(("a",1),("b",2),("c",3))) 
+val dataRDD2 = dataRDD1.aggregateByKey(0)(_+_,_+_)
+
+// TODO : 取出每个分区内相同 key 的最大值然后分区间相加 // aggregateByKey 算子是函数柯里化，存在两个参数列表 // 1. 第一个参数列表中的参数表示初始值 // 2. 第二个参数列表中含有两个参数 
+// 2.1 第一个参数表示分区内的计算规则 // 2.2 第二个参数表示分区间的计算规则 val rdd =
+  sc.makeRDD(List( ("a",1),("a",2),("c",3), ("b",4),("c",5),("c",6)
+),2) 
+//=> (a,10)(b,10)(c,20)
+// 0:("a",1),("a",2),("c",3) => (a,10)(c,10) //
+// 1:("b",4),("c",5),("c",6) => (b,10)(c,10) val resultRDD =
+rdd.aggregateByKey(10)( (x, y) => math.max(x,y), (x, y) => x + y
+)
+resultRDD.collect().foreach(println)
+```  
+![img_33.png](img_33.png)  
+```scala
+val dataRDD1 = sparkContext.makeRDD(List(("a",1),("b",2),("c",3))) 
+val dataRDD2 = dataRDD1.foldByKey(0)(_+_)
+```  
+![img_34.png](img_34.png)  
+```scala
+val list: List[(String, Int)] = List(("a", 88), ("b", 95), ("a", 91), ("b", 93), ("a", 95), ("b", 98))
+val input: RDD[(String, Int)] = sc.makeRDD(list, 2)
+val combineRdd: RDD[(String, (Int, Int))] = input.combineByKey( (_, 1),
+(acc: (Int, Int), v) => (acc._1 + v, acc._2 + 1), (acc1: (Int, Int), acc2: (Int, Int)) => (acc1._1 + acc2._1, acc1._2 + acc2._2)
+)
+```
