@@ -161,6 +161,64 @@ val dataRDD = sparkContext.makeRDD(List( 1,2,3,4,1,2
 val dataRDD1 = dataRDD.distinct()
 val dataRDD2 = dataRDD.distinct(2)  
 
+```  
+![img_23.png](img_23.png)  
+```scala
+val dataRDD = sparkContext.makeRDD(List( 1,2,3,4,1,2
+),6)
+val dataRDD1 = dataRDD.coalesce(2)
+```  
+
+![img_24.png](img_24.png)  
+```scala
+val dataRDD = sparkContext.makeRDD(List( 1,2,3,4,1,2
+),2)
+val dataRDD1 = dataRDD.repartition(4)  
+```  
+![img_25.png](img_25.png)  
+```scala
+val dataRDD = sparkContext.makeRDD(List( 1,2,3,4,1,2),2)
+val dataRDD1 = dataRDD.sortBy(num=>num, false, 4)  
 ```
+  
+![img_26.png](img_26.png)  
+```scala
+val dataRDD1 = sparkContext.makeRDD(List(1,2,3,4)) 
+val dataRDD2 = sparkContext.makeRDD(List(3,4,5,6))
+val dataRDD = dataRDD1.intersection(dataRDD2)
+```  
+![img_27.png](img_27.png)  
+```scala
+val dataRDD1 = sparkContext.makeRDD(List(1,2,3,4)) 
+val dataRDD2 = sparkContext.makeRDD(List(3,4,5,6))
+val dataRDD = dataRDD1.union(dataRDD2)
+```  
+![img_28.png](img_28.png)
+```scala
+val dataRDD1 = sparkContext.makeRDD(List(1,2,3,4)) 
+val dataRDD2 = sparkContext.makeRDD(List(3,4,5,6))
+val dataRDD = dataRDD1.subtract(dataRDD2)
+```
+![img_29.png](img_29.png)  
+```scala
+val dataRDD1 = sparkContext.makeRDD(List(1,2,3,4)) 
+val dataRDD2 = sparkContext.makeRDD(List(3,4,5,6))
+val dataRDD = dataRDD1.zip(dataRDD2)
+```  
+![img_30.png](img_30.png)  
+```scala
+import org.apache.spark.HashPartitioner
+val rdd: RDD[(Int, String)] = sc.makeRDD(Array((1,"aaa"),(2,"bbb"),(3,"ccc")),3)
+val rdd2: RDD[(Int, String)] = rdd.partitionBy(new HashPartitioner(2))
+```  
+![img_31.png](img_31.png)
 
-
+```scala
+val dataRDD1 = sparkContext.makeRDD(List(("a",1),("b",2),("c",3))) 
+val dataRDD2 = dataRDD1.groupByKey() val dataRDD3 = dataRDD1.groupByKey(2)
+val dataRDD4 = dataRDD1.groupByKey(new HashPartitioner(2))
+```  
+思考一个问题：reduceByKey 和 groupByKey 的区别？  
+从 shuffle 的角度:reduceByKey 和 groupByKey 都存在 shuffle 的操作，但是 reduceByKey 可以在 shuffle 前对分区内相同 key 的数据进行预聚合（combine）功能，这样会减少落盘的 数据量，而 groupByKey 只是进行分组，不存在数据量减少的问题，reduceByKey 性能比较
+高。
+从功能的角度: reduceByKey 其实包含分组和聚合的功能。GroupByKey 只能分组，不能聚合，所以在分组聚合的场合下，推荐使用 reduceByKey，如果仅仅是分组而不需要聚合那么还是只能使用 groupByKey
