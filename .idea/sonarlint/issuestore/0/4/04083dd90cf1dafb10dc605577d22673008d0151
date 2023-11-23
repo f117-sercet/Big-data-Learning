@@ -1,0 +1,8 @@
+
+h	java:S101	"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ãý²<8ÎÆ½ý¥1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ðô©á8ÏÆ½ý¥1
+O
+java:S1135"2Complete the task associated to this TODO comment.(¿¸€‘8ÓÆ½ý¥1
+L	java:S106"+Replace this use of System.out by a logger.(Øìíâùÿÿÿÿ8ÔÆ½ý¥1
+y
+java:S3077"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(ÂÊæüÿÿÿÿ8ÔÆ½ý¥1

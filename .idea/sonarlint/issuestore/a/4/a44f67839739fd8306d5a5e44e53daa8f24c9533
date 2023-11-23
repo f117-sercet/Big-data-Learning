@@ -1,0 +1,11 @@
+
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8€©‘´©1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ü‹«Š8Ï÷³©1
+O
+java:S1135"2Complete the task associated to this TODO comment.(¿¸€‘8Õ÷³©1
+o
+java:S2975"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(­æğ8Ö÷³©1
+x
+java:S1128"\Remove this unused import 'com.oracle.webservices.internal.api.databinding.DatabindingMode'.(î Ûp8Œëø³©1
+R
+java:S1128"0Remove this unused import 'lombok.SneakyThrows'.(¨³üÖûÿÿÿÿ8Èû´©1

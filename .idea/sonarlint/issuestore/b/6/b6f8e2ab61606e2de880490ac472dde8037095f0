@@ -1,0 +1,14 @@
+
+i	java:S101	"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ì×Ñç8ˆæü¤1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ğô©á8ƒˆæü¤1
+O
+java:S1135"2Complete the task associated to this TODO comment.(¿¸€‘8ˆæü¤1
+Z
+java:S1854"=Remove this useless assignment to local variable "instance1".(íœâ½8ü°Ïÿ¤1
+^
+java:S1854"<Remove this useless assignment to local variable "instance".(ñŒ±Éúÿÿÿÿ8ü°Ïÿ¤1
+O
+java:S1481"-Remove this unused "instance" local variable.(ñŒ±Éúÿÿÿÿ8ş°Ïÿ¤1
+K
+java:S1481".Remove this unused "instance1" local variable.(íœâ½8ş°Ïÿ¤1
+X	java:S125"<This block of commented-out lines of code should be removed.(ÃöŒ8ş°Ïÿ¤1

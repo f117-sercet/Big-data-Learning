@@ -1,0 +1,16 @@
+
+n	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(üÃÙ‚ûÿÿÿÿ8õñî™¦1
+W
+java:S1191"5Use classes from the Java API instead of Sun classes.(°İÀ‰şÿÿÿÿ8öñî™¦1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ğô©á8÷ñî™¦1
+O
+java:S1135"2Complete the task associated to this TODO comment.(¿¸€‘8üñî™¦1
+L	java:S106"+Replace this use of System.out by a logger.(Øìíâùÿÿÿÿ8şñî™¦1
+t
+java:S3077"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(ÙÓã‰8şñî™¦1
+G
+java:S2440 "*Remove this instantiation of "Singleton4".(ÅŠ¦‹8òî™¦1
+[
+java:S1128"9Remove this unused import 'sun.security.jca.GetInstance'.(°İÀ‰şÿÿÿÿ8èÄšš¦1
+I
+java:S1068",Remove this unused "instance" private field.(ÙÓã‰8…òî™¦1
