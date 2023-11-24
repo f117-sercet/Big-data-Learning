@@ -22,17 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark-RDD算子中的方法">
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/framework/application/WordCountApplication.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/framework/common/TApplication.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/framework/common/TController.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/framework/common/TDao.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/framework/common/TService.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/framework/controller/WordCountController.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/framework/dao/WordCountDao.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/framework/service/WordCountService.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/framework/util/EnvUtil.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="行为算子">
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_44.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_45.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_47.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_49.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/img_50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/RDD/spark04_dependencies.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/spark运行框架.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/spark运行框架.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +178,7 @@
       <recent name="framework.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WordCountApplication">
+  <component name="RunManager" selected="Application.spark04_dependencies">
     <configuration name="Spark03_Acc" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="acc.Spark03_Acc" />
       <module name="sparkLearning" />
@@ -219,8 +218,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="spark01_rddParallelize" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="RDD.spark01_rddParallelize" />
+    <configuration name="spark04_dependencies" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="RDD.spark04_dependencies" />
       <module name="sparkLearning" />
       <extension name="coverage">
         <pattern>
@@ -247,11 +246,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.spark04_dependencies" />
         <item itemvalue="Application.WordCountApplication" />
         <item itemvalue="Application.Spark06_bc" />
         <item itemvalue="Application.Spark03_Acc" />
         <item itemvalue="Application.wordCount3" />
-        <item itemvalue="Application.spark01_rddParallelize" />
       </list>
     </recent_temporary>
   </component>
@@ -445,7 +444,7 @@
       <workItem from="1700641528765" duration="285000" />
       <workItem from="1700648479390" duration="278000" />
       <workItem from="1700649071086" duration="9104000" />
-      <workItem from="1700710197297" duration="7249000" />
+      <workItem from="1700710197297" duration="10569000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -706,14 +705,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00078" summary="设计模式，桥接模式装饰者模式">
-      <option name="closed" value="true" />
-      <created>1699930692136</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1699930692136</updated>
-    </task>
     <task id="LOCAL-00079" summary="装饰者模式">
       <option name="closed" value="true" />
       <created>1700019474801</created>
@@ -802,7 +793,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700722731871</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="行为算子">
+      <option name="closed" value="true" />
+      <created>1700725220205</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1700725220205</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -852,7 +851,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Mapredue 文档汇总" />
     <MESSAGE value="设计模式-单例模式" />
     <MESSAGE value="设计模式-单例模式(饿汉模式)" />
     <MESSAGE value="设计模式-简单工厂模式" />
@@ -877,7 +875,8 @@
     <MESSAGE value="spark运行框架.md--RDD" />
     <MESSAGE value="spark-RDD算子" />
     <MESSAGE value="spark-RDD算子中的方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="spark-RDD算子中的方法" />
+    <MESSAGE value="行为算子" />
+    <option name="LAST_COMMIT_MESSAGE" value="行为算子" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
