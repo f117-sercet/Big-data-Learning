@@ -9,7 +9,7 @@ import org.apache.spark.{SparkConf, SparkContext}
  * @author: 段世超
  * @aate: Created in 2023/11/24 9:41
  */
-object Spark_RDD_Memory {
+object Spark01_RDD_Memory {
 
   def main(args: Array[String]): Unit = {
 

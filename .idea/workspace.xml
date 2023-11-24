@@ -23,8 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark-core">
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/RDD/builder/Spark_RDD_Memory.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/RDD/builder/Spark01_RDD_Memory_Par.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/RDD/builder/Spark02_RDD_File.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/RDD/builder/Spark02_RDD_file1.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/RDD/builder/Spark03_RDD_File_Par2.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/RDD/builder/Spark_RDD_Memory_Par1.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sparkLearning/src/main/scala/RDD/builder/Spark_RDD_Memory.scala" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/RDD/builder/Spark01_RDD_Memory.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -438,7 +443,9 @@
       <workItem from="1700648479390" duration="278000" />
       <workItem from="1700649071086" duration="9104000" />
       <workItem from="1700710197297" duration="13006000" />
-      <workItem from="1700790044713" duration="362000" />
+      <workItem from="1700790044713" duration="999000" />
+      <workItem from="1700808638018" duration="1868000" />
+      <workItem from="1700815845708" duration="303000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -699,14 +706,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00080" summary="spark 学习">
-      <option name="closed" value="true" />
-      <created>1700447568789</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1700447568789</updated>
-    </task>
     <task id="LOCAL-00081" summary="装饰者模式及其他">
       <option name="closed" value="true" />
       <created>1700447648602</created>
@@ -795,7 +794,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700789624377</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="spark-core">
+      <option name="closed" value="true" />
+      <created>1700790447133</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1700790447133</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
