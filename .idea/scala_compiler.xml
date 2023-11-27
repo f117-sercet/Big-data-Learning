@@ -2,6 +2,6 @@
 <project version="4">
   <component name="ScalaCompilerConfiguration">
     <option name="incrementalityType" value="IDEA" />
-    <profile name="Maven 1" modules="flink-scala,sparkLearning" />
+    <profile name="Maven 1" modules="flink-scala,sparkLearning,sparkSql" />
   </component>
 </project>

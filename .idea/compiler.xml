@@ -7,7 +7,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="sparkLearning" />
         <module name="designModel" />
         <module name="HadoopMapReducer" />
       </profile>
@@ -26,6 +25,7 @@
       <module name="HdfsClientDemo" target="1.8" />
       <module name="kafa-basis" target="1.8" />
       <module name="mapReduce" target="1.8" />
+      <module name="sparkSql" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

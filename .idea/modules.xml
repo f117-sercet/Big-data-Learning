@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Big-data-Learning.iml" filepath="$PROJECT_DIR$/.idea/Big-data-Learning.iml" />
       <module fileurl="file://$PROJECT_DIR$/Handoop/Handoop.iml" filepath="$PROJECT_DIR$/Handoop/Handoop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sparkLearning.iml" filepath="$PROJECT_DIR$/sparkLearning.iml" />
     </modules>
   </component>
 </project>
