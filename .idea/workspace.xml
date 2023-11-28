@@ -22,9 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark_行动算子">
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/sparkSql/SparkSQL01_Demo.scala" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark_Sql">
+      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/sparkSql/SparkSQL01_ReadandLoad.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sparkLearning/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sparkLearning/src/main/scala/sparkSql/SparkSQL01_Demo.scala" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/sparkSql/SparkSQL01_Demo.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,33 +115,33 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultPlantUmlFileTemplate": "UML Class",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "F:/git/Repository/gitHub/Big-data-Learning/sparkLearning/src/main/scala/framework/common",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.43448275",
-    "scala_project_settings_configurable.last_selected_tab_index": "6",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/git/Repository/gitHub/Big-data-Learning/sparkLearning/src/main/scala/framework/common&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.43448275&quot;,
+    &quot;scala_project_settings_configurable.last_selected_tab_index&quot;: &quot;6&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
@@ -173,7 +175,7 @@
       <recent name="framework.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SparkSQL01_Demo">
+  <component name="RunManager" selected="Application.SparkSQL01_ReadandLoad">
     <configuration name="Spark01_RDD_Operator_Action" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="RDD.action.Spark01_RDD_Operator_Action" />
       <module name="sparkLearning" />
@@ -226,12 +228,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Spark_RDD_Memory" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="RDD.builder.Spark_RDD_Memory" />
+    <configuration name="SparkSQL01_ReadandLoad" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="sparkSql.SparkSQL01_ReadandLoad" />
       <module name="sparkLearning" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="RDD.builder.*" />
+          <option name="PATTERN" value="sparkSql.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -241,11 +243,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SparkSQL01_ReadandLoad" />
         <item itemvalue="Application.SparkSQL01_Demo" />
         <item itemvalue="Application.Spark04_RDD_Operator_Action" />
         <item itemvalue="Application.Spark02_RDD_Operator_Action" />
         <item itemvalue="Application.Spark01_RDD_Operator_Action" />
-        <item itemvalue="Application.Spark_RDD_Memory" />
       </list>
     </recent_temporary>
   </component>
@@ -447,7 +449,10 @@
       <workItem from="1701054136015" duration="2055000" />
       <workItem from="1701057348691" duration="1156000" />
       <workItem from="1701065037703" duration="455000" />
-      <workItem from="1701068833742" duration="4801000" />
+      <workItem from="1701068833742" duration="5119000" />
+      <workItem from="1701078082210" duration="898000" />
+      <workItem from="1701131171952" duration="2187000" />
+      <workItem from="1701133393854" duration="1092000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -708,14 +713,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00083" summary="1、享元模">
-      <option name="closed" value="true" />
-      <created>1700553529685</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1700553529686</updated>
-    </task>
     <task id="LOCAL-00084" summary="spark运行框架.md--RDD">
       <option name="closed" value="true" />
       <created>1700559984377</created>
@@ -804,7 +801,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701071085992</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="spark_Sql">
+      <option name="closed" value="true" />
+      <created>1701077452562</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1701077452562</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -854,7 +859,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="MapTask笔记" />
     <MESSAGE value="工厂模式" />
     <MESSAGE value="原型模式" />
     <MESSAGE value="原型模式-深拷贝" />
@@ -879,7 +883,8 @@
     <MESSAGE value="spark-core" />
     <MESSAGE value="spark_core" />
     <MESSAGE value="spark_行动算子" />
-    <option name="LAST_COMMIT_MESSAGE" value="spark_行动算子" />
+    <MESSAGE value="spark_Sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="spark_Sql" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

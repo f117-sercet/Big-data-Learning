@@ -4,6 +4,8 @@ import org.apache.spark.SparkConf
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.{DataFrame, Dataset, Row, SparkSession}
 
+import scala.xml.XML.save
+
 /**
  * Description： TODO
  *
@@ -60,7 +62,12 @@ object SparkSQL01_Demo {
 
     //*****DataSet=>=>RDD*****
     ds1.rdd
+    spark.udf.register("addName",(x:String)=> "Name:"+x)
 
+    // 加载数据
+    //spark.read.format("…")[.option("…")].load("…")
+    // 保存数据
+    df.write.mode("append").json("/opt/module/data/output")
     // 释放资源
   }
 }
