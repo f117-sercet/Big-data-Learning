@@ -22,11 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark_Sql">
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/sparkSql/SparkSQL01_ReadandLoad.scala" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark_Sql基本">
+      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/sparkSql/Spark02_SparkSQL_UDF.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sparkLearning/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sparkLearning/src/main/scala/sparkSql/SparkSQL01_Demo.scala" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/sparkSql/SparkSQL01_Demo.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sparkLearning/src/main/scala/sparkSql/Spark01_Hive.scala" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/sparkSql/Spark01_Hive.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sparkLearning/src/main/scala/sparkSql/SparkSQL01_ReadandLoad.scala" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/src/main/scala/sparkSql/SparkSQL01_ReadandLoad.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,13 +175,13 @@
       <recent name="framework.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SparkSQL01_ReadandLoad">
-    <configuration name="Spark01_RDD_Operator_Action" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="RDD.action.Spark01_RDD_Operator_Action" />
+  <component name="RunManager" selected="Application.Spark02_SparkSQL_UDF">
+    <configuration name="Spark01_Hive" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="sparkSql.Spark01_Hive" />
       <module name="sparkLearning" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="RDD.action.*" />
+          <option name="PATTERN" value="sparkSql.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -189,12 +189,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Spark02_RDD_Operator_Action" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="RDD.action.Spark02_RDD_Operator_Action" />
+    <configuration name="Spark02_SparkSQL_UDF" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="sparkSql.Spark02_SparkSQL_UDF" />
       <module name="sparkLearning" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="RDD.action.*" />
+          <option name="PATTERN" value="sparkSql.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -243,11 +243,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Spark02_SparkSQL_UDF" />
+        <item itemvalue="Application.Spark01_Hive" />
         <item itemvalue="Application.SparkSQL01_ReadandLoad" />
         <item itemvalue="Application.SparkSQL01_Demo" />
         <item itemvalue="Application.Spark04_RDD_Operator_Action" />
-        <item itemvalue="Application.Spark02_RDD_Operator_Action" />
-        <item itemvalue="Application.Spark01_RDD_Operator_Action" />
       </list>
     </recent_temporary>
   </component>
@@ -452,7 +452,10 @@
       <workItem from="1701068833742" duration="5119000" />
       <workItem from="1701078082210" duration="898000" />
       <workItem from="1701131171952" duration="2187000" />
-      <workItem from="1701133393854" duration="1092000" />
+      <workItem from="1701133393854" duration="3462000" />
+      <workItem from="1701165005675" duration="44000" />
+      <workItem from="1701165061954" duration="207000" />
+      <workItem from="1701245677067" duration="1700000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -713,14 +716,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00084" summary="spark运行框架.md--RDD">
-      <option name="closed" value="true" />
-      <created>1700559984377</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1700559984378</updated>
-    </task>
     <task id="LOCAL-00085" summary="spark运行框架.md--RDD">
       <option name="closed" value="true" />
       <created>1700621548222</created>
@@ -809,7 +804,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701077452562</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="spark_Sql基本">
+      <option name="closed" value="true" />
+      <created>1701136242444</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1701136242445</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -859,7 +862,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="工厂模式" />
     <MESSAGE value="原型模式" />
     <MESSAGE value="原型模式-深拷贝" />
     <MESSAGE value="hadoop-小文件处理" />
@@ -884,7 +886,8 @@
     <MESSAGE value="spark_core" />
     <MESSAGE value="spark_行动算子" />
     <MESSAGE value="spark_Sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="spark_Sql" />
+    <MESSAGE value="spark_Sql基本" />
+    <option name="LAST_COMMIT_MESSAGE" value="spark_Sql基本" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

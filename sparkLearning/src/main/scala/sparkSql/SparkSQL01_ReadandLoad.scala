@@ -39,7 +39,8 @@ object SparkSQL01_ReadandLoad {
 
 
     // 方法二：
-    spark.read.format("jdbc").options(Map("url" -> "jdbc:mysql://localhost:3306/srb_core?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&user=root&password=123123",
+    spark.read.format("jdbc")
+      .options(Map("url" -> "jdbc:mysql://localhost:3306/srb_core?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&user=root&password=123123",
         "dbtable" -> "integral_grade",
       "driver"->"com.mysql.cj.jdbc.Driver"))
       .load()
