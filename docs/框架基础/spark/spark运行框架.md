@@ -3,7 +3,7 @@
 #### 运行架构
 
 Spark框架的核心是一个计算引擎，整体来说，它采用了标准master-slaver的结构。Driver表示master，负责整个集群中的作业调度。Executor则是slave。负责执行任务。
-![img.png](img.png)
+![img.png](images/img.png)
 
 #### 核心组件
 
@@ -33,7 +33,7 @@ Hadoop用户向Yarn集群提交应用程序时，提交程序中应该包含Appl
 
 Spark Executor是集群中运行在工作节点(Worker)
 中的一个JVM进程，是整个集群中的专门用与计算的节点。在提交应用中，可以提供餐无数指定计算节点的个数，以及对应的资源。这里的资源一般指的是工作节点Executor的内存大小和使用的虚拟CPU和数量。
-![img_1.png](img_1.png)
+![img_1.png](images/img_1.png)
 
 ### 并行度
 
@@ -41,14 +41,14 @@ Spark Executor是集群中运行在工作节点(Worker)
 
 ### 有向无环图(DAG)
 
-![img_2.png](img_2.png)  
+![img_2.png](images/img_2.png)  
 由spark程序直接映射成的数据流的高级抽象模型，简单理解就是将整个程序计算的执行过程用图形表示出来，这样更直观，更便于立=理解，可以用于表示程序的拓扑结构。
 DAG有向无环图是由点和线组成的拓扑图形，该图形具有方向，不会闭环。
 
 ### 提交流程
 
 所谓的提交流程，其实就是我们开发人员根据需求写的应用程序通过spark客户端提交给spark运行环境执行计算的流程。
-![img_3.png](img_3.png)  
+![img_3.png](images/img_3.png)  
 Spark 应用程序提交到Yarn 环境中执行的时候，一般会有两种部署执行的方式：Client 和Cluster。两种模式主要区别在于：Driver
 程序的运行节点位置。
 
@@ -120,37 +120,37 @@ RDD是Spark框架中用于数据处理的核心模型。
 
 1. 启动Yarn集群环境
 
-![img_5.png](img_5.png)
+![img_5.png](images/img_5.png)
 
 2. Spark 通过申请资源创建调度节点和计算节点。
-   ![img_6.png](img_6.png)
+   ![img_6.png](images/img_6.png)
 3. Spark框架根据需求将计算逻辑根据区分划分成不同的任务。
-   ![img_7.png](img_7.png)
+   ![img_7.png](images/img_7.png)
 4. 调度节点将任务根据计算节点状态发送到对应的计算节点进行计算。
-   ![img_8.png](img_8.png)
+   ![img_8.png](images/img_8.png)
 
 #### RDD创建
 
 在Spark中创建RDD的创建方式可以分为四种:
 
 1) 从集合中创建RDD，Spark 主要提供了两个方法：parallelize 和makeRDD.从底层代码来看，makeRDD方法其实就是parallelize方法。
-   ![img_9.png](img_9.png)
-   ![img_10.png](img_10.png)
+   ![img_9.png](images/img_9.png)
+   ![img_10.png](images/img_10.png)
 2) 从外部文件(存储)创建RDD：由外部存储系统的数据集创建RDD包括：本地的文件系统，所有Hadoop支持的数据集比如HDFS,HBASE等。
-   ![img_11.png](img_11.png)
+   ![img_11.png](images/img_11.png)
 3) 从其他RDD创建。主要是通过一个RDD运算完后，再产生新的RDD。
 4) 直接创建RDD（new）：使用 new 的方式直接构造RDD，一般由 Spark 框架自身使用。
 
 #### RDD并行度
 
 默认情况下，spark可以将一个作业切分多个任务后，发送给Executor节点并计算,而能够并行计算的任务数量我们称之为并行度。这个数量可以在构建RDD时指定。读取内存数据时,数据可以按照并行度的设定进行数据的分区操作，数据分区规则的Spark核心源码如下：
-![img_12.png](img_12.png)
+![img_12.png](images/img_12.png)
 
 #### RDD转换算子
 
 RDD根据数据处理方式的不同将算子整体上分为Value 类型、双Value 类型和Key-Value 类型
-![img_13.png](img_13.png)  
-![img_14.png](img_14.png)
+![img_13.png](images/img_13.png)  
+![img_14.png](images/img_14.png)
 
 ###### 思考一个问题：map 和mapPartitions 的区别？
 
@@ -164,16 +164,16 @@ RDD根据数据处理方式的不同将算子整体上分为Value 类型、双Va
    Map 算子因为类似于串行操作，所以性能比较低，而是mapPartitions 算子类似于批处 理，所以性能较高。但是mapPartitions
    算子会长时间占用内存，那么这样会导致内存可能
    不够用，出现内存溢出的错误。所以在内存有限的情况下，不推荐使用。使用map 操作。
-   ![img_15.png](img_15.png)  
-   ![img_16.png](img_16.png)
+   ![img_15.png](images/img_15.png)  
+   ![img_16.png](images/img_16.png)
 
 ```scala
 val dataRDD = sparkContext.makRDD(List(List(1, 2), List(3, 4)), 1)
 val dataRDD1 = dataRDD.flatMap(list => list)  
 ```
 
-![img_17.png](img_17.png)  
-![img_18.png](img_18.png)
+![img_17.png](images/img_17.png)  
+![img_18.png](images/img_18.png)
 
 ```scala
 val dataRDD = sparkContext.makRDD(List(
@@ -182,21 +182,21 @@ val dataRDD = sparkContext.makRDD(List(
 val dataRDD1: RDD[Array[Int]] = dataRDD.golm()
 ```
 
-![img_19.png](img_19.png)
+![img_19.png](images/img_19.png)
 
 ```scala 3
 val dataRDD = sparkContext.makeRDD(List(List(1, 2, 3, 4), 4))
 val dataRDD1 = dataRDD.groupBy(_ % 2)
 ```
 
-![img_20.png](img_20.png)
+![img_20.png](images/img_20.png)
 
 ```scala
 val dataRDD = sparkContext.makeRDD(List(List(1, 2, 3, 4), 1))
 val dataRDD1 = dataRDD.filter(_ % 2 == 0)  
 ```
 
-![img_21.png](img_21.png)
+![img_21.png](images/img_21.png)
 
 ```scala
 val dataRDD = sparkContext.makeRDD(List(1, 2, 3, 4
@@ -215,7 +215,7 @@ val dataRDD1 = dataRDD.sample(false, 0.5)
 val dataRDD2 = dataRDD.sample(true, 2)
 ```
 
-![img_22.png](img_22.png)
+![img_22.png](images/img_22.png)
 
 ```scala
 val dataRDD = sparkContext.makeRDD(List(1, 2, 3, 4, 1, 2
@@ -225,7 +225,7 @@ val dataRDD2 = dataRDD.distinct(2)
 
 ```  
 
-![img_23.png](img_23.png)
+![img_23.png](images/img_23.png)
 
 ```scala
 val dataRDD = sparkContext.makeRDD(List(1, 2, 3, 4, 1, 2
@@ -233,7 +233,7 @@ val dataRDD = sparkContext.makeRDD(List(1, 2, 3, 4, 1, 2
 val dataRDD1 = dataRDD.coalesce(2)
 ```  
 
-![img_24.png](img_24.png)
+![img_24.png](images/img_24.png)
 
 ```scala
 val dataRDD = sparkContext.makeRDD(List(1, 2, 3, 4, 1, 2
@@ -241,14 +241,14 @@ val dataRDD = sparkContext.makeRDD(List(1, 2, 3, 4, 1, 2
 val dataRDD1 = dataRDD.repartition(4)  
 ```  
 
-![img_25.png](img_25.png)
+![img_25.png](images/img_25.png)
 
 ```scala
 val dataRDD = sparkContext.makeRDD(List(1, 2, 3, 4, 1, 2), 2)
 val dataRDD1 = dataRDD.sortBy(num => num, false, 4)  
 ```
 
-![img_26.png](img_26.png)
+![img_26.png](images/img_26.png)
 
 ```scala
 val dataRDD1 = sparkContext.makeRDD(List(1, 2, 3, 4))
@@ -256,7 +256,7 @@ val dataRDD2 = sparkContext.makeRDD(List(3, 4, 5, 6))
 val dataRDD = dataRDD1.intersection(dataRDD2)
 ```  
 
-![img_27.png](img_27.png)
+![img_27.png](images/img_27.png)
 
 ```scala
 val dataRDD1 = sparkContext.makeRDD(List(1, 2, 3, 4))
@@ -264,7 +264,7 @@ val dataRDD2 = sparkContext.makeRDD(List(3, 4, 5, 6))
 val dataRDD = dataRDD1.union(dataRDD2)
 ```  
 
-![img_28.png](img_28.png)
+![img_28.png](images/img_28.png)
 
 ```scala
 val dataRDD1 = sparkContext.makeRDD(List(1, 2, 3, 4))
@@ -272,7 +272,7 @@ val dataRDD2 = sparkContext.makeRDD(List(3, 4, 5, 6))
 val dataRDD = dataRDD1.subtract(dataRDD2)
 ```
 
-![img_29.png](img_29.png)
+![img_29.png](images/img_29.png)
 
 ```scala
 val dataRDD1 = sparkContext.makeRDD(List(1, 2, 3, 4))
@@ -280,7 +280,7 @@ val dataRDD2 = sparkContext.makeRDD(List(3, 4, 5, 6))
 val dataRDD = dataRDD1.zip(dataRDD2)
 ```  
 
-![img_30.png](img_30.png)
+![img_30.png](images/img_30.png)
 
 ```scala
 import org.apache.spark.HashPartitioner
@@ -289,7 +289,7 @@ val rdd: RDD[(Int, String)] = sc.makeRDD(Array((1, "aaa"), (2, "bbb"), (3, "ccc"
 val rdd2: RDD[(Int, String)] = rdd.partitionBy(new HashPartitioner(2))
 ```  
 
-![img_31.png](img_31.png)
+![img_31.png](images/img_31.png)
 
 ```scala
 val dataRDD1 = sparkContext.makeRDD(List(("a", 1), ("b", 2), ("c", 3)))
@@ -304,7 +304,7 @@ val dataRDD4 = dataRDD1.groupByKey(new HashPartitioner(2))
 高。
 从功能的角度: reduceByKey 其实包含分组和聚合的功能。GroupByKey 只能分组，不能聚合，所以在分组聚合的场合下，推荐使用
 reduceByKey，如果仅仅是分组而不需要聚合那么还是只能使用 groupByKey。
-![img_32.png](img_32.png)
+![img_32.png](images/img_32.png)
 
 ```scala 3
 val dataRDD1 = sparkContext.makeRDD(List(("a", 1), ("b", 2), ("c", 3)))
@@ -322,14 +322,14 @@ rdd.aggregateByKey(10)((x, y) => math.max(x, y), (x, y) => x + y
 resultRDD.collect().foreach(println)
 ```  
 
-![img_33.png](img_33.png)
+![img_33.png](images/img_33.png)
 
 ```scala
 val dataRDD1 = sparkContext.makeRDD(List(("a", 1), ("b", 2), ("c", 3)))
 val dataRDD2 = dataRDD1.foldByKey(0)(_ + _)
 ```  
 
-![img_34.png](img_34.png)
+![img_34.png](images/img_34.png)
 
 ```scala
 val list: List[(String, Int)] = List(("a", 88), ("b", 95), ("a", 91), ("b", 93), ("a", 95), ("b", 98))
@@ -346,7 +346,7 @@ AggregateByKey：相同 key 的第一个数据和初始值进行分区内计算�
 当计算时，发现数据结构不满足要求时，可以让第一个数据转换结构。分区
 内和分区间计算规则不相同。  
 CombineByKey:当计算时，发现数据结构不满足要求时，可以让第一个数据转换结构。分区 内和分区间计算规则不相同。  
-![img_35.png](img_35.png)
+![img_35.png](images/img_35.png)
 
 ```scala
 val dataRDD1 = sparkContext.makeRDD(List(("a", 1), ("b", 2), ("c", 3)))
@@ -354,7 +354,7 @@ val sortRDD1: RDD[(String, Int)] = dataRDD1.sortByKey(true)
 val sortRDD1: RDD[(String, Int)] = dataRDD1.sortByKey(false)
 ```  
 
-![img_36.png](img_36.png)
+![img_36.png](images/img_36.png)
 
 ```scala
 val rdd: RDD[(Int, String)] = sc.makeRDD(Array((1, "a"), (2, "b"), (3, "c")))
@@ -362,9 +362,9 @@ val rdd1: RDD[(Int, Int)] = sc.makeRDD(Array((1, 4), (2, 5), (3, 6)))
 rdd.join(rdd1).collect().foreach(println)
 ```  
 
-![img_37.png](img_37.png)  
-![img_38.png](img_38.png)  
-![img_39.png](img_39.png)
+![img_37.png](images/img_37.png)  
+![img_38.png](images/img_38.png)  
+![img_39.png](images/img_39.png)
 
 ```scala
 val dataRDD1 = sparkContext.makeRDD(List(("a", 1), ("a", 2), ("c", 3)))
@@ -374,7 +374,7 @@ val value: RDD[(String, (Iterable[Int], Iterable[Int]))] = dataRDD1.cogroup(data
 
 ## 行动算子
 
-![img_40.png](img_40.png)
+![img_40.png](images/img_40.png)
 
 ```scala
 val rdd: RDD[Int] = sc.makeRDD(List(1, 2, 3, 4))
@@ -382,7 +382,7 @@ val rdd: RDD[Int] = sc.makeRDD(List(1, 2, 3, 4))
 val reduceResult: Int = rdd.reduce(_ + _)
 ```  
 
-![img_41.png](img_41.png)
+![img_41.png](images/img_41.png)
 
 ```scala
 val rdd: RDD[Int] = sc.makeRDD(List(1, 2, 3, 4))
@@ -390,7 +390,7 @@ val rdd: RDD[Int] = sc.makeRDD(List(1, 2, 3, 4))
 rdd.collect().foreach(println)
 ```
 
-![img_42.png](img_42.png)
+![img_42.png](images/img_42.png)
 
 ```scala
 var rdd: RDD[Int] = sc.makeRDD(List(1, 2, 3, 4))
@@ -398,14 +398,14 @@ var rdd: RDD[Int] = sc.makeRDD(List(1, 2, 3, 4))
 val countResult: Long = rdd.count()
 ```  
 
-![img_43.png](img_43.png)
+![img_43.png](images/img_43.png)
 
 ```scala
 var rdd: RDD[Int] = sc.makeRDD(List(1, 2, 3, 4))
 val firstResult: Int = rdd.first() println (firstResult)
 ```  
 
-![img_44.png](img_44.png)
+![img_44.png](images/img_44.png)
 
 ```scala
 val rdd: RDD[Int] = sc.makeRDD(List(1, 2, 3, 4))
@@ -414,14 +414,14 @@ val takeResult: Array[Int] = rdd.take(2)
 println(takeResult.mkString(","))
 ```  
 
-![img_45.png](img_45.png)
+![img_45.png](images/img_45.png)
 
 ```scala
 val rdd: RDD[Int] = sc.makeRDD(List(1, 3, 2, 4))
 var result: Array[Int] = rdd.takeOrdered(2)
 ```
 
-![img_46.png](img_46.png)
+![img_46.png](images/img_46.png)
 
 ```scala
 val rdd: RDD[Int] = sc.makeRDD(List(1, 2, 3, 4), 8)
@@ -430,14 +430,14 @@ val rdd: RDD[Int] = sc.makeRDD(List(1, 2, 3, 4), 8)
 val result: Int = rdd.aggregate(10)(_ + _, _ + _)
 ```  
 
-![img_47.png](img_47.png)
+![img_47.png](images/img_47.png)
 
 ```scala
 val rdd: RDD[Int] = sc.makeRDD(List(1, 2, 3, 4))
 val foldResult: Int = rdd.fold(0)(_ + _)
 ```  
 
-![img_48.png](img_48.png)
+![img_48.png](images/img_48.png)
 
 ```scala
 val rdd: RDD[(Int, String)] = sc.makeRDD(List((1, "a"), (1, "a"), (1, "a"), (2, "b"), (3, "c"), (3, "c")))
@@ -445,7 +445,7 @@ val rdd: RDD[(Int, String)] = sc.makeRDD(List((1, "a"), (1, "a"), (1, "a"), (2, 
 val result: collection.Map[Int, Long] = rdd.countByKey()
 ```
 
-![img_49.png](img_49.png)
+![img_49.png](images/img_49.png)
 
 ```scala
 // 保存成 Text 文件 
@@ -456,7 +456,7 @@ rdd.saveAsObjectFile("output1")
 rdd.map((_, 1)).saveAsSequenceFile("output2")
 ```
 
-![img_50.png](img_50.png)
+![img_50.png](images/img_50.png)
 
 ```scala 3
 val rdd: RDD[Int] = sc.makeRDD(List(1, 2, 3, 4))
@@ -535,7 +535,7 @@ RDD任务切分中间分为：Application、Job、Stage 和 Task
 * Job:一个Action 算子就会生成一个 Job;
 * Stage:Stage等于宽依赖的个数加1
 * Task：一个 Stage 阶段中，最后一个RDD的分区个数就是 Task 的个数。
-  ![img_51.png](img_51.png)
+  ![img_51.png](images/img_51.png)
 
 ### RDD持久化
 
@@ -631,4 +631,4 @@ sc.objectFile[Int]("output").collect().foreach(println)
 累加器用来把 Executor 端变量信息聚合到Driver端。在Driver程序中定义的变量，在 Executor 端的每个 Task 都会得到这个变量的一份新的副本，每个 task 更新这些副本的值后，传回Driver端进行merge。  
 #### 广播变量  
 广播变量用来高效分发较大的对象。向所有工作节点发送一个较大的只读值，以供一个 或多个 Spark 操作使用。比如，如果你的应用需要向所有节点发送一个较大的只读查询表， 广播变量用起来都很顺手。在多个并行操作中使用同一个变量，但是 Spark 会为每个任务
-分别发送。
+分别发送。  

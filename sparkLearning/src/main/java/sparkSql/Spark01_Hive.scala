@@ -24,6 +24,7 @@ object Spark01_Hive {
     // 1. 拷贝Hive-size.xml文件到classpath下
     // 2. 启用Hive的支持
     // 3. 增加对应的依赖关系（包含MySQL驱动）
+    spark.sql("select * from sparklearning.city_info").show()
 
     // TODO 关闭环境
     spark.close()
