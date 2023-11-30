@@ -1,0 +1,119 @@
+<?xml version="1.0"?> 
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+ <configuration> 
+<!-- jdbc 连接的 URL -->
+ <property>
+<name>javax.jdo.option.ConnectionURL</name>
+ <value>jdbc:mysql://hadoop102:3306/metastore?useSSL=false</value>
+
+</property>
+<!-- jdbc 连接的 Driver-->
+ <property>
+<name>javax.jdo.option.ConnectionDriverName</name> 
+<value>com.mysql.jdbc.Driver</value>
+</property>
+
+<!-- jdbc 连接的 username-->
+ <property>
+<name>javax.jdo.option.ConnectionUserName</name>
+ <value>root</value>
+</property>
+<!-- jdbc 连接的 password -->
+ <property>
+<name>javax.jdo.option.ConnectionPassword</name>
+ <value>123123</value>
+</property>
+
+<!--最小连接数-->
+<property>
+    <name>hive.server2.thrift.min.worker.threads</name>
+    <value>5</value>
+    <description>Minimum number of Thrift worker threads</description>
+  </property>
+
+<!--最大连接数-->
+  <property>
+    <name>hive.server2.thrift.max.worker.threads</name>
+    <value>1000</value>
+    <description>Maximum number of Thrift worker threads</description>
+  </property>
+
+<!-- Hive 元数据存储版本的验证 -->
+ <property>
+<name>hive.metastore.schema.verification</name>
+ <value>false</value>
+</property>
+
+<!--元数据存储授权-->
+ <property>
+<name>hive.metastore.event.db.notification.api.auth</name>
+ <value>false</value>
+</property>
+
+<!-- Hive 默认在 HDFS 的工作目录 -->
+<property>
+ <name>hive.metastore.warehouse.dir</name>
+ <value>/user/hive/warehouse</value>
+</property>
+
+
+<!-- 指定存储元数据要连接的地址 --> <property>
+<name>hive.metastore.uris</name>
+ <value>thrift://hadoop102:9083</value>
+</property>
+
+<!-- 指定 hiveserver2 连接的 host -->
+ <property>
+<name>hive.server2.thrift.bind.host</name>
+<value>hadoop102</value>
+ </property>
+<!-- 指定 hiveserver2 连接的端口号 -->
+ <property>
+<name>hive.server2.thrift.port</name>
+ <value>10000</value>
+</property>
+
+<property> 
+<name>hive.cli.print.header</name>
+ <value>true</value>
+</property> 
+<property>
+<name>hive.cli.print.current.db</name>
+ <value>true</value>
+</property>
+
+
+
+      <!--权限配置-->
+
+<property>
+
+<name>hive.security.authorization.enabled</name>
+
+<value>true</value>
+
+<description>enableor disable the hive clientauthorization</description>
+
+</property>
+
+
+<property>
+        <name>hive.users.in.admin.role</name>
+        <value>atguigu</value>
+</property>
+
+
+<property>
+
+<name>hive.security.authorization.createtable.owner.grants</name>
+
+<value>ALL</value>
+
+<description>theprivileges automatically granted to the ownerwhenever a table gets created. Anexample like "select,drop" willgrant select and drop privilege to theowner of the table</description>
+
+</property>
+
+
+
+
+</configuration>

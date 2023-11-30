@@ -22,64 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark_Sql 需求">
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/streaming/images/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/streaming/sparkStreaming.md" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark_streaminng基础">
+      <change afterPath="$PROJECT_DIR$/Handoop/HadoopMapReducer/target/classes/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/StreamWordCount.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sparkLearning/target/classes/hive-site.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sparkLearning/target/classes/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_12.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_13.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_14.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_15.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_16.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_17.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_18.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_19.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_19.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_20.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_21.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_22.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_22.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_23.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_23.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_24.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_24.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_25.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_25.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_26.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_26.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_27.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_27.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_28.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_28.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_29.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_29.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_30.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_30.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_31.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_31.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_33.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_33.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_34.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_34.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_35.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_35.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_36.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_36.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_37.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_37.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_38.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_38.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_39.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_39.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_40.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_40.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_41.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_41.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_42.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_42.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_43.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_43.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_44.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_44.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_45.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_45.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_46.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_46.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_47.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_47.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_48.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_48.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_49.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_49.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_50.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_50.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_51.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_51.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/images/img_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/images/img_9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/sparkStreaming.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/spark运行框架.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/core/spark运行框架.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/streaming/sparkStreaming.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/streaming/sparkStreaming.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,11 +159,11 @@
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\Hadoop" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\git\Repository\gitHub\Big-data-Learning" />
-      <recent name="F:\git\Repository\gitHub\Big-data-Learning\Handoop" />
-      <recent name="F:\git\Repository\gitHub\Big-data-Learning\sparkLearning" />
-      <recent name="F:\git\Repository\gitHub\Big-data-Learning\Handoop\HadoopMapReducer" />
-      <recent name="F:\git\Repository\gitHub\Big-data-Learning\designModel" />
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\spark\streaming" />
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\spark\streaming\images" />
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\spark\core" />
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\spark" />
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\spark\images" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -228,7 +177,7 @@
       <recent name="framework.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Spark06_SparkSQL_Test2">
+  <component name="RunManager" selected="Application.StreamWordCount">
     <configuration name="Spark01_Hive" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="sparkSql.Spark01_Hive" />
       <module name="sparkLearning" />
@@ -281,12 +230,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="spark01_rddParallelize" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="RDD.spark01_rddParallelize" />
+    <configuration name="StreamWordCount" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="sparkStreaming.StreamWordCount" />
       <module name="sparkLearning" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="RDD.*" />
+          <option name="PATTERN" value="sparkStreaming.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -296,11 +245,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StreamWordCount" />
         <item itemvalue="Application.Spark06_SparkSQL_Test2" />
         <item itemvalue="Application.Spark06_SparkSql" />
         <item itemvalue="Application.Spark01_Hive" />
         <item itemvalue="Application.Spark01_RDD_IO_Save" />
-        <item itemvalue="Application.spark01_rddParallelize" />
       </list>
     </recent_temporary>
   </component>
@@ -514,7 +463,7 @@
       <workItem from="1701308861928" duration="307000" />
       <workItem from="1701309207336" duration="5719000" />
       <workItem from="1701315616411" duration="326000" />
-      <workItem from="1701315974276" duration="379000" />
+      <workItem from="1701315974276" duration="3789000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -775,14 +724,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00087" summary="spark-RDD算子">
-      <option name="closed" value="true" />
-      <created>1700706591903</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1700706591903</updated>
-    </task>
     <task id="LOCAL-00088" summary="spark-RDD算子中的方法">
       <option name="closed" value="true" />
       <created>1700709888012</created>
@@ -871,7 +812,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701315150804</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="spark_streaminng">
+      <option name="closed" value="true" />
+      <created>1701316783727</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1701316783727</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -921,8 +870,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="hadoop-小文件处理" />
-    <MESSAGE value="设计模式-建造者模式.md" />
     <MESSAGE value="scala 编程规范" />
     <MESSAGE value="handoop笔记" />
     <MESSAGE value="handoop笔记-排序" />
@@ -946,7 +893,9 @@
     <MESSAGE value="spark_Sql基本" />
     <MESSAGE value="spark_SqlUDF" />
     <MESSAGE value="spark_Sql 需求" />
-    <option name="LAST_COMMIT_MESSAGE" value="spark_Sql 需求" />
+    <MESSAGE value="spark_streaminng" />
+    <MESSAGE value="spark_streaminng基础" />
+    <option name="LAST_COMMIT_MESSAGE" value="spark_streaminng基础" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
