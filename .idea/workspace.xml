@@ -22,7 +22,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark_streaminng基础" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark_streaminngTransform">
+      <change afterPath="$PROJECT_DIR$/Handoop/Handoop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/WorldCount.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/streaming/sparkStreaming.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/streaming/sparkStreaming.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output1/._SUCCESS.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output1/.part-00000.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output1/_SUCCESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output1/part-00000" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output2/._SUCCESS.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output2/.part-00000.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output2/_SUCCESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output2/part-00000" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output3/._SUCCESS.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output3/.part-00000.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output3/_SUCCESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output3/part-00000" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sparkLearning/target/classes/hive-site.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sparkLearning/target/classes/log4j.properties" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,11 +171,11 @@
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\Hadoop" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\算法基础" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\spark\streaming" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\spark\streaming\images" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\spark\core" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\spark" />
-      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\spark\images" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -170,26 +189,13 @@
       <recent name="framework.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StreamWordCount">
+  <component name="RunManager" selected="JUnit.hdfsClient.testMkdirs">
     <configuration name="Spark01_Hive" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="sparkSql.Spark01_Hive" />
       <module name="sparkLearning" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="sparkSql.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Spark01_RDD_IO_Save" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="RDD.io.Spark01_RDD_IO_Save" />
-      <module name="sparkLearning" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="RDD.io.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -236,13 +242,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="hdfsClient.testMkdirs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Handoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.hadoop.hdfsClient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.hadoop.hdfsClient" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.hadoop.hdfsClient.hdfsClient" />
+      <option name="METHOD_NAME" value="testMkdirs" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.hdfsClient.testMkdirs" />
         <item itemvalue="Application.StreamWordCount" />
         <item itemvalue="Application.Spark06_SparkSQL_Test2" />
         <item itemvalue="Application.Spark06_SparkSql" />
         <item itemvalue="Application.Spark01_Hive" />
-        <item itemvalue="Application.Spark01_RDD_IO_Save" />
       </list>
     </recent_temporary>
   </component>
@@ -457,6 +479,9 @@
       <workItem from="1701309207336" duration="5719000" />
       <workItem from="1701315616411" duration="326000" />
       <workItem from="1701315974276" duration="4010000" />
+      <workItem from="1701390371774" duration="4245000" />
+      <workItem from="1701394662751" duration="122000" />
+      <workItem from="1701411857617" duration="1302000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -717,14 +742,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00089" summary="spark-RDD算子中的方法">
-      <option name="closed" value="true" />
-      <created>1700722731871</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1700722731871</updated>
-    </task>
     <task id="LOCAL-00090" summary="行为算子">
       <option name="closed" value="true" />
       <created>1700725220205</created>
@@ -813,7 +830,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701328468511</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="spark_streaminngTransform">
+      <option name="closed" value="true" />
+      <created>1701394395880</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1701394395881</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -863,7 +888,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="scala 编程规范" />
     <MESSAGE value="handoop笔记" />
     <MESSAGE value="handoop笔记-排序" />
     <MESSAGE value="handoop笔记-排序整理" />
@@ -888,7 +912,8 @@
     <MESSAGE value="spark_Sql 需求" />
     <MESSAGE value="spark_streaminng" />
     <MESSAGE value="spark_streaminng基础" />
-    <option name="LAST_COMMIT_MESSAGE" value="spark_streaminng基础" />
+    <MESSAGE value="spark_streaminngTransform" />
+    <option name="LAST_COMMIT_MESSAGE" value="spark_streaminngTransform" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
