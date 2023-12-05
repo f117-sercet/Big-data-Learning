@@ -22,8 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark_streaminng基础">
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark_streaminng 实践">
+      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice/BlackListHandler.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice/Spark01Adverties.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice/util/JdbcUtil.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice/util/MykafkaUtil.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice/MockerRealTime.scala" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice/MockerRealTime.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice/PropertiesUtil.scala" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice/util/PropertiesUtil.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +61,7 @@
         <option value="Class" />
         <option value="FxmlFile" />
         <option value="Scala Class" />
+        <option value="Scala Object" />
         <option value="Package Object" />
       </list>
     </option>
@@ -466,6 +473,11 @@
       <workItem from="1701394662751" duration="122000" />
       <workItem from="1701411857617" duration="1787000" />
       <workItem from="1701413676692" duration="109000" />
+      <workItem from="1701650103697" duration="6970000" />
+      <workItem from="1701736370231" duration="1229000" />
+      <workItem from="1701748217121" duration="624000" />
+      <workItem from="1701757610162" duration="2539000" />
+      <workItem from="1701764300575" duration="1781000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -726,14 +738,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00091" summary="spark-core">
-      <option name="closed" value="true" />
-      <created>1700789624377</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1700789624377</updated>
-    </task>
     <task id="LOCAL-00092" summary="spark-core">
       <option name="closed" value="true" />
       <created>1700790447133</created>
@@ -822,7 +826,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701413450254</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="spark_streaminng 实践">
+      <option name="closed" value="true" />
+      <created>1701657133749</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1701657133749</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -872,7 +884,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="handoop笔记" />
     <MESSAGE value="handoop笔记-排序" />
     <MESSAGE value="handoop笔记-排序整理" />
     <MESSAGE value="handoop笔记-Join" />
@@ -897,7 +908,8 @@
     <MESSAGE value="spark_streaminng" />
     <MESSAGE value="spark_streaminngTransform" />
     <MESSAGE value="spark_streaminng基础" />
-    <option name="LAST_COMMIT_MESSAGE" value="spark_streaminng基础" />
+    <MESSAGE value="spark_streaminng 实践" />
+    <option name="LAST_COMMIT_MESSAGE" value="spark_streaminng 实践" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

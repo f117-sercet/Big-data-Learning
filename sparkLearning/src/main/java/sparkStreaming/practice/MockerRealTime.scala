@@ -2,6 +2,7 @@ package sparkStreaming.practice
 
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerConfig}
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerConfig, ProducerRecord}
+import sparkStreaming.practice.util.PropertiesUtil
 
 import java.util.{Properties, Random}
 import scala.collection.mutable.ArrayBuffer
