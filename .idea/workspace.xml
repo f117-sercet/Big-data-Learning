@@ -23,13 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark_streaminng 实践">
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice/BlackListHandler.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice/Spark01Adverties.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice/util/JdbcUtil.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice/util/MykafkaUtil.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice02/DateAreaCityAdCountHandler.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice/MockerRealTime.scala" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice/MockerRealTime.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice/PropertiesUtil.scala" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice/util/PropertiesUtil.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -477,7 +472,10 @@
       <workItem from="1701736370231" duration="1229000" />
       <workItem from="1701748217121" duration="624000" />
       <workItem from="1701757610162" duration="2539000" />
-      <workItem from="1701764300575" duration="1781000" />
+      <workItem from="1701764300575" duration="1967000" />
+      <workItem from="1701822664908" duration="24000" />
+      <workItem from="1701823265718" duration="2571000" />
+      <workItem from="1701855470188" duration="2715000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -738,14 +736,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00092" summary="spark-core">
-      <option name="closed" value="true" />
-      <created>1700790447133</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1700790447133</updated>
-    </task>
     <task id="LOCAL-00093" summary="spark_core">
       <option name="closed" value="true" />
       <created>1700816485857</created>
@@ -834,7 +824,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701657133749</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="spark_streaminng 实践">
+      <option name="closed" value="true" />
+      <created>1701766240844</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1701766240844</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

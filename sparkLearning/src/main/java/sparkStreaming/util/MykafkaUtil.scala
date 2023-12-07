@@ -1,4 +1,4 @@
-package sparkStreaming.practice.util
+package sparkStreaming.util
 
 import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.kafka.common.serialization.StringDeserializer

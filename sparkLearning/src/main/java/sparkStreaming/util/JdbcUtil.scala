@@ -1,4 +1,4 @@
-package sparkStreaming.practice.util
+package sparkStreaming.util
 
 import java.sql.{Connection, PreparedStatement, ResultSet}
 import java.util.Properties

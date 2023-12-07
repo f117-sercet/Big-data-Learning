@@ -1,4 +1,4 @@
-package sparkStreaming.practice.util
+package sparkStreaming.util
 
 import java.io.InputStreamReader
 import java.util.Properties

@@ -2,7 +2,7 @@ package sparkStreaming.practice
 
 import org.apache.spark.streaming.dstream.DStream
 import org.joda.time.format.ISODateTimeFormat.date
-import sparkStreaming.practice.util.JdbcUtil
+import sparkStreaming.util.JdbcUtil
 
 import java.sql.Connection
 import java.text.SimpleDateFormat
