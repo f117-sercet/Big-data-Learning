@@ -39,6 +39,7 @@
         <option value="$PROJECT_DIR$/sparkLearning/sparkSql/pom.xml" />
       </set>
     </option>
+    <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
   <component name="PWA">
     <option name="enabled" value="true" />
