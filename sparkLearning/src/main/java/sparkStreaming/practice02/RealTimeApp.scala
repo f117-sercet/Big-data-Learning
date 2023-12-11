@@ -42,9 +42,10 @@ object RealTimeApp {
     })
     filterAdsLogDStream.cache()
     // 6.对没有被加入黑名单的用户统计当前佩慈单日各个用户对广告点击的总次数，并更新至Mysql
-    BlackListHandler.saveBlackListToMysql(filterAdsLogDStream)
+    //BlackListHandler.saveBlackListToMysql(filterAdsLogDStream)
 
     // 统计每天各大区各个城市广告点击次数并保存至Mysql中
+    DateAreaCityAdCountHandler.saveDateAreaCityAdCountToMysql(filterAdsLogDStream)
 
     //测试打印
     filterAdsLogDStream.cache()
