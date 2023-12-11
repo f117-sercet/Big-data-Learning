@@ -23,10 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark_streaminng 实践">
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice3/LastHourAdCountHandler.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice3/RealTimeApp.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice02/RealTimeApp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/practice02/RealTimeApp.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -485,7 +482,7 @@
       <workItem from="1702028293465" duration="1289000" />
       <workItem from="1702029658094" duration="2644000" />
       <workItem from="1702254724027" duration="1921000" />
-      <workItem from="1702258756306" duration="1808000" />
+      <workItem from="1702258756306" duration="2500000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -746,14 +743,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00095" summary="spark_Sql">
-      <option name="closed" value="true" />
-      <created>1701077452562</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1701077452562</updated>
-    </task>
     <task id="LOCAL-00096" summary="spark_Sql基本">
       <option name="closed" value="true" />
       <created>1701136242444</created>
@@ -842,7 +831,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702031178337</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="spark_streaminng 实践">
+      <option name="closed" value="true" />
+      <created>1702260772508</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1702260772509</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
