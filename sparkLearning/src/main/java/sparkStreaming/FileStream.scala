@@ -23,7 +23,7 @@ object FileStream {
     val lineStream = ssc.receiverStream(new CustomerReceiver("hadoop102", 9999))
 
     //4.将每一行数据做切分，形成一个个单词
-    val wordStream = lineStream.flatMap(_.split("\t")
+    val wordStream = lineStream.flatMap(_.split("\t"))
 
     //5.将单词映射成元组（word,1)
     val wordAndOneStream = wordStream.map((_, 1))

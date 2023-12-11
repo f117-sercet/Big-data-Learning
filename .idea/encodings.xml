@@ -10,6 +10,8 @@
     <file url="file://$PROJECT_DIR$/code/Flink/flink-scala/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/designModel/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/designModel/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sparkLearning/projectSparkStreaming/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sparkLearning/projectSparkStreaming/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sparkLearning/sparkSql/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sparkLearning/sparkSql/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sparkLearning/src/main/java" charset="UTF-8" />

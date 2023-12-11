@@ -15,7 +15,7 @@ object PropertiesUtil {
 
     val prop = new Properties()
     prop.load(
-      new  InputStreamReader(Thread.currentThread().getContextClassLoader.getResourceAsStream(propertiesName),"UTF-8")))
+      new  InputStreamReader(Thread.currentThread().getContextClassLoader.getResourceAsStream(propertiesName),"UTF-8"))
 
     prop
   }

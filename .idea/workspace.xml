@@ -22,8 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark_streaminng 实践">
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark内核概述">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sparkLearning/sparkLearning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/sparkLearning.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/FileStream.scala" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/FileStream.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/MonitorStop.scala" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/MonitorStop.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/util/PropertiesUtil.scala" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/util/PropertiesUtil.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +121,8 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.FileStream.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Spark01_Acc.executor&quot;: &quot;Run&quot;,
     &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
     &quot;Maven.sparkLearning [clean].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -136,9 +142,9 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.43448275&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.14712644&quot;,
     &quot;scala_project_settings_configurable.last_selected_tab_index&quot;: &quot;6&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.scala.compiler.ScalaCompileServerForm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -175,13 +181,26 @@
       <recent name="framework.util" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.hdfsClient.testMkdirs">
-    <configuration name="Spark01_Hive" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="sparkSql.Spark01_Hive" />
+  <component name="RunManager" selected="Application.Spark01_Acc">
+    <configuration name="FileStream" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="sparkStreaming.FileStream" />
       <module name="sparkLearning" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sparkSql.*" />
+          <option name="PATTERN" value="sparkStreaming.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Spark01_Acc" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="acc.Spark01_Acc" />
+      <module name="sparkLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="acc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -191,19 +210,6 @@
     </configuration>
     <configuration name="Spark06_SparkSQL_Test2" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="sparkSql.Spark06_SparkSQL_Test2" />
-      <module name="sparkLearning" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sparkSql.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Spark06_SparkSql" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="sparkSql.Spark06_SparkSql" />
       <module name="sparkLearning" />
       <extension name="coverage">
         <pattern>
@@ -246,11 +252,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Spark01_Acc" />
+        <item itemvalue="Application.FileStream" />
         <item itemvalue="JUnit.hdfsClient.testMkdirs" />
         <item itemvalue="Application.StreamWordCount" />
         <item itemvalue="Application.Spark06_SparkSQL_Test2" />
-        <item itemvalue="Application.Spark06_SparkSql" />
-        <item itemvalue="Application.Spark01_Hive" />
       </list>
     </recent_temporary>
   </component>
@@ -482,7 +488,8 @@
       <workItem from="1702028293465" duration="1289000" />
       <workItem from="1702029658094" duration="2644000" />
       <workItem from="1702254724027" duration="1921000" />
-      <workItem from="1702258756306" duration="2500000" />
+      <workItem from="1702258756306" duration="3994000" />
+      <workItem from="1702262787289" duration="916000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -743,14 +750,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00096" summary="spark_Sql基本">
-      <option name="closed" value="true" />
-      <created>1701136242444</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1701136242445</updated>
-    </task>
     <task id="LOCAL-00097" summary="spark_SqlUDF">
       <option name="closed" value="true" />
       <created>1701247605029</created>
@@ -839,7 +838,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702260772509</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="spark内核概述">
+      <option name="closed" value="true" />
+      <created>1702262455491</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1702262455491</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -889,7 +896,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="handoop笔记-排序" />
     <MESSAGE value="handoop笔记-排序整理" />
     <MESSAGE value="handoop笔记-Join" />
     <MESSAGE value="handoop笔记Yarn" />
@@ -914,7 +920,8 @@
     <MESSAGE value="spark_streaminngTransform" />
     <MESSAGE value="spark_streaminng基础" />
     <MESSAGE value="spark_streaminng 实践" />
-    <option name="LAST_COMMIT_MESSAGE" value="spark_streaminng 实践" />
+    <MESSAGE value="spark内核概述" />
+    <option name="LAST_COMMIT_MESSAGE" value="spark内核概述" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
