@@ -58,5 +58,16 @@ object ExecutorLauncher{
       ApplicationMaster.main(args)
    }
 }
-```
+```  
 6. AM向RM注册，申请资源；
+7. 获取资源后AM向NM发送指令：bin/java CoarseGrainedExecutorBackend；
+8. CoarseGrainedExecutorBackend 进程会接收消息，跟 Driver 通信，注册已经启动的 Executor；然后启动计算对象 Executor 等待接收任务
+9. Driver 分配任务并监控任务的执行。    
+
+   注意：SparkSubmit、ApplicationMaster 和YarnCoarseGrainedExecutorBackend 是独立的进 程；Executor 和Driver是对象。  
+![img_2.png](img_2.png)  
+#### Standalone  
+Standalone 集群有 2 个重要组成部分，分别是：  
+1) Master(RM)：是一个进程，主要负责资源的调度和分配，并进行集群的监控等职责；
+2) Worker(NM)：是一个进程，一个Worker 运行在集群中的一台服务器上，主要负责两个 职责，一个是用自己的内存存储 RDD 的某个或某些 partition；另一个是启动其他进程
+   和线程（Executor），对RDD上的 partition 进行并行的处理和计算。
