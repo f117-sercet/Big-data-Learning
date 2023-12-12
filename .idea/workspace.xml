@@ -22,12 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark内核概述">
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="sparkStreaming其他">
+      <change afterPath="$PROJECT_DIR$/flink/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware-kafka/kafka/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware-kafka/kaka-integration/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware-kafka/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sparkLearning/projectSparkStreaming/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sparkLearning/sparkLearning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/sparkLearning.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/FileStream.scala" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/FileStream.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/MonitorStop.scala" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/MonitorStop.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/util/PropertiesUtil.scala" beforeDir="false" afterPath="$PROJECT_DIR$/sparkLearning/src/main/java/sparkStreaming/util/PropertiesUtil.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/spark内核.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/spark内核.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +139,7 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/git/Repository/gitHub/Big-data-Learning/sparkLearning/target/classes&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/git/Repository/gitHub&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -489,7 +494,11 @@
       <workItem from="1702029658094" duration="2644000" />
       <workItem from="1702254724027" duration="1921000" />
       <workItem from="1702258756306" duration="3994000" />
-      <workItem from="1702262787289" duration="916000" />
+      <workItem from="1702262787289" duration="1546000" />
+      <workItem from="1702278736072" duration="1723000" />
+      <workItem from="1702283364226" duration="264000" />
+      <workItem from="1702285120189" duration="2590000" />
+      <workItem from="1702369451534" duration="312000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -750,14 +759,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00097" summary="spark_SqlUDF">
-      <option name="closed" value="true" />
-      <created>1701247605029</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1701247605030</updated>
-    </task>
     <task id="LOCAL-00098" summary="spark_Sql 需求">
       <option name="closed" value="true" />
       <created>1701315150804</created>
@@ -846,7 +847,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702262455491</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="sparkStreaming其他">
+      <option name="closed" value="true" />
+      <created>1702264287764</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1702264287764</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -896,7 +905,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="handoop笔记-排序整理" />
     <MESSAGE value="handoop笔记-Join" />
     <MESSAGE value="handoop笔记Yarn" />
     <MESSAGE value="设计模式，桥接模式装饰者模式" />
@@ -921,7 +929,8 @@
     <MESSAGE value="spark_streaminng基础" />
     <MESSAGE value="spark_streaminng 实践" />
     <MESSAGE value="spark内核概述" />
-    <option name="LAST_COMMIT_MESSAGE" value="spark内核概述" />
+    <MESSAGE value="sparkStreaming其他" />
+    <option name="LAST_COMMIT_MESSAGE" value="sparkStreaming其他" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

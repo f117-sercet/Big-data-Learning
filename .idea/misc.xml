@@ -21,6 +21,8 @@
         <option value="$PROJECT_DIR$/code/Kafka/kafa-basis/pom.xml" />
         <option value="$PROJECT_DIR$/designModel/pom.xml" />
         <option value="$PROJECT_DIR$/sparkLearning/pom.xml" />
+        <option value="$PROJECT_DIR$/middleware-kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/flink/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
