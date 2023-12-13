@@ -70,4 +70,14 @@ object ExecutorLauncher{
 Standalone 集群有 2 个重要组成部分，分别是：  
 1) Master(RM)：是一个进程，主要负责资源的调度和分配，并进行集群的监控等职责；
 2) Worker(NM)：是一个进程，一个Worker 运行在集群中的一台服务器上，主要负责两个 职责，一个是用自己的内存存储 RDD 的某个或某些 partition；另一个是启动其他进程
-   和线程（Executor），对RDD上的 partition 进行并行的处理和计算。
+   和线程（Executor），对RDD上的 partition 进行并行的处理和计算。  
+#### Standalone Cluster 模式 
+![img_3.png](img_3.png)  
+在 Standalone Cluster 模式下，任务提交后，Master 会找到一个 Worker 启动 Driver。    
+Driver 启动后向 Master 注册应用程序，Master 根据 submit 脚本的资源需求找到内部资源至 少可以启动一个 Executor 的所有Worker，然后在这些Worker 之间分配 Executor，Worker 上 的 Executor 启动后会向Driver 反向注册，所有的 Executor 注册完成后，Driver 开始执行main
+函数，之后执行到Action 算子时，开始划分 Stage，每个 Stage 生成对应的 taskSet，之后将Task 分发到各个 Executor 上执行。  
+#### Standalone Client 模式    
+![img_4.png](img_4.png)  
+在 Standalone Client 模式下，Driver 在任务提交的本地机器上运行。Driver 启动后向 Master 注册应用程序，Master 根据 submit 脚本的资源需求找到内部资源至少可以启动一个 Executor 的所有Worker，然后在这些Worker 之间分配 Executor，Worker 上的 Executor 启动 后会向Driver 反向注册，所有的 Executor 注册完成后，Driver 开始执行main 函数，之后执 行到 Action 算子时，开始划分 Stage，每个 Stage 生成对应的 TaskSet，之后将 Task 分发到
+各个 Executor 上执行。
+

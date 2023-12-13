@@ -22,17 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="sparkStreaming其他">
-      <change afterPath="$PROJECT_DIR$/flink/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware-kafka/kafka/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware-kafka/kaka-integration/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware-kafka/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sparkLearning/projectSparkStreaming/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark内核.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/spark内核.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/spark内核.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -498,7 +489,9 @@
       <workItem from="1702278736072" duration="1723000" />
       <workItem from="1702283364226" duration="264000" />
       <workItem from="1702285120189" duration="2590000" />
-      <workItem from="1702369451534" duration="312000" />
+      <workItem from="1702369451534" duration="897000" />
+      <workItem from="1702376762292" duration="970000" />
+      <workItem from="1702428230736" duration="271000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -759,22 +752,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00098" summary="spark_Sql 需求">
-      <option name="closed" value="true" />
-      <created>1701315150804</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1701315150804</updated>
-    </task>
-    <task id="LOCAL-00099" summary="spark_streaminng">
-      <option name="closed" value="true" />
-      <created>1701316783727</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1701316783727</updated>
-    </task>
     <task id="LOCAL-00100" summary="spark_streaminng基础">
       <option name="closed" value="true" />
       <created>1701328468510</created>
@@ -855,7 +832,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702264287764</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="spark内核.md">
+      <option name="closed" value="true" />
+      <created>1702370333490</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1702370333491</updated>
+    </task>
+    <task id="LOCAL-00111" summary="spark内核.md">
+      <option name="closed" value="true" />
+      <created>1702377107937</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1702377107937</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -905,7 +898,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="handoop笔记-Join" />
     <MESSAGE value="handoop笔记Yarn" />
     <MESSAGE value="设计模式，桥接模式装饰者模式" />
     <MESSAGE value="装饰者模式" />
@@ -930,7 +922,8 @@
     <MESSAGE value="spark_streaminng 实践" />
     <MESSAGE value="spark内核概述" />
     <MESSAGE value="sparkStreaming其他" />
-    <option name="LAST_COMMIT_MESSAGE" value="sparkStreaming其他" />
+    <MESSAGE value="spark内核.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="spark内核.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
