@@ -103,4 +103,25 @@ Spark 通讯框架中各个组件（Client/Master/Worker）可以认为是一个
    件箱，如果指令接收方不是自己，则放入发件箱；
 4. Inbox：指令消息收件箱。一个本地RpcEndpoint 对应一个收件箱，Dispatcher 在每次向 Inbox 存入消息时，都将对应 EndpointData 加入内部ReceiverQueue 中，另外Dispatcher
    创建时会启动一个单独线程进行轮询ReceiverQueue，进行收件箱消息消费；
+5. RpcEndpointRef：RpcEndpointRef是对远程 RpcEndpoint 的一个引用。当我们需要向一 个具体的RpcEndpoint 发送消息时，一般我们需要获取到该RpcEndpoint 的引用，然后
+   通过该应用发送消息。
+6. OutBox：指令消息发件箱。对于当前RpcEndpoint 来说，一个目标RpcEndpoint 对应一 个发件箱，如果向多个目标RpcEndpoint发送信息，则有多个OutBox。当消息放入Outbox 后，紧接着通过TransportClient 将消息发送出去。消息放入发件箱以及发送过程是在同
+   一个线程中进行；
+7. RpcAddress：表示远程的RpcEndpointRef的地址，Host + Port。
+8. TransportClient：Netty通信客户端，一个OutBox对应一个TransportClient，TransportClient 不断轮询OutBox，根据OutBox 消息的 receiver 信息，请求对应的远程 TransportServer；
+
+### 第四章 Spark任务调度器  
+ 在生产环境下，Spark 集群的部署方式一般为YARN-Cluster 模式，之后的内核分析内容 中我们默认集群的部署方式为 YARN-Cluster 模式。  
+Driver 线程 主要是初始化 SparkContext 对象，准备运行所需的上下文，然后一方面保持与 ApplicationMaster 的 RPC 连接，通过 ApplicationMaster 申请资源，另一方面根据用户业务
+逻辑开始调度任务，将任务下发到已有的空闲 Executor 上。  
+ 当ResourceManager向ApplicationMaster返回Container资源时，ApplicationMaster就尝试在对应的Container上启动Executor进程，Executor进程起来后，会向Driver反向注册，注册成功后保持与Driver的心跳，同时等待Driver分发任务，当分发的任务执行完毕后，将任务状态上报给Driver。
+#### Spark任务调度概述  
+当 Driver 起来后，Driver 则会根据用户程序逻辑准备任务，并根据 Executor 资源情况 逐步分发任务。在详细阐述任务调度前，首先说明下 Spark 里的几个概念。一个 Spark 应用
+程序包括 Job、Stage 以及 Task 三个概念：
+1. Job 是以Action方法为界，遇到一个Action方法触发一个Job。
+2. stage是JOB的子集,以RDD宽依赖为界，遇到Shuffle做一次划分。
+3. Task 是 Stage 的子集，以并行度(分区数)来衡量，分区数是多少，则有多少个 task。
+   park 的任务调度总体来说分两路进行，一路是 Stage 级的调度，一路是 Task 级的调度，总 体调度流程如下图所示  
+![img_8.png](img_8.png)  
+4. 
 

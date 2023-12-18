@@ -23,6 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark内核-standalone Client 模式">
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/img_8.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/spark内核.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/spark内核.md" afterDir="false" />
     </list>
@@ -497,6 +498,9 @@
       <workItem from="1702513866952" duration="934000" />
       <workItem from="1702628850275" duration="1755000" />
       <workItem from="1702634385985" duration="10000" />
+      <workItem from="1702868262627" duration="1761000" />
+      <workItem from="1702870796477" duration="1751000" />
+      <workItem from="1702882921719" duration="3346000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -757,14 +761,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00101" summary="spark_streaminngTransform">
-      <option name="closed" value="true" />
-      <created>1701394395880</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1701394395881</updated>
-    </task>
     <task id="LOCAL-00102" summary="spark_streaminng基础">
       <option name="closed" value="true" />
       <created>1701413450253</created>
@@ -853,7 +849,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702459782182</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="spark内核-standalone Client 模式">
+      <option name="closed" value="true" />
+      <created>1702870155626</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1702870155627</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
