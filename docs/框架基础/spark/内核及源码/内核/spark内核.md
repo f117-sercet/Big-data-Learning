@@ -79,5 +79,28 @@ Driver 启动后向 Master 注册应用程序，Master 根据 submit 脚本的�
 #### Standalone Client 模式    
 ![img_4.png](img_4.png)  
 在 Standalone Client 模式下，Driver 在任务提交的本地机器上运行。Driver 启动后向 Master 注册应用程序，Master 根据 submit 脚本的资源需求找到内部资源至少可以启动一个 Executor 的所有Worker，然后在这些Worker 之间分配 Executor，Worker 上的 Executor 启动 后会向Driver 反向注册，所有的 Executor 注册完成后，Driver 开始执行main 函数，之后执 行到 Action 算子时，开始划分 Stage，每个 Stage 生成对应的 TaskSet，之后将 Task 分发到
-各个 Executor 上执行。
+各个 Executor 上执行。  
+### spark通讯架构  
+#### Spark架构概述  
+spark中通讯架构的发展: 
+1. 在 Standalone Client 模式下，Driver 在任务提交的本地机器上运行。Driver 启动后向 Master 注册应用程序，Master 根据 submit 脚本的资源需求找到内部资源至少可以启动一个 Executor 的所有Worker，然后在这些Worker 之间分配 Executor，Worker 上的 Executor 启动 后会向Driver 反向注册，所有的 Executor 注册完成后，Driver 开始执行main 函数，之后执 行到 Action 算子时，开始划分 Stage，每个 Stage 生成对应的 TaskSet，之后将 Task 分发到
+   各个 Executor 上执行。
+2. Spark1.3 中引入Netty 通信框架，为了解决 Shuffle 的大数据传输问题使用
+3. Spark1.6 中Akka 和Netty 可以配置使用。Netty 完全实现了Akka 在 Spark 中的功能。
+4. Spark2 系列中，Spark 抛弃Akka，使用Netty。
+   Spark2.x 版本使用Netty 通讯框架作为内部通讯组件。Spark 基于Netty 新的 RPC 框架 借鉴了Akka 的中的设计，它是基于Actor 模型，Spark2.x 版本使用Netty 通讯框架作为内部通讯组件。Spark 基于Netty 新的 RPC 框架 借鉴了Akka 的中的设计，它是基于Actor 模型，
+![img_5.png](img_5.png)  
+Spark 通讯框架中各个组件（Client/Master/Worker）可以认为是一个个独立的实体，各 个实体之间通过消息来进行通信。具体各个组件之间的关系图如下：  
+![img_6.png](img_6.png)  
+   Endpoint（Client/Master/Worker）有 1 个 InBox 和N个OutBox（N>=1，N取决于当前 Endpoint 与多少其他的Endpoint进行通信，一个与其通讯的其他Endpoint对应一个OutBox），Endpoint 接收到的消息被写入 InBox，发送出去的消息写入OutBox并被发送到其他Endpoint的 InBox
+   中。  
+### Spark 通讯架构解析 
+![img_7.png](img_7.png)  
+1. RpcEndPoint:Spark 针对每个节点（Client/Master/Worker）都称之为一 个 RPC 终端，且都实现 RpcEndpoint 接口，内部根据不同端点的需求，设计不同的消 息和不同的业务处理，如果需要发送（询问）则调用 Dispatcher。在 Spark 中，所有的
+   终端都存在生命周期。
+2. RpcEnv：RPC 上下文环境，每个 RPC 终端运行时依赖的上下文环境称为 RpcEnv；在 把当前 Spark 版本中使用的NettyRpcEnv。
+3. Dispatcher：消息调度（分发）器，针对于RPC 终端需要发送远程消息或者从远程RPC 接收到的消息，分发至对应的指令收件箱（发件箱）。如果指令接收方是自己则存入收
+   件箱，如果指令接收方不是自己，则放入发件箱；
+4. Inbox：指令消息收件箱。一个本地RpcEndpoint 对应一个收件箱，Dispatcher 在每次向 Inbox 存入消息时，都将对应 EndpointData 加入内部ReceiverQueue 中，另外Dispatcher
+   创建时会启动一个单独线程进行轮询ReceiverQueue，进行收件箱消息消费；
 

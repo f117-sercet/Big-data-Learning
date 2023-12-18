@@ -22,8 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark内核.md">
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark内核-standalone Client 模式">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/spark内核.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/spark内核.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,11 +249,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Spark01_Acc" />
-        <item itemvalue="Application.FileStream" />
         <item itemvalue="JUnit.hdfsClient.testMkdirs" />
         <item itemvalue="Application.StreamWordCount" />
         <item itemvalue="Application.Spark06_SparkSQL_Test2" />
+        <item itemvalue="Application.Spark01_Acc" />
+        <item itemvalue="Application.FileStream" />
       </list>
     </recent_temporary>
   </component>
@@ -492,6 +493,10 @@
       <workItem from="1702369451534" duration="897000" />
       <workItem from="1702376762292" duration="970000" />
       <workItem from="1702428230736" duration="271000" />
+      <workItem from="1702457805828" duration="1605000" />
+      <workItem from="1702513866952" duration="934000" />
+      <workItem from="1702628850275" duration="1755000" />
+      <workItem from="1702634385985" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -752,14 +757,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00100" summary="spark_streaminng基础">
-      <option name="closed" value="true" />
-      <created>1701328468510</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1701328468511</updated>
-    </task>
     <task id="LOCAL-00101" summary="spark_streaminngTransform">
       <option name="closed" value="true" />
       <created>1701394395880</created>
@@ -848,7 +845,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702377107937</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="spark内核-standalone Client 模式">
+      <option name="closed" value="true" />
+      <created>1702459782182</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1702459782182</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -898,7 +903,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="handoop笔记Yarn" />
     <MESSAGE value="设计模式，桥接模式装饰者模式" />
     <MESSAGE value="装饰者模式" />
     <MESSAGE value="spark 学习" />
@@ -923,7 +927,8 @@
     <MESSAGE value="spark内核概述" />
     <MESSAGE value="sparkStreaming其他" />
     <MESSAGE value="spark内核.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="spark内核.md" />
+    <MESSAGE value="spark内核-standalone Client 模式" />
+    <option name="LAST_COMMIT_MESSAGE" value="spark内核-standalone Client 模式" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
