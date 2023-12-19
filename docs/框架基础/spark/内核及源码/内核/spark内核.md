@@ -123,5 +123,13 @@ Driver 线程 主要是初始化 SparkContext 对象，准备运行所需的上�
 3. Task 是 Stage 的子集，以并行度(分区数)来衡量，分区数是多少，则有多少个 task。
    park 的任务调度总体来说分两路进行，一路是 Stage 级的调度，一路是 Task 级的调度，总 体调度流程如下图所示  
 ![img_8.png](img_8.png)  
-4. 
+   Spark RDD通过其Transactions 操作，形成了RDD血缘（依赖）关系图，即DAG，最 后通过Action 的调用，触发 Job 并调度执行，执行过程中会创建两个调度器：DAGScheduler
+   和 TaskScheduler。
+   1. DAGScheduler 负责Stage级别调度，主要是讲Job切分成若干Stages，并将每个Stage打包成TaskSet交给TaskScheduler调度。
+   2. TaskScheduler负责Task级别的调度，将DAGScheduler给过来的TaskSet按照指定的调度策略分发到Executor执行,调度过程中SchedulerBackend负责提供可用资源，其中SchedulerBackend有多种实现，分别对接不同的资源管理系统。
+   ![img_9.png](img_9.png)
+      river 初始化 SparkContext 过程中，会分别初始化 DAGScheduler、TaskScheduler、 SchedulerBackend 以及HeartbeatReceiver，并启动 SchedulerBackend 以及HeartbeatReceiver。 SchedulerBackend 通过 ApplicationMaster 申请资源，并不断从 TaskScheduler 中拿到合适的 Task 分发到 Executor 执行。HeartbeatReceiver 负责接收 Executor 的心跳信息，监控 Executor
+      的存活状况，并通知到TaskScheduler。  
+#### Spark Stage 级别调度  
+
 
