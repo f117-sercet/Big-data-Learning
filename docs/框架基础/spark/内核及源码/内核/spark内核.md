@@ -130,6 +130,22 @@ Driver 线程 主要是初始化 SparkContext 对象，准备运行所需的上�
    ![img_9.png](img_9.png)
       river 初始化 SparkContext 过程中，会分别初始化 DAGScheduler、TaskScheduler、 SchedulerBackend 以及HeartbeatReceiver，并启动 SchedulerBackend 以及HeartbeatReceiver。 SchedulerBackend 通过 ApplicationMaster 申请资源，并不断从 TaskScheduler 中拿到合适的 Task 分发到 Executor 执行。HeartbeatReceiver 负责接收 Executor 的心跳信息，监控 Executor
       的存活状况，并通知到TaskScheduler。  
-#### Spark Stage 级别调度  
+#### Spark Stage 级别调度 
+Spark 的任务调度是从 DAG 切割开始，主要是由 DAGScheduler 来完成。当遇到一个 Action 操作后就会触发一个 Job 的计算，并交给 DAGScheduler 来提交，下图是涉及到 Job
+提交的相关方法调用流程图。  
+![img_10.png](img_10.png)  
+1) Job 由最终的RDD和Action 方法封装而成；
+2) SparkContext 将 Job 交给 DAGScheduler 提交，它会根据 RDD 的血缘关系构成的 DAG 进行切分，将一个 Job 划分为若干 Stages，具体划分策略是，由最终的 RDD 不断通过 依赖回溯判断父依赖是否是宽依赖，即以 Shuffle 为界，划分 Stage，窄依赖的 RDD之 间被划分到同一个 Stage 中，可以进行 pipeline 式的计算。划分的 Stages 分两类，一类 叫做 ResultStage，为 DAG 最下游的 Stage，由 Action 方法决定，另一类叫做
+   ShuffleMapStage，为下游 Stage 准备数据。
+![img_11.png](img_11.png)  
+   Job 由 saveAsTextFile 触发，该 Job 由RDD-3 和 saveAsTextFile 方法组成，根据 RDD之 间的依赖关系从RDD-3 开始回溯搜索，直到没有依赖的RDD-0，在回溯搜索过程中，RDD3 依赖RDD-2，并且是宽依赖，所以在RDD-2 和 RDD-3 之间划分 Stage，RDD-3 被划到最 后一个 Stage，即ResultStage 中，RDD-2 依赖RDD-1，RDD-1 依赖RDD-0，这些依赖都是 窄依赖，所以将 RDD-0、RDD-1 和 RDD-2 划分到同一个 Stage，形成 pipeline 操作，。即 ShuffleMapStage 中，实际执行的时候，数据记录会一气呵成地执行 RDD-0 到 RDD-2 的转
+   化。不难看出，其本质上是一个深度优先搜索（Depth First Search）算法。    
+   一个 Stage 是否被提交，需要判断它的父 Stage 是否执行，只有在父 Stage 执行完毕才 能提交当前 Stage，如果一个 Stage 没有父 Stage，那么从该 Stage 开始提交。Stage 提交时会
+   将 Task 信息（分区信息以及方法等）序列化并被打包成 TaskSet 交给 TaskScheduler，一个Partition 对应一个 Task，另一方面 TaskScheduler 会监控 Stage 的运行状态，只有 Executor 丢 失或者 Task 由于 Fetch 失败才需要重新提交失败的 Stage 以调度运行失败的任务，其他类型
+   的 Task 失败会在TaskScheduler 的调度过程中重试。  
+   相对来说 DAGScheduler 做的事情较为简单，仅仅是在 Stage 层面上划分 DAG，提交 Stage 并监控相关状态信息。  
+### SparkTask级调度  
+
+
 
 
