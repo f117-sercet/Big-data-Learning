@@ -23,8 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark内核-standalone Client 模式">
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/img_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/img_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/img_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/img_13.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/spark内核.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/spark内核.md" afterDir="false" />
     </list>
@@ -509,6 +509,12 @@
       <workItem from="1702945550025" duration="723000" />
       <workItem from="1702946879999" duration="1418000" />
       <workItem from="1702951422793" duration="1374000" />
+      <workItem from="1702954809760" duration="1479000" />
+      <workItem from="1702969491546" duration="3456000" />
+      <workItem from="1703463659997" duration="522000" />
+      <workItem from="1703474659737" duration="644000" />
+      <workItem from="1703475684823" duration="940000" />
+      <workItem from="1703484959984" duration="1635000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -769,14 +775,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00104" summary="spark_streaminng 实践">
-      <option name="closed" value="true" />
-      <created>1701766240844</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1701766240844</updated>
-    </task>
     <task id="LOCAL-00105" summary="spark_streaminng 实践">
       <option name="closed" value="true" />
       <created>1701943885230</created>
@@ -865,7 +863,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702947091823</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="spark内核-standalone Client 模式">
+      <option name="closed" value="true" />
+      <created>1702954905300</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1702954905300</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

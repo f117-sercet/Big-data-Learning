@@ -144,7 +144,125 @@ Spark 的任务调度是从 DAG 切割开始，主要是由 DAGScheduler 来完�
    将 Task 信息（分区信息以及方法等）序列化并被打包成 TaskSet 交给 TaskScheduler，一个Partition 对应一个 Task，另一方面 TaskScheduler 会监控 Stage 的运行状态，只有 Executor 丢 失或者 Task 由于 Fetch 失败才需要重新提交失败的 Stage 以调度运行失败的任务，其他类型
    的 Task 失败会在TaskScheduler 的调度过程中重试。  
    相对来说 DAGScheduler 做的事情较为简单，仅仅是在 Stage 层面上划分 DAG，提交 Stage 并监控相关状态信息。  
-### SparkTask级调度  
+### SparkTask级调度    
+Spark Task 的调度是由 TaskScheduler 来完成，由前文可知，DAGScheduler 将 Stage 打 包到交给 TaskScheTaskSetduler，TaskScheduler 会将 TaskSet 封装为 TaskSetManager 加入到
+调度队列中，TaskSetManager 结构如下图所示。  
+![img_12.png](img_12.png)  
+TaskSetManager 负责监控管理同一个Stage中的Tasks,TasksScheduler就是以TaskSetManager为单元来调度任务。TaskScheduler 初始化后会启动 SchedulerBackend，它负责跟外界打交道， 接收 Executor 的注册信息，并维护 Executor 的状态，同时它在启动后会定期地去“询问”TaskScheduler 有没有任务要运行,  
+会从调度队列中按照指定的调度策略选择 TaskSetManager 去调度运行，大致方 法调用流程如下图所示：  
+![img_13.png](img_13.png)  
+上图中，将 TaskSetManager 加入 rootPool 调度池中之后，调用 SchedulerBackend 的 riviveOffers 方法给 driverEndpoint 发送ReviveOffer 消息；driverEndpoint 收到ReviveOffer消息后调用makeOffers方法，过滤出活跃状态的Excutor(这些 Executor 都是任务启动时反 向注册到 Driver 的 Executor),然后将将Executor封装成为WorkerOffer对象；准备好计算机资源后，taskScheduler基于这些资源调用resourceOffer在Executor上分配task。  
+### 调度策略
+TaskScheduler支持两种调度策略，一种是FIFO，也是默认的调度策略，另外一种是FAIR，在 TaskScheduler 初始化过程中会实例化 rootPool，表示树的根节点，是 Pool 类型。
+
+1) FIFO调度测略
+   如果是采用 FIFO 调度策略，则直接简单地将 TaskSetManager 按照先来先到的方式入 队，出队时直接拿出最先进队的 TaskSetManager，其树结构如下图所示，TaskSetManager 保
+   存在一个 FIFO队列中。  
+   ![img_14.png](img_14.png)
+2) FAIR调度策略
+![img_15.png](img_15.png)
+FAIR模式中有一个rootPool和多个子Pool，各个子Pool中存储这所有待分配的TaskSetManager。 在FAIR模式中，需要先对Pool进行排序，再对Pool里面的TaskSetMananger进行排序，因为Pool和TaskSetManager都继承了Schedulable特质，因此使用相同的排序算法。  
+排序过程的比较是基于Fair-share来比较的，每个要排序的对象包含三个属性：runningTasks值(正在运行的Task数)，minShare值，weight值，比较时会综合考量runningTasks值，minShare值，以及weight值。 minShare、weight 的值均在公平调度配置文件 fairscheduler.xml 中被指定，调度 池在构建阶段会读取此文件的相关配置。  
+   1) 如果A对象的runningTasks大于它的minShare，B对象的runningTasks小于它的minShare， 那么B 排在A前面；（runningTasks 比minShare 小的先执行）
+   2) 如果 A、B 对象的 runningTasks 都小于它们的 minShare，那么就比较 runningTasks 与 minShare 的比值（minShare 使用率），谁小谁排前面；（minShare 使用率低的先执行）
+   3) 如果 A、B 对象的 runningTasks 都大于它们的 minShare，那么就比较 runningTasks 与 weight 的比值（权重使用率），谁小谁排前面。（权重使用率低的先执行）
+   4) 如果上述比较比较均相等，则比较名字。
+整体上来说就是通过minShare和weight这两个参数控制比较过程，可以做到让minShare使用率和权重率使少的先运行。
+FAIR 模式排序完成后，所有的TaskSetManager被放入一个ArrayBuffer里，之后一次取出并发给Executor。执行。 从调度队列中拿到 TaskSetManager 后，由于 TaskSetManager 封装了一个 Stage 的所有 Task，并负责管理调度这些 Task，那么接下来的工作就是 TaskSetManager 按照一定的规则 一个个取出 Task 给 TaskScheduler，TaskScheduler 再交给 SchedulerBackend 去发到 Executor 上执行。
+### 本地化调度
+DAGScheduler切割Job,划分Stage，通过调用submitStage来提交一个Stage对应的tasks，submitStage会调用submitMissingTasks，submitMissingTasks确定每个需要计算的tasks的preferredlocations，通过调用getPreferrdelocations()得到partition的优先位置，对于要提交到TaskScheduler的TaskSet中的每一个Task，该Task优先位置与其对应的partition对应的优先位置一致。
+从调度队列中拿到TaskSetManager后，TaskSetManager按照一定的规则一个个取出task给TaskScheduler,TaskScheduler再给SchedulerBackend去发到Executor上执行。前面也提到，TaskSetManager封装了一个Stage的所有Task，并负责管理调度这些Task。
+ 根据每个Task的优先位置，确定Task的Locality级别，Locality一共有五种，优先级由告到低如下：
+![img_16.png](img_16.png)  
+  在执行调度时，Spark调度总是会尽量让每个task以最高的本地性级别来启动，当一个task以X本地性级别启动，但是本地性级别对应的所有节点都没有空闲资源而启动失败，此时并不会马上降低本地性级别启动而是在某个时间长度内再次以X本地性级别来启动该task，若超过时间限制则降级启动，去尝试下一个本地性级别，以此类推。
+ 可以通过调大每个类别的自大容忍延迟时间，在等待阶段对应的Executor可能就会有相应的资源去执行此task，这就在一定程度上提高了运行性能。
+
+### 失败重试与黑名单机制  
+ 除了选择合适的Task调度运行外，还需要监控Task的执行状态。对于失败的 Task，会记录它失败的次数，如果失败次数还没有超过最大 重试次数，那么就把它放回待调度的 Task 池子中，否则整个Application 失败。  
+在记录Task失败次数过程中，会记录它上一次失败所在的ExecutorId和Host，这样下次在调度这个Task时，会使用黑名单机制，避免它被调度到上一次失败的节点，起到一定的容错作用。黑名单记录Task上一次失败所在的ExecutorId和Host，以其对应的“拉黑时间”，“拉黑”时间是值这段时间内不要再往这个节点上调度这个Task。
+## SparkShuffle 解析  
+### Shuffle 的核心要点
+#### ShuffleMapStage 与 ResultStage 
+![img_17.png](img_17.png)  
+ 在划分stage时，最后一个stage称为finalStage，它本质上是一个ResultStage对象，前面的所有stage被称为ShuffleMapStage。
+ShuffleMapStage的结束伴随着shuffle文件的写磁盘。 ResultMapStage基本上对应代码中的action算子，即将一个函数应用在RDD的各个partition的数据集上，意味着一个job
+的运行结束。  
+### HashShuffle解析  
+#### 未优化的HashShuffle 
+从 Task 开始那边各自把自己进行 Hash 计算(分区器： hash/numreduce 取模)，分类出 3 个不同的类别，每个 Task 都分成 3 种类别的数据，想把不 同的数据汇聚然后计算出最终的结果，所以Reducer 会在每个 Task 中把属于自己类别的数 据收集过来，汇聚成一个同类别的大集合，每 1 个 Task 输出 3 份本地文件，这里有 4 个
+Mapper Tasks，所以总共输出了4个Tasks x 3个分类文件 = 12 个本地小文件。  
+#### 优化后的HashShuffle  
+优化的 HashShuffle 过程就是启用合并机制，合并机制就是复用 buffer，开启合并机制 的配置是 spark.shuffle.consolidateFiles。该参数默认值为 false，将其设置为 true 即可开启优
+化机制。通常来说，如果我们使用HashShuffleManager，那么都建议开启这个选项。  
+这里还是有 4 个 Tasks，数据类别还是分成 3 种类型，因为 Hash 算法会根据你的 Key 进行分类，在同一个进程中，无论是有多少过 Task，都会把同样的 Key 放在同一个 Buffer 里，然后把 Buffer 中的数据写入以 Core 数量为单位的本地文件中，(一个 Core 只有一种类 型的Key 的数据)，每 1 个Task 所在的进程中，分别写入共同进程中的 3 份本地文件，这里
+有 4 个 Mapper Tasks，所以总共输出是 2 个Cores x 3 个分类文件 = 6 个本地小文件。  
+![img_18.png](img_18.png)  
+### SortShuffle 解析  
+ 在该模式下，数据会先写入一个数据结构，reduceByKey写入Map，一边通过Map局部聚合，一边写入内存。Join算子写入ArrayList直接写入内存中。然后需要判断是否达到阈值，如果达到就会将内存数据结构的数据写入到磁盘，清空内存数据结构。  
+在溢写磁盘前，先根据key进行排序，排序过后的数据，会分批写入到磁盘文件中,默认批次为10000条，汇聚会以每批一万条写入到磁盘文件，写入磁盘文件通过缓冲区溢写的方式，每次溢写都会产生一个磁盘文件，也就说一个Task会产生多个临时文件。  
+  最后在每个Task中，将所有的临时文件合并，此过程将所有临时文件读取出来，一次写入到最终文件当中。意味着一个Task的所有数据都在这一个文件中。同时单独写一份索引文件，标识下游各个Task的数据在文件中的索引，start offset和 end offset。
+ ![img_19.png](img_19.png)  
+#### bypass SortShuffle 
+bypass 运行机制如下：
+1) shuffle reduce task 数量小于等于 spark.shuffle.sort.bypassMergeThreshold 参数的值，默认为200。
+2) 不是聚合类的shuffle算子(比如reduceByKey)。
+   此时 task 会为每个 reduce 端的 task 都创建一个临时磁盘文件，并将数据按 key 进行 hash 然后根据 key 的 hash 值，将 key 写入对应的磁盘文件之中。当然，写入磁盘文件时也先写入内存缓冲，缓冲写满之后再溢写到磁盘文件的。最后，同样会将所有临时磁盘文件 都合并成一个磁盘文件，并创建一个单独的索引文件。
+   该过程的磁盘写机制其实跟未经优化的 HashShuffleManager 是一模一样的，因为都要 创建数量惊人的磁盘文件，只是在最后会做一个磁盘文件的合并而已。因此少量的最终磁盘
+   文件，也让该机制相对未经优化的HashShuffleManager 来说，shuffle read 的性能会更好。而该机制与普通 SortShuffleManager 运行机制的不同在于：不会进行排序。也就是说， 启用该机制的最大好处在于，shuffle write 过程中，不需要进行数据的排序操作，也就节省
+   掉了这部分的性能开销。  
+![img_20.png](img_20.png)  
+## Spark内存管理 
+### 堆内存和堆外内存规划
+作为一个JVM进程，Executor的内存管理建立在Jvm的内存管理之上，Spark对JVM的堆内存(on-heap)空间进行了更为详细的分配，已充分利用内存。同时，Spark引入堆外内存(offset-heap),使之可以直接在工作节点的系统内存中开辟空间，进一步优化了内存的使用。堆内存受到JVM的统一管理，堆外内存是直接向曹做系统进行内存的申请和释放。
+![img_21.png](img_21.png)  
+1) 堆内内存
+ 堆内内存的大小，由Spark应用程序启动时的 - executor-memory或spark.executor.memory 参数配置。Executor内运行的并发任务共享Jvm堆内内存，这些任务在缓存RDD数据和广播数据时占用的内存被规划为存储内存，而这些任务在执行Shuffle时占用的内存被规划为执行内存，剩余的部分不做特殊规划，那些Spark内部的对象实例，或者用户定义的Spark应用程序的对象实例，均占用剩余的空间。不同的管理模式下，这三部分占用的空间大小各不相同。
+ Spark对堆内内存的管理是一种逻辑上的“规划式”管理，因为对象实例占用内存的申请和释放都有JVM完成,Spark只能在申请后和释放前记录这些内存。  
+具体流程如下：
+   1. Spark在代码中 new一个对象实例；
+   2. JVM从堆内内存分配空间，创建对象并返回对象引用。
+   3. spark保存该对象的引用，记录该对象占用的内存。  
+
+释放内存流程如下：  
+   1. Spark记录该对象释放的内存，删除该对象的引用。
+   2. 等待JVM的垃圾回收机制释放该对象占用的堆内内存  
+
+我们知道，JVM 的对象可以以序列化的方式存储，序列化的过程是将对象转换为二进 制字节流，本质上可以理解为将非连续空间的链式存储转化为连续空间或块存储，在访问时 则需要进行序列化的逆过程——反序列化，将字节流转化为对象，序列化的方式可以节省存
+储空间，但增加了存储和读取时候的计算开销。对于Spark中序列化的对象，由于是字节流的形式，其占用的内存大小可直接计算，而对于非序列化的对象，其占用的内存是通过周期性地采样近似估算而得，即并不是每次新增地数据项都会计算一次占用地内存大小，这种方法降低了时间开销但是有可能误差较大，导致某一时刻地实际内存有可能远远超出预期。此外，在被Spark标记为释放的对象实例，很可能在实际上并没有被JVM回收，导致实际可用的的内存小于Spark记录的可用内存，
+所以Spark并不能准确地记录实际可用的堆内存，从而也就无法完全避免内存溢出的异常。   
+虽然不能精准控制堆内内存的申请和释放，但Spark通过对存储内衬和执行内存各自独立的规划管理，可以决定是否要在存储内存里缓存新的RDD,以及是否为新的任务分配执行内存，在一定程度上可以提升内存的利用率，减少异常的出现。
+2) 堆外内存  
+   为了进一步优化内存的使用及提高,Shuffle 时排序的效率，Spark引入了堆外内存，使之可以直接在工作节点的系统内存中开辟空间，存储经过序列化的二进制数据。  
+   堆外内存意味着把内存对象分配在Java虚拟机的堆以外的内存，这些内存直接受操作系统管理，这样做的结果就是能保持一个较小的堆，以减少垃圾收集对应用的影响。利用 JDK Unsafe API（从 Spark 2.0 开始，在管理堆外的存储内存时不再基于Tachyon， 而是与堆外的执行内存一样，基于 JDK Unsafe API 实现）Spark 可以直接操作系统堆外内
+   存，减少了不必要的内存开销，以及频繁的 GC 扫描和回收，提升了处理性能。堆外内存可以被精确地申请和释放(堆外内存之所以能够被精确的申请和释放，是由于内存的申请和释放不再通过 JVM机制，而是直接向操作系统申请，JVM对于内存的清理是无法准确指定 时间点的，因此无法实现精确的释放)，而且序列化的数据占用的空间可以被精确计算，
+  所以相比堆内内存来说降低了管理的难度，也降低了误差。
+ 在默认情况下堆外内存并不启用，可通过配置spark.memory.offHeap.enabled 参数启动,并由spark.memory.offHeap.size 参数设定堆外空间的大小。除了没有其他空间，堆外内存与堆内内存的划分方式相同，所有运行运行中的并发任务共享存储内存和执行内存。  
+### 内存空间分配  
+   1) 静态内存管理
+      在Spark最初采用的静态内存管理机制下，存储内存，执行内存和其他内存的大小在Spark应用程序运行期间均为固定的，单用户可以应用程序启动前进行配置，堆内内存的分配如图所示：
+     ![img_22.png](img_22.png)  
+ 可用的堆内内存的大小需要按照下列方式计算：
+   ```text
+    可用的内存  = systemMaxMemory * spark.storage.memoryFraction * spark.storage.safety
+   ```
+
+   ```text
+    Fraction 可用的执行内存 = systemMaxMemory * spark.shuffle.memoryFraction * spark.shuffle.safety
+    Fraction
+   ```
+   其中 systemMaxMemory 取决于当前 JVM 堆内内存的大小，最后可用的执行内存或者存储 内存要在此基础上与各自的memoryFraction 参数和 safetyFraction 参数相乘得出。
+   上述计算 公式中的两个 safetyFraction 参数，其意义在于在逻辑上预留出 1-safetyFraction 这么一块 保险区域，降低因实际内存超出当前预设范围而导致 OOM 的风险（上文提到，对于非序
+   列化对象的内存采样估算会产生误差）。在具体使用时 Spark 并没有区别对待，和”其它内存”一样交给了JVM去管理。
+   Storage内存和Execution内存都有预留空间，目的是防止OOM，因为Spark堆内内存大小的记录是不准确的，需要留出保险区域。堆外的空间分配较为简单，只有存储内存和执行内存，如下图所示。可用的执行内存和存储内存占用的空间大小直接由参数 spark.memory.storageFraction决定，
+   由于堆外内存占用的空间可以被精确计算,所以无需在设定保险区域。
+   ![img_23.png](img_23.png)
+   静态内存管理机制实现起来较为简单，但如果用户不熟悉Spark的存储机制，或没有根据具体的数据规模和计算任务或做相应的配置，
+3) 
+
+
+
+
+
 
 
 
