@@ -256,8 +256,89 @@ bypass 运行机制如下：
    Storage内存和Execution内存都有预留空间，目的是防止OOM，因为Spark堆内内存大小的记录是不准确的，需要留出保险区域。堆外的空间分配较为简单，只有存储内存和执行内存，如下图所示。可用的执行内存和存储内存占用的空间大小直接由参数 spark.memory.storageFraction决定，
    由于堆外内存占用的空间可以被精确计算,所以无需在设定保险区域。
    ![img_23.png](img_23.png)
-   静态内存管理机制实现起来较为简单，但如果用户不熟悉Spark的存储机制，或没有根据具体的数据规模和计算任务或做相应的配置，
-3) 
+   静态内存管理机制实现起来较为简单，但如果用户不熟悉Spark的存储机制，或没有根据具体的数据规模和计算任务或做相应的配置，很容易造成”一半海水，一半火焰”的局面，即存 储内存和执行内存中的一方剩余大量的空间，而另一方却早早被占满，不得不淘汰或移出旧
+   的内容以存储新的内容。由于新的内存管理机制的出现，这种方式目前已经很少有开发者使 用，出于兼容旧版本的应用程序的目的，Spark 仍然保留了它的实现。
+   2) 统一内存管理  
+      Spark1.6 之后引入的统一内存管理机制，与静态内存管理的区别在于存储内存和执行 内存共享同一块空间，可以动态占用对方的空闲区域，统一内存管理的堆内内存结构如图所
+      示：
+    ![img_24.png](img_24.png)
+其中最重要的优化在于动态占用机制，其规则如下：
+      1. 设定基本的存储内存和执行区域（spark.storage.storageFraction 参数）,该设定确定了双方各自拥有的空间的范围；
+      2. 双发的空间都不足时，则存储到硬盘;若己方空间不足而对方空余时，可借用对方的空间;(存储空间不足是指以放下一个完整的Block)
+      3. 执行内存的空间被对方占用后，可以让对方将占用的部分转存到硬盘，然后“归还”借用的空间。
+      4. 存储内存的空间被对方占用后，无法让对方“归还”,因为需要考虑Shuffle过程中的很多因素，实现起来较为复杂
+统一内存管理的动态占用机制如图：
+    ![img_25.png](img_25.png)  
+凭借统一内存管理机制，Spark在一定程度上提高了堆内存和堆外内存资源的利用率，降低了开发者维护Spark内存的难度，但并不意味着开发者可以高枕无忧，如果存储内存的空间太大或者说缓存的数据过多，反而会导致频繁的全量垃圾回收，降低任务执行时的性能，因为缓存的RDD数据通常都是长期驻留内存的。
+### 存储内存管理
+##### 1) RDD的持久化机制
+  弹性分布式数据集(RDD)作为Spark最根本的数据抽象，是只读的分区记录的集合，只能基于在稳定物理存储中的数据集上创建，或者在其他已有的RDD上执行转换操作产生一个新的RDD。转换后的RDD与原始的RDD之间产生的依赖关系，构成了血统，凭借血统，Spark保证了每一个RDD都可以被重新恢复。但RDD的所有转换都是惰性的，即只有当一个返回结果给Driver的行动发生时，Spark才会创建任务读取RDD，然后真正触发转换的执行。  
+  Task在启动之初读取一个分区时，会先判断这个分区是否已经被持久化，如果没有需要检查CheckPoint或按照血统重新计算。如果一个RDD上要执行多次行动，可以在第一次行动中使用persist或cache方法，在内存或磁盘中持久化或缓存这个RDD，从而在后面的行动时提升计算速度。
+  事实上，cache方法是使用默认的MEMORY_ONLY的存储级别将RDD持久化到内存，故缓存是一种特殊的持久化。堆内存和堆外存储的设计，便可以对缓存RDD时使用的内存做统一的规划和管理。 
+  RDD的持久化由Spark的Storage模块负责，实现RDD与物理存储的解耦合。Storage模块负责管理Spark在计算过程中产生的数据，将那些在内存或磁盘，在本地或远程取数据的功能封装了起来。在具体实现时，Driver端和Executor端的Sotrage模块构成了主从式的架构，即Driver端的BlockManager为Master，Executor端的BlockManager为Slave。
+Sotrage模块在逻辑上以Block为基本存储单位,RDD的每个Partition经过处理后唯一对应一个Block（BlockId 的格式为 rdd_RDD-ID_PARTITION-ID ）。Driver端的Master负责震哥哥Spark应用程序的Block的元数据信息的管理与维护和维护，而Executor端的Slave需要将Block的更新等状态上报到Master，同时接收Master的命令，例如新增或删除一个RDD。  
+![img_26.png](img_26.png)  
+  在对RDD持久化时，Spark 规定了MEMORY_ONLY、MEMORY_AND_DISK 等 7 种 不同的存储级别，而存储级别是以下 5 个变量的组合：
+  ```text
+class StorageLevel private( 
+private var _useDisk: Boolean, //磁盘 
+private var _useMemory: Boolean, //这里其实是指堆内内存 
+private var _useOffHeap: Boolean, //堆外内存 
+private var _deserialized: Boolean, //是否为非序列化 
+private var _replication: Int = 1 //副本个数
+)
+```  
+Spark 中 7 种存储级别如下：  
+![img_27.png](img_27.png)  
+通过对数据结构的分析，可以看出存储级别从三个维度定义了RDD的 Partition（同时也就 是Block）的存储方式：   
+1. 存储位置：磁盘／堆内内存／堆外内存。如 MEMORY_AND_DISK 是同时在磁盘和堆 内内存上存储，实现了冗余备份。OFF_HEAP 则是只在堆外内存存储，目前选择堆外
+   内存时不能同时存储到其他位置。
+2. 存储形式：Block 缓存到存储内存后，是否为非序列化的形式。如 MEMORY_ONLY 是 非序列化方式存储，OFF_HEAP 是序列化方式存储。
+3. 副本数量：大于 1 时需要远程冗余备份到其他节点。如DISK_ONLY_2 需要远程备份 1 个副本。
+2) RDD缓存过程
+   RDD 在缓存到存储内存之前，Partition 中的数据一般以迭代器（Iterator）的数据结构来访问，这是 Scala 语言中一种遍历数据集合的方法。通过 Iterator 可以获取分区中每一条序 列化或者非序列化的数据项(Record)，这些 Record 的对象实例在逻辑上占用了 JVM 堆内内
+   存的 other 部分的空间，同一 Partition 的不同 Record 的存储空间并不连续。RDD 在缓存到存储内存之后，Partition 被转换成 Block，Record 在堆内或堆外存储内存中 占用一块连续的空间。将 Partition 由不连续的存储空间转换为连续存储空间的过程，Spark
+   称之为"展开"（Unroll）。  
+   Block 有序列化和非序列化两种存储格式，具体以哪种方式取决于该 RDD 的存储级别。非 序列化的Block 以一种 DeserializedMemoryEntry 的数据结构定义，用一个数组存储所有的 对象实例，序列化的 Block 则以 SerializedMemoryEntry 的数据结构定义，用字节缓冲区 （ByteBuffer）来存储二进制数据。每个 Executor 的 Storage 模块用一个链式 Map 结构 （LinkedHashMap）来管理堆内和堆外存储内存中所有的 Block 对象的实例，对这个
+   LinkedHashMap 新增和删除间接记录了内存的申请和释放。
+   因为不能保证存储空间可以一次容纳 Iterator 中的所有数据，当前的计算任务在 Unroll 时 要向 MemoryManager 申请足够的 Unroll 空间来临时占位，空间不足则 Unroll 失败，空间 足够时可以继续进行。
+   对于序列化的 Partition，其所需的Unroll 空间可以直接累加计算，一次申请。
+   对于非序列化的 Partition 则要在遍历 Record 的过程中依次申请，即每读取一条 Record， 采样估算其所需的 Unroll 空间并进行申请，空间不足时可以中断，释放已占用的 Unroll 空
+   间。如果最终 Unroll 成功，当前 Partition 所占用的 Unroll 空间被转换为正常的缓存 RDD 的存 储空间，如下图所示。
+    ![img_28.png](img_28.png)  
+   在静态内存管理时，Spark 在存储内存中专门划分了一块 Unroll 空间，其大小是固定的，统一内存管理时则没有对 Unroll 空间进行特别区分，当存储空间不足时会根据动态占用机 制进行处理。
+3) 淘汰与罗盘  
+   由于同一个 Executor 的所有的计算任务共享有限的存储内存空间，当有新的 Block 需 要缓存但是剩余空间不足且无法动态占用时，就要对 LinkedHashMap 中的旧 Block 进行淘 汰（Eviction），而被淘汰的 Block 如果其存储级别中同时包含存储到磁盘的要求，则要对其
+   进行落盘（Drop），否则直接删除该Block。  
+  存储内存淘汰的规则：
+   1. 被淘汰的旧的Block要与新的Block的MemoryMode相同，即同属于堆外或堆内内存。
+   2. 新旧Block不能属于同一个RDD，避免循环淘汰。
+   3. 旧Block所属RDD不能处于被读状态，避免引发一致性问题；
+   4. 遍历 LinkedHashMap 中 Block，按照最近最少使用（LRU）的顺序淘汰，直到满足新 Block 所需的空间。其中LRU 是 LinkedHashMap 的特性。   
+落盘的流程则比较简单，如果其存储级别符合_useDisk 为 true 的条件，再根据其_deserialized 判断是否是非序列化的形式，若是则对其进行序列化，最后将数据存储到磁盘，在 Storage 模块中更新其信息。   
+#### 执行内存管理  
+执行内存主要用来存储任务在执行 Shuffle 时占用的内存，Shuffle 是按照一定规则对 RDD数据重新分区的过程，我们来看 Shuffle 的Write 和Read 两阶段对执行内存的使用：  
+1) Shuffle Write   
+   若在map 端选择普通的排序方式，会采用 ExternalSorter 进行外排，在内存中存储数据时主 要占用堆内执行空间。
+   若在 map 端选择 Tungsten 的排序方式，则采用 ShuffleExternalSorter 直接对以序列化形式 存储的数据排序，在内存中存储数据时可以占用堆外或堆内执行空间，取决于用户是否开启
+   了堆外内存以及堆外执行内存是否足够。  
+2) Shuffle Read  
+   在对 reduce 端的数据进行聚合时，要将数据交给 Aggregator 处理，在内存中存储数据时占 用堆内执行空间。  
+   如果需要进行最终结果排序，则要将再次将数据交给 ExternalSorter 处理，占用堆内执行空间。  
+   在 ExternalSorter 和Aggregator 中，Spark 会使用一种叫 AppendOnlyMap 的哈希表在堆内执 行内存中存储数据，但在 Shuffle 过程中所有数据并不能都保存到该哈希表中，当这个哈希 表占用的内存会进行周期性地采样估算，当其大到一定程度，无法再从MemoryManager 申 请到新的执行内存时，Spark 就会将其全部内容存储到磁盘文件中，这个过程被称为溢存
+   (Spill)，溢存到磁盘的文件最后会被归并(Merge)。  
+   Shuffle Write 阶段中用到的 Tungsten 是 Databricks 公司提出的对 Spark 优化内存和 CPU 使 用的计划（钨丝计划），解决了一些 JVM在性能上的限制和弊端。Spark 会根据 Shuffle 的情
+   况来自动选择是否采用Tungsten 排序。Tungsten 采用的页式内存管理机制建立在 MemoryManager 之上，即 Tungsten 对执行内存 的使用进行了一步的抽象，这样在 Shuffle 过程中无需关心数据具体存储在堆内还是堆外。 每个内存页用一个MemoryBlock 来定义，并用 Object obj 和 long offset 这两个变量统一标
+   识一个内存页在系统内存中的地址。堆内的MemoryBlock 是以 long 型数组的形式分配的内存，其 obj 的值为是这个数组的对象 引用，offset 是 long 型数组的在 JVM 中的初始偏移地址，两者配合使用可以定位这个数组 在堆内的绝对地址；堆外的 MemoryBlock 是直接申请到的内存块，其 obj 为 null，offset 是 这个内存块在系统内存中的 64 位绝对地址。Spark 用 MemoryBlock 巧妙地将堆内和堆外内
+   存页统一抽象封装，并用页表(pageTable)管理每个 Task 申请到的内存页。Tungsten 页式管理下的所有内存用 64 位的逻辑地址表示，由页号和页内偏移量组成： 页号：占 13 位，唯一标识一个内存页，Spark 在申请内存页之前要先申请空闲页号。 页内偏移量：占 51 位，是在使用内存页存储数据时，数据在页内的偏移地址。 有了统一的寻址方式，Spark 可以用 64 位逻辑地址的指针定位到堆内或堆外的内存，整个 Shuffle Write 排序的过程只需要对指针进行排序，并且无需反序列化，整个过程非常高效，
+   对于内存访问效率和 CPU使用效率带来了明显的提升。Spark 的存储内存和执行内存有着截然不同的管理方式：对于存储内存来说，Spark 用一个 LinkedHashMap 来集中管理所有的Block，Block 由需要缓存的 RDD的 Partition 转化而成； 而对于执行内存，Spark 用AppendOnlyMap 来存储 Shuffle 过程中的数据，在Tungsten 排序
+   中甚至抽象成为页式内存管理，开辟了全新的 JVM内存管理机制。
+
+
+
+
+
+
 
 
 
