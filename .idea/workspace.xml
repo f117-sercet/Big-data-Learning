@@ -22,12 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="原理分析">
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/img_24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/img_25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/img_26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/img_27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/img_28.png" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="原理分析-spark">
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/调优/05_尚硅谷大数据技术之Spark优化.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/spark内核.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/spark内核.md" afterDir="false" />
     </list>
@@ -119,37 +115,37 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Application.FileStream.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Spark01_Acc.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
-    &quot;Maven.sparkLearning [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/wms_ym_java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.14712644&quot;,
-    &quot;scala_project_settings_configurable.last_selected_tab_index&quot;: &quot;6&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.FileStream.executor": "Run",
+    "Application.Spark01_Acc.executor": "Run",
+    "DefaultPlantUmlFileTemplate": "UML Class",
+    "Maven.sparkLearning [clean].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/git/Repository/gitHub/Big-data-Learning/docs/框架基础/spark/内核及源码/调优",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.14712644",
+    "scala_project_settings_configurable.last_selected_tab_index": "6",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
@@ -284,6 +280,13 @@
       </map>
     </option>
     <option name="scala3DisclaimerShown" value="true" />
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_392-corretto-1.8.0_392-f644763e9732-f719d367" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -520,7 +523,8 @@
       <workItem from="1703484959984" duration="1635000" />
       <workItem from="1703486703540" duration="12050000" />
       <workItem from="1703556878252" duration="4254000" />
-      <workItem from="1703572376091" duration="2391000" />
+      <workItem from="1703572376091" duration="4545000" />
+      <workItem from="1703637058474" duration="3200000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -781,14 +785,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00106" summary="spark_streaminng 实践">
-      <option name="closed" value="true" />
-      <created>1702031178337</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1702031178337</updated>
-    </task>
     <task id="LOCAL-00107" summary="spark_streaminng 实践">
       <option name="closed" value="true" />
       <created>1702260772508</created>
@@ -877,7 +873,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703499631331</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="原理分析-spark">
+      <option name="closed" value="true" />
+      <created>1703579169004</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1703579169004</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -927,7 +931,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="装饰者模式" />
     <MESSAGE value="spark 学习" />
     <MESSAGE value="装饰者模式及其他" />
     <MESSAGE value="spark 模式" />
@@ -952,7 +955,8 @@
     <MESSAGE value="spark内核.md" />
     <MESSAGE value="spark内核-standalone Client 模式" />
     <MESSAGE value="原理分析" />
-    <option name="LAST_COMMIT_MESSAGE" value="原理分析" />
+    <MESSAGE value="原理分析-spark" />
+    <option name="LAST_COMMIT_MESSAGE" value="原理分析-spark" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
