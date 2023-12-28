@@ -22,10 +22,36 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="原理分析-spark">
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/调优/05_尚硅谷大数据技术之Spark优化.pdf" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark调优">
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/Zookeeper/ZookeeperV3.3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/Zookeeper/Zookeeper源码解析V3.3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/Zookeeper/笔记1.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/spark内核.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/框架基础/spark/内核及源码/内核/spark内核.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/数据和数据库/HBase/HBase协处理详情.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/数据和数据库/HBase/HBase基本环境搭建.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/数据和数据库/HBase/HBase容灾与备份.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/数据和数据库/HBase/HBase常用命令.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/数据和数据库/HBase/HBase的SQL中间层.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/数据和数据库/HBase/HBase系统架构及数据结构.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/数据和数据库/HBase/HBase过滤器.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/数据和数据库/HBase/Hbase简介.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Zookeeper/ACLQ权限控制.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Zookeeper/zookeeper应用服务.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Zookeeper/zookeeper服务.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Zookeeper/安装和运行.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Zookeeper/开发实例.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Zookeeper/集群构建.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式ID生成器解决方案.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式事务的解决方案.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式理论基础三.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式理论基础二.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式理论进阶三.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式理论进阶二.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式系统理论基础一.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式系统理论进阶一.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式系统的一些基本概念.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式解决方案.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式锁解决方案二.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +158,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "F:/git/Repository/gitHub/Big-data-Learning/docs/框架基础/spark/内核及源码/调优",
+    "last_opened_file_path": "F:/git/Repository/gitHub/Big-data-Learning/docs/框架基础/Zookeeper",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -154,11 +180,11 @@
       <recent name="com.designPattern.composition" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\Zookeeper" />
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\spark\内核及源码\调优" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\sparkLearning\target\classes" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\sparkLearning\src\main\java" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\sparkLearning\src\main\scala\framework\common" />
-      <recent name="F:\git\Repository\gitHub\Big-data-Learning\designModel\src\main\java\com\designPattern\singleton\LazyManSingleton" />
-      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\Hadoop" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\算法基础" />
@@ -524,7 +550,9 @@
       <workItem from="1703486703540" duration="12050000" />
       <workItem from="1703556878252" duration="4254000" />
       <workItem from="1703572376091" duration="4545000" />
-      <workItem from="1703637058474" duration="3200000" />
+      <workItem from="1703637058474" duration="4972000" />
+      <workItem from="1703663533701" duration="2776000" />
+      <workItem from="1703729948028" duration="1680000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -785,14 +813,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00107" summary="spark_streaminng 实践">
-      <option name="closed" value="true" />
-      <created>1702260772508</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1702260772509</updated>
-    </task>
     <task id="LOCAL-00108" summary="spark内核概述">
       <option name="closed" value="true" />
       <created>1702262455491</created>
@@ -881,7 +901,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703579169004</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="spark调优">
+      <option name="closed" value="true" />
+      <created>1703663509952</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1703663509952</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -931,7 +959,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="spark 学习" />
     <MESSAGE value="装饰者模式及其他" />
     <MESSAGE value="spark 模式" />
     <MESSAGE value="1、享元模式" />
@@ -956,7 +983,8 @@
     <MESSAGE value="spark内核-standalone Client 模式" />
     <MESSAGE value="原理分析" />
     <MESSAGE value="原理分析-spark" />
-    <option name="LAST_COMMIT_MESSAGE" value="原理分析-spark" />
+    <MESSAGE value="spark调优" />
+    <option name="LAST_COMMIT_MESSAGE" value="spark调优" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
