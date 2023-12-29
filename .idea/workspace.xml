@@ -22,36 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="spark调优">
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/Zookeeper/ZookeeperV3.3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/Zookeeper/Zookeeper源码解析V3.3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/框架基础/Zookeeper/笔记1.pdf" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="笔记整理">
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/Zookeeper/ZookeeperV3.3-已转换.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/Zookeeper/Zookeeper源码解析V3.3.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/框架基础/Zookeeper/笔记1.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/数据和数据库/HBase/HBase协处理详情.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/数据和数据库/HBase/HBase基本环境搭建.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/数据和数据库/HBase/HBase容灾与备份.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/数据和数据库/HBase/HBase常用命令.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/数据和数据库/HBase/HBase的SQL中间层.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/数据和数据库/HBase/HBase系统架构及数据结构.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/数据和数据库/HBase/HBase过滤器.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/数据和数据库/HBase/Hbase简介.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/Zookeeper/ACLQ权限控制.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/Zookeeper/zookeeper应用服务.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/Zookeeper/zookeeper服务.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/Zookeeper/安装和运行.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/Zookeeper/开发实例.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/Zookeeper/集群构建.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式ID生成器解决方案.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式事务的解决方案.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式理论基础三.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式理论基础二.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式理论进阶三.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式理论进阶二.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式系统理论基础一.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式系统理论进阶一.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式系统的一些基本概念.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式解决方案.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/框架基础/分布式理论基础和原理/分布式锁解决方案二.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Zookeeper/ZookeeperV3.3.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Zookeeper/Zookeeper源码解析V3.3.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/框架基础/Zookeeper/笔记1.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,37 +119,37 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.FileStream.executor": "Run",
-    "Application.Spark01_Acc.executor": "Run",
-    "DefaultPlantUmlFileTemplate": "UML Class",
-    "Maven.sparkLearning [clean].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "F:/git/Repository/gitHub/Big-data-Learning/docs/框架基础/Zookeeper",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.14712644",
-    "scala_project_settings_configurable.last_selected_tab_index": "6",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.FileStream.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Spark01_Acc.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
+    &quot;Maven.sparkLearning [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/git/Repository/gitHub/Big-data-Learning/docs/框架基础/Zookeeper&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.14712644&quot;,
+    &quot;scala_project_settings_configurable.last_selected_tab_index&quot;: &quot;6&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
@@ -552,7 +530,9 @@
       <workItem from="1703572376091" duration="4545000" />
       <workItem from="1703637058474" duration="4972000" />
       <workItem from="1703663533701" duration="2776000" />
-      <workItem from="1703729948028" duration="1680000" />
+      <workItem from="1703729948028" duration="2382000" />
+      <workItem from="1703749068684" duration="599000" />
+      <workItem from="1703831561724" duration="643000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -813,14 +793,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00108" summary="spark内核概述">
-      <option name="closed" value="true" />
-      <created>1702262455491</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1702262455491</updated>
-    </task>
     <task id="LOCAL-00109" summary="sparkStreaming其他">
       <option name="closed" value="true" />
       <created>1702264287764</created>
@@ -909,7 +881,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703663509952</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="笔记整理">
+      <option name="closed" value="true" />
+      <created>1703735096025</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1703735096026</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -959,7 +939,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="装饰者模式及其他" />
     <MESSAGE value="spark 模式" />
     <MESSAGE value="1、享元模式" />
     <MESSAGE value="spark运行框架.md--RDD" />
@@ -984,7 +963,8 @@
     <MESSAGE value="原理分析" />
     <MESSAGE value="原理分析-spark" />
     <MESSAGE value="spark调优" />
-    <option name="LAST_COMMIT_MESSAGE" value="spark调优" />
+    <MESSAGE value="笔记整理" />
+    <option name="LAST_COMMIT_MESSAGE" value="笔记整理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
