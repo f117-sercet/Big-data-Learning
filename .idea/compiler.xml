@@ -8,11 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="flink" />
+        <module name="zookeeper" />
+        <module name="kafka" />
         <module name="kaka-integration" />
         <module name="designModel" />
         <module name="projectSparkStreaming" />
         <module name="HadoopMapReducer" />
-        <module name="kafka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
