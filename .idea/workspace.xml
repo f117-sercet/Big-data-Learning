@@ -22,18 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="zookeeper相关笔记">
-      <change afterPath="$PROJECT_DIR$/zookeeper/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zookeeper/src/main/java/com/zookeeper/zk/case1/DistributeClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zookeeper/src/main/java/com/zookeeper/zk/case1/DistributeServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zookeeper/src/main/java/com/zookeeper/zk/case2/DistributeLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zookeeper/src/main/java/com/zookeeper/zk/case2/client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zookeeper/src/main/java/com/zookeeper/zk/case2/server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zookeeper/src/main/java/com/zookeeper/zk/zkClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zookeeper/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="kafka笔记">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,41 +113,41 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.FileStream.executor": "Run",
-    "Application.Spark01_Acc.executor": "Run",
-    "DefaultPlantUmlFileTemplate": "UML Class",
-    "JUnit.zkClient.create.executor": "Run",
-    "JUnit.zkClient.exist.executor": "Run",
-    "JUnit.zkClient.getChildren.executor": "Run",
-    "JUnit.zkClient.init.executor": "Run",
-    "Maven.sparkLearning [clean].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "F:/git/Repository/gitHub/Big-data-Learning/docs/框架基础/Zookeeper",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.14712644",
-    "scala_project_settings_configurable.last_selected_tab_index": "6",
-    "settings.editor.selected.configurable": "build.tools",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.FileStream.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Spark01_Acc.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
+    &quot;JUnit.zkClient.create.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.zkClient.exist.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.zkClient.getChildren.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.zkClient.init.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.sparkLearning [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/git/Repository/gitHub/collection&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.14712644&quot;,
+    &quot;scala_project_settings_configurable.last_selected_tab_index&quot;: &quot;6&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
@@ -167,11 +156,11 @@
       <recent name="com.designPattern.composition" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\Kafka" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\Zookeeper" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\框架基础\spark\内核及源码\调优" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\sparkLearning\target\classes" />
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\sparkLearning\src\main\java" />
-      <recent name="F:\git\Repository\gitHub\Big-data-Learning\sparkLearning\src\main\scala\framework\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\git\Repository\gitHub\Big-data-Learning\docs\算法基础" />
@@ -554,7 +543,13 @@
       <workItem from="1703729948028" duration="2382000" />
       <workItem from="1703749068684" duration="599000" />
       <workItem from="1703831561724" duration="1578000" />
-      <workItem from="1704157158822" duration="5772000" />
+      <workItem from="1704157158822" duration="11790000" />
+      <workItem from="1704241740328" duration="2758000" />
+      <workItem from="1704267649089" duration="68000" />
+      <workItem from="1704275559626" duration="2000" />
+      <workItem from="1704329672666" duration="1005000" />
+      <workItem from="1704674484010" duration="161000" />
+      <workItem from="1704675691413" duration="1231000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -815,38 +810,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00110" summary="spark内核.md">
-      <option name="closed" value="true" />
-      <created>1702370333490</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1702370333491</updated>
-    </task>
-    <task id="LOCAL-00111" summary="spark内核.md">
-      <option name="closed" value="true" />
-      <created>1702377107937</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1702377107937</updated>
-    </task>
-    <task id="LOCAL-00112" summary="spark内核-standalone Client 模式">
-      <option name="closed" value="true" />
-      <created>1702459782182</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1702459782182</updated>
-    </task>
-    <task id="LOCAL-00113" summary="spark内核-standalone Client 模式">
-      <option name="closed" value="true" />
-      <created>1702870155626</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1702870155627</updated>
-    </task>
     <task id="LOCAL-00114" summary="spark内核-standalone Client 模式">
       <option name="closed" value="true" />
       <created>1702891823166</created>
@@ -911,7 +874,39 @@
       <option name="project" value="LOCAL" />
       <updated>1703832713624</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="zookeeper分布式锁代码">
+      <option name="closed" value="true" />
+      <created>1704167779748</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1704167779748</updated>
+    </task>
+    <task id="LOCAL-00123" summary="zookeeper分布式锁代码">
+      <option name="closed" value="true" />
+      <created>1704176958479</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1704176958479</updated>
+    </task>
+    <task id="LOCAL-00124" summary="zookeeper分布式锁代码">
+      <option name="closed" value="true" />
+      <created>1704179582208</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1704179582209</updated>
+    </task>
+    <task id="LOCAL-00125" summary="kafka笔记">
+      <option name="closed" value="true" />
+      <created>1704267695928</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1704267695928</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -961,8 +956,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="1、享元模式" />
-    <MESSAGE value="spark运行框架.md--RDD" />
     <MESSAGE value="spark-RDD算子" />
     <MESSAGE value="spark-RDD算子中的方法" />
     <MESSAGE value="行为算子" />
@@ -986,7 +979,9 @@
     <MESSAGE value="spark调优" />
     <MESSAGE value="笔记整理" />
     <MESSAGE value="zookeeper相关笔记" />
-    <option name="LAST_COMMIT_MESSAGE" value="zookeeper相关笔记" />
+    <MESSAGE value="zookeeper分布式锁代码" />
+    <MESSAGE value="kafka笔记" />
+    <option name="LAST_COMMIT_MESSAGE" value="kafka笔记" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -47,7 +47,7 @@ public class DistributeLock {
             }
         });
         //阻塞
-        connectLatch.await();
+        connectLatch.await();//1
 
         // 判断根节点是否存在
 
