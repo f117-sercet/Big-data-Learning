@@ -22,15 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="kafka笔记">
-      <change afterPath="$PROJECT_DIR$/middleware-kafka/kafka/src/main/java/com/kafkaTest/kafka/producer/CustomProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware-kafka/kafka/src/main/java/com/kafkaTest/kafka/producer/CustomProducerCallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware-kafka/kafka/src/main/java/com/kafkaTest/kafka/producer/CustomProducerCallbackPartitions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware-kafka/kafka/src/main/java/com/kafkaTest/kafka/producer/CustomProducerSync.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware-kafka/kafka/src/main/java/com/kafkaTest/kafka/producer/MyPartitioner.java" afterDir="false" />
+    <list default="true" id="cafae2de-b388-4e57-88d6-0cbb76ad8bdf" name="Default Changelist" comment="kafka 分区">
+      <change afterPath="$PROJECT_DIR$/middleware-kafka/kafka/src/main/java/com/kafkaTest/kafka/producer/CustomProducerParameters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware-kafka/kafka/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/middleware-kafka/kafka/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware-kafka/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/middleware-kafka/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -557,7 +551,7 @@
       <workItem from="1704789567866" duration="2082000" />
       <workItem from="1704876813454" duration="954000" />
       <workItem from="1704934967417" duration="2517000" />
-      <workItem from="1704963327697" duration="3072000" />
+      <workItem from="1704963327697" duration="3864000" />
     </task>
     <task id="LOCAL-00001" summary="文档更新">
       <created>1628864147560</created>
@@ -818,14 +812,6 @@
       <option name="project" value="LOCAL" />
       <updated>1667983228538</updated>
     </task>
-    <task id="LOCAL-00114" summary="spark内核-standalone Client 模式">
-      <option name="closed" value="true" />
-      <created>1702891823166</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1702891823167</updated>
-    </task>
     <task id="LOCAL-00115" summary="spark内核-standalone Client 模式">
       <option name="closed" value="true" />
       <created>1702947091822</created>
@@ -914,7 +900,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704267695928</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="kafka 分区">
+      <option name="closed" value="true" />
+      <created>1704967352964</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1704967352965</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -964,7 +958,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="spark-RDD算子" />
     <MESSAGE value="spark-RDD算子中的方法" />
     <MESSAGE value="行为算子" />
     <MESSAGE value="spark-core" />
@@ -989,7 +982,8 @@
     <MESSAGE value="zookeeper相关笔记" />
     <MESSAGE value="zookeeper分布式锁代码" />
     <MESSAGE value="kafka笔记" />
-    <option name="LAST_COMMIT_MESSAGE" value="kafka笔记" />
+    <MESSAGE value="kafka 分区" />
+    <option name="LAST_COMMIT_MESSAGE" value="kafka 分区" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
