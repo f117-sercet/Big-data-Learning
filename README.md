@@ -4,25 +4,20 @@
 快速部署
 clone 项目到本地,使用idea打开并用maven构建工程
 
-## 代码架构
-Big-data-learning
-├── designModel -- 设计模式
-├── docs 代码笔记
-├── flink -- flink的代码
-├── Hadoop -- Hadoop笔记
-├── middleware-kafka -- 中间件kafka
-├── sparkLearning --spark代码
-└── zookeeper -- zookeeper
-使用技术
-技术	说明	官网
-spark	计算引擎	[https://spring.io/projects/spring-boot](https://spark.apache.org/)
-Hadoop	分布式存储引擎	[https://spring.io/projects/spring-security](https://hadoop.apache.org/)
-flink	流计算引擎	[http://www.mybatis.org/generator/index.html](https://flink.apache.org/)
-Elasticsearch	搜索引擎	https://github.com/elastic/elasticsearch
-Kafka	消息队列	[https://www.rabbitmq.com/](https://kafka.apache.org/)
-Redis	内存数据存储	https://redis.io/
-移动端技术
-技术	说明	官网
-Vue	核心前端框架	https://vuejs.org
-Vuex	全局状态管理框架	https://vuex.vuejs.org
-luch-request	HTTP请求框架	https://github.com/lei-mu/luch-request
+
+
+## 使用技术
+|技术|说明|官网|  
+--|:--:|:--:|
+|spark|计算引擎|https://spark.apache.org/
+|Hadoop|分布式存储引擎|https://hadoop.apache.org/
+|flink|流计算引擎|[http://www.mybatis.org/generator/index.html](https://flink.apache.org/)
+|Elasticsearch|搜索引擎|https://github.com/elastic/elasticsearch
+|Kafka|消息队列|[https://www.rabbitmq.com/](https://kafka.apache.org/)
+|Redis|内存数据存储|https://redis.io/
+## 移动端技术
+|技术|说明|官网|
+--|:--:|:--:|  
+|Vue|核心前端框架|https://vuejs.org
+|Vuex|全局状态管理框架|https://vuex.vuejs.org
+|luch-request|HTTP请求框架|https://github.com/lei-mu/luch-request
