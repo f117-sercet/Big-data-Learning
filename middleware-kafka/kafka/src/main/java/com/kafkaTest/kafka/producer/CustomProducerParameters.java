@@ -42,7 +42,7 @@ public class CustomProducerParameters {
         for (int i = 0; i < 5; i++) {
             kafkaProducer.send(new ProducerRecord<>("first", "second"+i));
         }
-        // 3.关闭数据
+        // 3.关闭数据123
         kafkaProducer.close();
     }
 }
